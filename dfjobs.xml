@@ -1,0 +1,30 @@
+<dfjobs>
+    <dfjob name="charcoal" category="wood furnace" type="186">
+        <item type="bar" material="COAL" />
+    </dfjob>
+    <dfjob name="ash" category="wood furnace" type="187">
+        <item type="bar" material="ASH" />
+    </dfjob>
+    <dfjob name="lye" category="ashery" type="188">
+        <item type="liquid_misc" material="LYE" />
+    </dfjob>
+    <dfjob name="potash" category="ashery" type="191">
+        <item type="bar" material="POTASH" />
+    </dfjob>
+    <dfjob name="drink" category="still" type="150">
+        <item type="drink" material="all" />	
+    </dfjob>
+    <dfjob name="collect sand" category="glass kiln" type="22">
+        <item type="powder_misc" material="SAND_WHITE" />
+        <item type="powder_misc" material="SAND_TAN" />
+        <item type="powder_misc" material="SAND_BLACK" />
+        <item type="powder_misc" material="SAND_RED" />
+        <item type="powder_misc" material="SAND_YELLOW" />        
+    </dfjob>
+    <dfjob name="coke from coal" category="smelter" reaction="BITUMINOUS_COAL_TO_COKE">
+        <item type="bar" material="COAL" />
+    </dfjob>
+    <dfjob name="steel bar" category="smelter" reaction="STEEL_MAKING">
+        <item type="bar" material="STEEL" />
+    </dfjob>
+</dfjobs>
