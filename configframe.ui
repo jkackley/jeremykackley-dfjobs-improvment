@@ -170,6 +170,9 @@
    </item>
    <item>
     <widget class="QTreeWidget" name="treeWidget">
+     <attribute name="headerDefaultSectionSize">
+      <number>132</number>
+     </attribute>
      <column>
       <property name="text">
        <string>item</string>

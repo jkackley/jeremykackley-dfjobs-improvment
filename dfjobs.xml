@@ -8,18 +8,31 @@
     <dfjob name="lye" category="ashery" type="188">
         <item type="liquid_misc" material="LYE" />
     </dfjob>
-    <dfjob name="potash" category="ashery" type="191">
+    <dfjob name="potash from lye" category="ashery" type="189">
+        <item type="bar" material="POTASH" />
+    </dfjob>
+    <dfjob name="potash from ash" category="ashery" type="191">
         <item type="bar" material="POTASH" />
     </dfjob>
     <dfjob name="drink" category="still" type="150">
         <item type="drink" material="all" />	
     </dfjob>
-    <dfjob name="collect sand" category="glass kiln" type="22">
+    <dfjob name="collect sand" category="kiln" type="22">
         <item type="powder_misc" material="SAND_WHITE" />
         <item type="powder_misc" material="SAND_TAN" />
         <item type="powder_misc" material="SAND_BLACK" />
         <item type="powder_misc" material="SAND_RED" />
         <item type="powder_misc" material="SAND_YELLOW" />        
+    </dfjob>
+    <dfjob name="collect clay" category="kiln" type="222">
+        <item type="boulder" material="CLAY" />
+        <item type="boulder" material="SILTY_CLAY" />
+        <item type="boulder" material="SANDY_CLAY" />
+        <item type="boulder" material="CLAY_LOAM" />
+        <item type="boulder" material="FIRE_CLAY" />
+    </dfjob>
+    <dfjob name="pearlash" category="kiln" reaction="MAKE_PEARLASH">
+        <item type="bar" material="PEARLASH" />
     </dfjob>
     <dfjob name="coke from coal" category="smelter" reaction="BITUMINOUS_COAL_TO_COKE">
         <item type="bar" material="COAL" />
