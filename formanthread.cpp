@@ -141,6 +141,34 @@ void FormanThread::run()
 //    }
 }
 
+bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
+{
+    uint8_t data[56];
+    ReadProcessMemory(hDF, (void *)jobptr, (void *) &data, 56, 0);
+
+    const uint8_t type = data[0];
+    //const int16_t subtype3 = *((int16_t *)(data+0x02));
+    //const int16_t subtype2 = *((int16_t *)(data+0x04));
+    //const int16_t subtype1 = *((int16_t *)(data+0x24));
+    //const int16_t matid = *((int16_t *)(data+0x28));
+    //const int16_t gembitmask = *((int16_t *)(data+0x2C));
+    //const int16_t memorial = *((int16_t *)(data+0x30));
+    //const int16_t bitmask = *((int16_t *)(data+34));
+    //const int16_t left = *((int16_t *)(data+0x38));
+    //const int16_t total = *((int16_t *)(data+0x3A));
+
+    if (type == 0xD5)
+    {
+        std::string text = readSTLString(jobptr+8);
+        if (job->reaction.empty() || text.empty()) return false;
+        if (job->reaction == text) return true;
+        return false;
+    }
+    if (job->type == type) return true;
+
+    return false;
+}
+
 void FormanThread::cullOrder(dfjob *job)
 {
     if (job->pending == 0) return;
@@ -168,38 +196,18 @@ void FormanThread::cullOrder(dfjob *job)
         }
 
         uint32_t jobptr = readDWord(queuebase + (jobs * 4)-4);
-        uint8_t manager[56];
-        ReadProcessMemory(hDF, (void *)jobptr, (void *) &manager, 56, 0);
-        uint16_t remaining = readWord(jobptr+0x38);
-        //
-        std::string text = readSTLString(jobptr+8);
-        if(text.length() && job->reaction.length() && (text == job->reaction))
-        {
-            if (remaining > a)
-            {
-                writeWord(jobptr+0x38,remaining-a);
-                writeWord(jobptr+0x3a,remaining-a);
-                job->pending -= amount;
-                return;
-            }
-            a -= remaining;
-            int b = ((queuepos-queuebase)/4) - jobs + 1;
 
-            uint8_t data[b*4];
-            ReadProcessMemory(hDF, (void *)(queuebase + (jobs * 4)), (void *)&data, b * 4, 0);
-            WriteProcessMemory(hDF,(void *)(queuebase + (jobs *4) -4) , (void *)&data, b * 4, 0);
-            writeDWord(queuePointer+4, readDWord(queuePointer+4) - 4);
-        }
-        if (job->type == manager[0]) //standard job
+        if (compareJob(job, jobptr))
         {
+            const uint16_t remaining = readWord(jobptr+0x38);
             if (remaining > a)
             {
                 writeWord(jobptr+0x38,remaining-a);
                 writeWord(jobptr+0x3a,remaining-a);
-                //actionLog("moving on");
                 job->pending -= amount;
                 return;
             }
+
             //actionLog("deleting the sucker");
             a -= remaining;
             int b = ((queuepos-queuebase)/4) - jobs + 1;
@@ -231,21 +239,9 @@ void FormanThread::insertOrder(dfjob *job)
         for (int jobs = (queuepos-queuebase)/4; jobs > 0; jobs--)
         {
             uint32_t jobptr = readDWord(queuebase + (jobs * 4)-4);
-            uint8_t a[56];
-            ReadProcessMemory(hDF, (void *) jobptr, (void *) &a, 56, 0);
-            string text = readSTLString(jobptr+8);
-            uint16_t remaining = readWord(jobptr+0x38) + amount;
-
-            // custom reactions
-            if(text.length() && job->reaction.length() && (text == job->reaction))
+            if (compareJob(job, jobptr))
             {
-                writeWord(jobptr+0x38,remaining);
-                writeWord(jobptr+0x3a,remaining);
-                job->pending += amount;
-                return;
-            } // standard reactions
-            if(job->type == a[0])
-            {
+                const uint16_t remaining = readWord(jobptr+0x38) + amount;
                 writeWord(jobptr+0x38,remaining);
                 writeWord(jobptr+0x3a,remaining);
                 job->pending += amount;
@@ -309,7 +305,6 @@ void FormanThread::insertOrder(dfjob *job)
 
 void FormanThread::countPending()
 {
-    uint8_t a[52];
     uint32_t queuebase = readDWord(queuePointer);
     uint32_t queuepos = readDWord(queuePointer+4);
 
@@ -324,18 +319,10 @@ void FormanThread::countPending()
     {
         uint32_t job = readDWord(queuebase + (jobs * 4)-4);
         usedMemory.push_back(job);
-        std::string text = readSTLString(job+8);
 
-        ReadProcessMemory(hDF, (void *) job, (void *) &a, 52, 0);
         for (unsigned int z = 0; z < dfjobs.size(); z++)
         {
-            if (text.length() && (text == dfjobs[z]->reaction))
-            {
-                //actionLog("poop");
-                dfjobs[z]->pending += readWord(job+0x38);
-                break;
-            }
-            if (dfjobs[z]->type == a[0])
+            if (compareJob(dfjobs[z], job))
             {
                 dfjobs[z]->pending += readWord(job+0x38);
                 break;

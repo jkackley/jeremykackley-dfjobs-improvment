@@ -44,6 +44,7 @@ signals:
     void actionPopup(QString, bool);
     void actionLog(QString);
 private:
+    bool compareJob(const dfjob *job, const uint32_t jobptr);
     void countPending();
     void countItems(bool);
     void cullOrder(dfjob *job);
