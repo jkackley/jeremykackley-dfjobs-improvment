@@ -149,7 +149,7 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
     const uint8_t type = data[0];
     //const int16_t subtype3 = *((int16_t *)(data+0x02));
     //const int16_t subtype2 = *((int16_t *)(data+0x04));
-    //const int16_t subtype1 = *((int16_t *)(data+0x24));
+    const int16_t subtype1 = *((int16_t *)(data+0x24));
     //const int16_t matid = *((int16_t *)(data+0x28));
     //const int16_t gembitmask = *((int16_t *)(data+0x2C));
     //const int16_t memorial = *((int16_t *)(data+0x30));
@@ -164,7 +164,21 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
         if (job->reaction == text) return true;
         return false;
     }
-    if (job->type == type) return true;
+    if (job->type == type)
+    {
+        if (job->materialType.empty()) return true;
+        if ((job->materialType == "bone") &&
+                (data[4] == 0x00) && (data[5] == 0x00) && (data[52] == 0x20))
+            return true;
+        if ((job->materialType == "wood") && (data[52] == 0x02))
+            return true;
+        if ((job->materialType == "other") && ((int16_t)otherMaterials.size() > subtype1) &&
+                (otherMaterials[subtype1] == job->other))
+            return true;
+        if ((job->materialType == "inorganic") && ((int16_t)inorganicMaterials.size() > subtype1) &&
+                (inorganicMaterials[subtype1] == job->inorganic))
+            return true;
+    }
 
     return false;
 }
@@ -251,8 +265,6 @@ void FormanThread::insertOrder(dfjob *job)
     }
 
     //Find free memory
-    //const uint32_t freeSpot = (uint32_t) VirtualAllocEx(hDF, NULL, 0x1000, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
-    //actionLog("Allocated " % QString::number(freeSpot,16));
     uint32_t freeSpot = readDWord(queuePointer) + 0x3000;
     sort(usedMemory.begin(), usedMemory.end());
     for (uint32_t i = 0; i < usedMemory.size(); i++) //
@@ -263,12 +275,14 @@ void FormanThread::insertOrder(dfjob *job)
     }
     usedMemory.push_back(freeSpot);
 
-    if (job->reaction.size())
+    uint8_t data[64] = { 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x6e, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x72, 0x6f, 0x77, 0x20, 0xff, 0xff,
+                         0x75, 0x72, 0xff, 0xff, 0xff, 0xff, 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00,
+                         0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00 };
+
+    if (!job->reaction.empty())
     {
-        static const uint8_t custom1[] = {0xD5, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00};
-        uint8_t data[56];
-        memset (data, 0x00, 56);
-        memcpy (data, custom1, 8);
+        data[0] = 0xD5;
         data[0x18] = job->reaction.size();
 
         if (job->reaction.size() > 16)
@@ -282,21 +296,61 @@ void FormanThread::insertOrder(dfjob *job)
             memcpy (data+8, blah, job->reaction.size());
             data[0x1c] = 0x0F;
         }
-
-        WriteProcessMemory(hDF, (void *) freeSpot, (void *) &data, 56, 0);
     }
     else
     {
-        uint8_t data[56];
-        memset (data, 0x00, 56);
         data[0] = job->type;
-        data[2] = 0xFF; data[3] = 0xFF; data[4] = 0xFF; data[5] = 0xFF;
-        WriteProcessMemory(hDF, (void *) freeSpot, (void *) &data, 56, 0);
+        if (job->materialType == "bone")
+        {
+            data[4] = 0x00;
+            data[5] = 0x00;
+            data[52] = 0x20;
+        }
+        if (job->materialType == "wood")
+        {
+            data[52] = 0x02;
+        }
+        if (job->materialType == "other")
+        {
+            for (unsigned short i = 0; i <= otherMaterials.size(); i++)
+            {
+                if (i == otherMaterials.size())
+                {
+                    actionLog("invalid material in dfjobs.xml");
+                    return;
+                }
+                if (otherMaterials[i] == job->other)
+                {
+                    memcpy(data+36, &i, 2);
+                    break;
+                }
+            }
+        }
+        if (job->materialType == "inorganic")
+        {
+            for (unsigned int i = 0; i <= inorganicMaterials.size(); i++)
+            {
+                if (i == inorganicMaterials.size())
+                {
+                    actionLog("invalid material in dfjobs.xml");
+                    return;
+                }
+                if (inorganicMaterials[i] == job->inorganic)
+                {
+                    data[36] = 0x00;
+                    data[37] = 0x00;
+                    memcpy(data+40, &i, 4);
+                    break;
+                }
+            }
+        }
     }
 
-    writeWord(freeSpot+56,amount);
-    writeWord(freeSpot+58,amount);
-    writeDWord(freeSpot+60,1);
+    if (job->subtype == "bolt") memset (data+4, 0, 2); // UGLY HACK JUST FOR NOW
+
+    memcpy (data+56, &amount, 2);
+    memcpy (data+58, &amount, 2);
+    WriteProcessMemory(hDF, (void *) freeSpot, (void *) &data, 64, 0);
     writeDWord(readDWord(queuePointer+4), freeSpot);
     writeDWord(queuePointer+4, readDWord(queuePointer+4)+4);
     job->pending += amount;
@@ -794,10 +848,10 @@ bool FormanThread::attach()
     uint32_t freeSpot = readDWord(queuePointer) + 0x2000;
     for (unsigned int i = 0; i < dfjobs.size() ; i++ )
     {
-        if (dfjobs[i]->reaction.size())
+        if (dfjobs[i]->reaction.size() > 16)
         {
             dfjobs[i]->reactionPtr = freeSpot;
-            WriteProcessMemory(hDF, (void *)freeSpot, (void *) dfjobs[i]->reaction.c_str(), dfjobs[i]->reaction.size(), 0);
+            writeRaw(freeSpot, dfjobs[i]->reaction.c_str(), dfjobs[i]->reaction.size());
             freeSpot += dfjobs[i]->reaction.size() + 1;
         }
     }
@@ -805,59 +859,74 @@ bool FormanThread::attach()
     return true;
 }
 
+bool FormanThread::readRaw(const uint32_t address, LPVOID data, SIZE_T size)
+{
+    return(ReadProcessMemory(hDF, (LPCVOID)address, data, size, (SIZE_T)NULL));
+}
+
+bool FormanThread::writeRaw(const uint32_t address, LPCVOID data, SIZE_T size)
+{
+    return(WriteProcessMemory(hDF, (LPVOID)address, data, size, (SIZE_T)NULL));
+}
+
 const uint32_t FormanThread::readDWord(const uint32_t address)
 {
     uint32_t dword = 0;
-    ReadProcessMemory(hDF, (void *)address, (void *)&dword, 4, 0);
+    ReadProcessMemory(hDF, (LPCVOID)address, (LPVOID)&dword, 4, 0);
     return dword;
 }
 
 const uint16_t FormanThread::readWord(const uint32_t address)
 {
     uint16_t word = 0;
-    ReadProcessMemory(hDF, (void *)address, (void *)&word, 2, 0);
+    ReadProcessMemory(hDF, (LPCVOID)address, (LPVOID)&word, (SIZE_T)2, (SIZE_T)NULL);
     return word;
 }
 
 const uint8_t FormanThread::readByte(const uint32_t address)
 {
     uint8_t byte = 0;
-    ReadProcessMemory(hDF, (void *)address, (void *)&byte, 1, 0);
+    ReadProcessMemory(hDF, (LPCVOID)address, (LPVOID)&byte, (SIZE_T)1, (SIZE_T)NULL);
     return byte;
 }
 
 bool FormanThread::writeDWord(const uint32_t address, const uint32_t data)
 {
-    return(WriteProcessMemory(hDF, (void *) address, &data, 4, 0));
+    return(WriteProcessMemory(hDF, (LPVOID)address, (LPCVOID)&data, (SIZE_T)4, (SIZE_T)NULL));
 }
 
 bool FormanThread::writeWord(const uint32_t address, const uint16_t data)
 {
-    return(WriteProcessMemory(hDF, (void *) address, &data, 2, 0));
+    return(WriteProcessMemory(hDF, (LPVOID)address, (LPCVOID)&data, (SIZE_T)2, (SIZE_T)NULL));
 }
 
 bool FormanThread::writeByte(const uint32_t address, const uint8_t data)
 {
-    return(WriteProcessMemory(hDF, (void *) address, &data, 1, 0));
+    return(WriteProcessMemory(hDF, (LPVOID)address, (LPCVOID)&data, (SIZE_T)1, (SIZE_T)NULL));
 }
 
 const std::string FormanThread::readSTLString(const uint32_t addr)
 {
     const uint32_t strsize = readDWord(addr + 0x10);
     const uint32_t strmode = readDWord(addr + 0x14);
-    char* text = (char *)malloc(strsize+1);
+
+    if (strsize > 255) return string();
+    char text[strsize+1];
 
     if (strmode == 0x0F)
     {
-        ReadProcessMemory(hDF, (void *)addr, (void *) text, strsize, 0);
+        ReadProcessMemory(hDF, (LPCVOID)addr, (LPVOID)text, (SIZE_T)strsize, 0);
     }
     else if (strmode == 0x1F)
     {
-        ReadProcessMemory(hDF, (void *)readDWord(addr), (void *) text, strsize, 0);
+        ReadProcessMemory(hDF, (LPCVOID)readDWord(addr), (LPVOID)text, (SIZE_T)strsize, (SIZE_T)NULL);
+    }
+    else
+    {
+        text[0] = '\0';
     }
 
     text[strsize] = '\0';
     std::string stlstring(text);
-    free(text);
     return stlstring;
 }

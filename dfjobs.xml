@@ -1,4 +1,37 @@
 <dfjobs>
+    <dfjob name="wood door" category="carpenter" type="69" materialType="wood">
+        <item type="door" material="all" />
+    </dfjob>
+    <dfjob name="stone door" category="mason" type="69" materialType="other" other="INORGANIC">
+        <item type="door" material="all" />
+    </dfjob>
+    <dfjob name="green glass door" category="glass" type="69" materialType="other" other="GLASS_GREEN">
+        <item type="door" material="all" />
+    </dfjob>
+    <dfjob name="clear glass door" category="glass" type="69" materialType="other" other="GLASS_CLEAR">
+        <item type="door" material="all" />
+    </dfjob>
+    <dfjob name="crystal glass door" category="glass" type="69" materialType="other" other="GLASS_CRYSTAL">
+        <item type="door" material="all" />
+    </dfjob>
+    <dfjob name="iron door" category="forge" type="69" materialType="inorganic" inorganic="IRON">
+        <item type="door" material="all" />
+    </dfjob>
+    <dfjob name="gold door" category="forge" type="69" materialType="inorganic" inorganic="GOLD">
+        <item type="door" material="all" />
+    </dfjob>
+    <dfjob name="wooden bolt" category="craft" type="131" subtype="bolt" materialType="wood">
+        <item type="bolt" material="organic" />
+    </dfjob>
+    <dfjob name="bone bolt" category="craft" type="131" subtype="bolt" materialType="bone">
+        <item type="bolt" material="creature" />
+    </dfjob>
+    <dfjob name="iron bolt" category="forge" type="131" subtype="bolt" materialType="inorganic" inorganic="IRON">
+        <item type="bolt" material="IRON" />
+    </dfjob>
+    <dfjob name="steel bolt" category="forge" type="131" subtype="bolt" materialType="inorganic" inorganic="STEEL">
+        <item type="bolt" material="STEEL" />
+    </dfjob>
     <dfjob name="charcoal" category="wood furnace" type="186">
         <item type="bar" material="COAL" />
     </dfjob>

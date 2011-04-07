@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>285</width>
-    <height>489</height>
+    <width>800</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dwarf Foreman 0.6.6</string>
+   <string>Dwarf Foreman 0.6.7</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -77,7 +77,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>285</width>
+     <width>800</width>
      <height>21</height>
     </rect>
    </property>

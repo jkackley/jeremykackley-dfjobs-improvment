@@ -31,6 +31,7 @@
 #include <QThread>
 #include <QString>
 #include "dwarfforeman.h"
+#include "windows.h"
 
 class FormanThread : public QThread
 {
@@ -50,6 +51,8 @@ private:
     void cullOrder(dfjob *job);
     void insertOrder(dfjob *job);
     bool attach();
+    bool writeRaw(const uint32_t, LPCVOID, SIZE_T);
+    bool readRaw(const uint32_t, LPVOID, SIZE_T);
     const uint32_t readDWord(const uint32_t);
     const uint16_t readWord(const uint32_t);
     const uint8_t readByte(const uint32_t);

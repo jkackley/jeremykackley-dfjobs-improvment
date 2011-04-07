@@ -52,6 +52,10 @@ struct dfjob {
     uint32_t stack;
     uint8_t type;
     std::string reaction;
+    std::string materialType;
+    std::string inorganic;
+    std::string other;
+    std::string subtype;
     uint32_t reactionPtr;
     std::vector<std::map<std::string, std::string> > result;
     bool enabled;

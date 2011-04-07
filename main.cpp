@@ -82,12 +82,11 @@ public:
         if ( name == "dfjob" )
         {
             job = new dfjob;
-            job->enabled = 0;
+            job->enabled = false;
             job->target = 0;
             job->count = 0;
             job->pending = 0;
             job->stack = 0;
-
             for( int i=0; i<attrs.count(); i++ )
             {
                 if( attrs.localName( i ) == "name" )
@@ -100,7 +99,14 @@ public:
                     job->reaction = attrs.value ( i ).toStdString();
                 else if ( attrs.localName( i ) == "stack" )
                     job->stack = attrs.value( i ).toUInt();
-
+                else if ( attrs.localName( i ) == "materialType" )
+                    job->materialType = attrs.value (i).toStdString();
+                else if ( attrs.localName( i ) == "inorganic" )
+                    job->inorganic = attrs.value (i).toStdString();
+                else if ( attrs.localName( i ) == "other" )
+                    job->other = attrs.value (i).toStdString();
+                else if ( attrs.localName( i ) == "subtype" )
+                    job->subtype = attrs.value (i).toStdString();
             }
         }
 
