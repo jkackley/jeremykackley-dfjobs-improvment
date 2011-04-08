@@ -642,76 +642,81 @@ bool FormanThread::attach()
                 }
             }
 
-
-            strsize = readDWord(*(dfvector) + 0x10);
-            strmode = readDWord(*(dfvector) + 0x14);
-            if (strsize > 255)
+            for (uint32_t ipad = 0; ipad < (size / 4); ipad++)
             {
-                free ((uint32_t *)dfvector);
-                goto vectorsearchdone;
-            }
+                trash = 0;
+                strsize = readDWord(*(dfvector+ipad) + 0x10);
+                strmode = readDWord(*(dfvector+ipad) + 0x14);
 
-            if (strmode == 0x0F)
-            {
-                ReadProcessMemory(hDF, (void *)*(dfvector), (void *)&className, strsize, 0);
-                className[strsize] = '\0';
-            }
-
-            if (strmode == 0x1F)
-            {
-                ReadProcessMemory(hDF, (void *)*(dfvector), (void *)&trash, 4, 0);
-                ReadProcessMemory(hDF, (void *)trash, (void *)&className, strsize, 0);
-                className[strsize] = '\0';
-            }
-
-            if ((inorganicPointer == 0) && (strcmp(className,"IRON") == 0))
-            {
-                inorganicPointer = (a*4) + dfbase;
-                actionLog("Inorganic Pointer Found: " % QString::number(inorganicPointer, 16));
-                for (trash = 0; trash < (size / 4); trash++)
+                if (strsize > 255)
                 {
-                    tstring = readSTLString(*(dfvector+trash));
-                    inorganicMaterials.push_back(tstring);
+                    free ((uint32_t *)dfvector);
+                    goto vectorsearchdone;
                 }
-            }
-            if ((organicAllPointer == 0) && ((strcmp(className,"MEADOW-GRASS") == 0) || (strcmp(className,"MUSHROOM_HELMET_PLUMP") == 0)))
-            {
-                organicAllPointer = (a*4) + dfbase;
-                actionLog("Organic All Pointer Found: " % QString::number(organicAllPointer, 16));
-                for (trash = 0; trash < (size / 4); trash++)
+
+
+                if (strmode == 0x0F)
                 {
-                    tstring = readSTLString(*(dfvector+trash));
-                    organicMaterials.push_back(tstring);
+                    ReadProcessMemory(hDF, (void *)*(dfvector+ipad), (void *)&className, strsize, 0);
+                    className[strsize] = '\0';
                 }
-            }
-            if ((organicPlantPointer == 0) && (strcmp(className,"MUSHROOM_HELMET_PLUMP") == 0))
-            {
-                organicPlantPointer = (a*4) + dfbase;
-                actionLog("Organic Plant Pointer Found: " % QString::number(organicPlantPointer, 16));
-            }
-            if ((organicTreePointer == 0) && (strcmp(className,"MANGROVE") == 0))
-            {
-                organicTreePointer = (a*4) + dfbase;
-                actionLog("Organic Tree Pointer Found: " % QString::number(organicTreePointer, 16));
-            }
-            if ((creatureTypePointer == 0) && (strcmp(className,"TOAD") == 0))
-            {
-                creatureTypePointer = (a*4) + dfbase;
-                actionLog("Creature Type Pointer Found: " % QString::number(creatureTypePointer, 16));
-                for (trash = 0; trash < (size / 4); trash++)
+
+                if (strmode > 0x10)
                 {
-                    tstring = readSTLString(*(dfvector+trash));
-                    creatureTypes.push_back(tstring);
+                    ReadProcessMemory(hDF, (void *)*(dfvector+ipad), (void *)&trash, 4, 0);
+                    ReadProcessMemory(hDF, (void *)trash, (void *)&className, strsize, 0);
+                    className[strsize] = '\0';
                 }
-            }
-            if ((reactionPointer == 0) && (strcmp(className,"TAN_A_HIDE") == 0))
-            {
-                reactionPointer = (a*4) + dfbase;
-                actionLog("Reaction Pointer Found: " % QString::number(reactionPointer, 16));
-                for (trash = 0; trash < (size / 4); trash++)
+
+                if ((inorganicPointer == 0) && (strcmp(className,"IRON") == 0))
                 {
-                    tstring = readSTLString(*(dfvector+trash));
-                    reactionTypes.push_back(tstring);
+                    inorganicPointer = (a*4) + dfbase;
+                    actionLog("Inorganic Pointer Found: " % QString::number(inorganicPointer, 16));
+                    for (trash = 0; trash < (size / 4); trash++)
+                    {
+                        tstring = readSTLString(*(dfvector+trash));
+                        inorganicMaterials.push_back(tstring);
+                    }
+                }
+                if ((organicAllPointer == 0) && ((strcmp(className,"MEADOW-GRASS") == 0) || (strcmp(className,"MUSHROOM_HELMET_PLUMP") == 0)))
+                {
+                    organicAllPointer = (a*4) + dfbase;
+                    actionLog("Organic All Pointer Found: " % QString::number(organicAllPointer, 16));
+                    for (trash = 0; trash < (size / 4); trash++)
+                    {
+                        tstring = readSTLString(*(dfvector+trash));
+                        organicMaterials.push_back(tstring);
+                    }
+                }
+                if ((organicPlantPointer == 0) && (strcmp(className,"MUSHROOM_HELMET_PLUMP") == 0))
+                {
+                    organicPlantPointer = (a*4) + dfbase;
+                    actionLog("Organic Plant Pointer Found: " % QString::number(organicPlantPointer, 16));
+                }
+                if ((organicTreePointer == 0) && (strcmp(className,"MANGROVE") == 0))
+                {
+                    organicTreePointer = (a*4) + dfbase;
+                    actionLog("Organic Tree Pointer Found: " % QString::number(organicTreePointer, 16));
+                }
+                if ((creatureTypePointer == 0) && (strcmp(className,"TOAD") == 0))
+                {
+                    creatureTypePointer = (a*4) + dfbase;
+                    actionLog("Creature Type Pointer Found: " % QString::number(creatureTypePointer, 16));
+                    for (trash = 0; trash < (size / 4); trash++)
+                    {
+                        tstring = readSTLString(*(dfvector+trash));
+                        creatureTypes.push_back(tstring);
+                    }
+                }
+                if ((reactionPointer == 0) && (strcmp(className,"TAN_A_HIDE") == 0))
+                {
+                    reactionPointer = (a*4) + dfbase;
+                    actionLog("Reaction Pointer Found: " % QString::number(reactionPointer, 16));
+                    for (trash = 0; trash < (size / 4); trash++)
+                    {
+                        tstring = readSTLString(*(dfvector+trash));
+                        reactionTypes.push_back(tstring);
+                    }
                 }
             }
             free ((uint32_t *)dfvector);
@@ -774,7 +779,6 @@ bool FormanThread::attach()
     otherMaterials.push_back("FILTH_Y");
     otherMaterials.push_back("UNKNOWN_SUBSTANCE");
     otherMaterials.push_back("GRIME");
-    otherMaterials.push_back("CREATURE_1");
 
     actionStatus("Prepping..");
 
