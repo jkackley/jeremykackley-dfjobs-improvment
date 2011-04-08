@@ -917,7 +917,7 @@ const std::string FormanThread::readSTLString(const uint32_t addr)
     {
         ReadProcessMemory(hDF, (LPCVOID)addr, (LPVOID)text, (SIZE_T)strsize, 0);
     }
-    else if (strmode == 0x1F)
+    else if (strmode > 0x10)
     {
         ReadProcessMemory(hDF, (LPCVOID)readDWord(addr), (LPVOID)text, (SIZE_T)strsize, (SIZE_T)NULL);
     }
