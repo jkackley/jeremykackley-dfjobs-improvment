@@ -145,6 +145,7 @@ int main(int argc, char *argv[])
     settings.cutalltrees=false;
     settings.gatherallplants=false;
     settings.logenabled=false;
+    settings.buffer=5;
 
     {
         DFJobParser handler;
