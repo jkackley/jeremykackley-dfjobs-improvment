@@ -220,7 +220,7 @@ void FormanThread::cullOrder(dfjob *job)
             {
                 writeWord(jobptr+0x38,remaining-a);
                 writeWord(jobptr+0x3a,remaining-a);
-                job->pending -= amount;
+                job->pending -= (amount * job->stack);
                 return;
             }
 

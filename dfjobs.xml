@@ -47,7 +47,7 @@
     <dfjob name="potash from ash" category="ashery" type="191">
         <item type="bar" material="POTASH" />
     </dfjob>
-    <dfjob name="drink" category="still" type="150">
+    <dfjob name="drink" category="still" type="150" stack="5">
         <item type="drink" material="all" />	
     </dfjob>
     <dfjob name="collect sand" category="kiln" type="22">
