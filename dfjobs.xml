@@ -20,16 +20,16 @@
     <dfjob name="gold door" category="forge" type="69" materialType="inorganic" inorganic="GOLD">
         <item type="door" material="all" />
     </dfjob>
-    <dfjob name="wooden bolt" category="craft" type="131" subtype="bolt" materialType="wood">
+    <dfjob name="wooden bolt" category="craft" type="131" subtype="bolt" materialType="wood" stack="25">
         <item type="bolt" material="organic" />
     </dfjob>
-    <dfjob name="bone bolt" category="craft" type="131" subtype="bolt" materialType="bone">
+    <dfjob name="bone bolt" category="craft" type="131" subtype="bolt" materialType="bone" stack="5">
         <item type="bolt" material="creature" />
     </dfjob>
-    <dfjob name="iron bolt" category="forge" type="131" subtype="bolt" materialType="inorganic" inorganic="IRON">
+    <dfjob name="iron bolt" category="forge" type="131" subtype="bolt" materialType="inorganic" inorganic="IRON" stack="25">
         <item type="bolt" material="IRON" />
     </dfjob>
-    <dfjob name="steel bolt" category="forge" type="131" subtype="bolt" materialType="inorganic" inorganic="STEEL">
+    <dfjob name="steel bolt" category="forge" type="131" subtype="bolt" materialType="inorganic" inorganic="STEEL" stack="25">
         <item type="bolt" material="STEEL" />
     </dfjob>
     <dfjob name="charcoal" category="wood furnace" type="186">

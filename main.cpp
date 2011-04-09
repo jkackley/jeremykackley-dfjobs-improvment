@@ -86,7 +86,7 @@ public:
             job->target = 0;
             job->count = 0;
             job->pending = 0;
-            job->stack = 0;
+            job->stack = 1;
             for( int i=0; i<attrs.count(); i++ )
             {
                 if( attrs.localName( i ) == "name" )

@@ -188,11 +188,13 @@ void FormanThread::cullOrder(dfjob *job)
     if (job->pending == 0) return;
     if ((job->count + job->pending) <= job->target) return;
     if (((job->count + job->pending) - job->target)  > 10000) return;
-    uint16_t amount = (job->count + job->pending) - job->target;
+    uint32_t amount = (job->count + job->pending) - job->target;
     if (amount > job->pending) amount = job->pending;
     if (amount <= settings.buffer) return;
     amount -= settings.buffer;
     //actionLog(QString::number(amount));
+    amount = amount / job->stack;
+    if (!amount) return;
 
     uint32_t queuebase = readDWord(queuePointer);
     uint32_t queuepos = readDWord(queuePointer+4);
@@ -243,7 +245,8 @@ void FormanThread::insertOrder(dfjob *job)
     if ((job->target - (job->count + job->pending) > 10000)) return;
     uint16_t amount = job->target - (job->count + job->pending);
     amount += settings.buffer;
-
+    amount = amount / job->stack;
+    if (!amount) return;
 
     if(job->pending > 0)
     {
@@ -258,7 +261,7 @@ void FormanThread::insertOrder(dfjob *job)
                 const uint16_t remaining = readWord(jobptr+0x38) + amount;
                 writeWord(jobptr+0x38,remaining);
                 writeWord(jobptr+0x3a,remaining);
-                job->pending += amount;
+                job->pending += (amount * job->stack);
                 return;
             }
         }
@@ -353,7 +356,7 @@ void FormanThread::insertOrder(dfjob *job)
     WriteProcessMemory(hDF, (void *) freeSpot, (void *) &data, 64, 0);
     writeDWord(readDWord(queuePointer+4), freeSpot);
     writeDWord(queuePointer+4, readDWord(queuePointer+4)+4);
-    job->pending += amount;
+    job->pending += (amount * job->stack);
     return;
 }
 
@@ -378,7 +381,7 @@ void FormanThread::countPending()
         {
             if (compareJob(dfjobs[z], job))
             {
-                dfjobs[z]->pending += readWord(job+0x38);
+                dfjobs[z]->pending += (readWord(job+0x38)  * dfjobs[z]->stack);
                 break;
             }
         }
