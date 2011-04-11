@@ -85,6 +85,7 @@ public:
             job->enabled = false;
             job->target = 0;
             job->count = 0;
+            job->sourcecount = 0;
             job->pending = 0;
             job->stack = 1;
             for( int i=0; i<attrs.count(); i++ )
@@ -111,6 +112,19 @@ public:
         }
 
         if ( name == "item" )
+        {
+            std::map<std::string, std::string> item;
+            for( int i=0; i<attrs.count(); i++ )
+            {
+                if( attrs.localName( i ) == "type" )
+                    item["type"] = attrs.value( i ).toStdString();
+                else if( attrs.localName( i ) == "material" )
+                    item["material"] = attrs.value( i ).toStdString();
+            }
+            job->result.push_back(item);
+        }
+
+        if ( name == "source" )
         {
             std::map<std::string, std::string> item;
             for( int i=0; i<attrs.count(); i++ )

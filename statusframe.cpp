@@ -61,8 +61,9 @@ void StatusFrame::updateStatus()
     {
         ui->tableWidget->setItem(row, 0, new QTableWidgetItem("logs"));
         ui->tableWidget->setItem(row, 1, new QTableWidgetItem(QString::number(settings.logcount)));
-        ui->tableWidget->setItem(row, 2, new QTableWidgetItem(QString::number(settings.logpending)));
-        ui->tableWidget->setItem(row, 3, new QTableWidgetItem("0"));
+        ui->tableWidget->setItem(row, 2, new QTableWidgetItem("0"));
+        ui->tableWidget->setItem(row, 3, new QTableWidgetItem(QString::number(settings.logpending)));
+        ui->tableWidget->setItem(row, 4, new QTableWidgetItem("0"));
         row++;
     }
     for (uint32_t i = 0; i < dfjobs.size(); i++)
@@ -70,8 +71,9 @@ void StatusFrame::updateStatus()
         if (!dfjobs[i]->enabled) continue;
         ui->tableWidget->setItem(row, 0, new QTableWidgetItem(dfjobs[i]->name));
         ui->tableWidget->setItem(row, 1, new QTableWidgetItem(QString::number(dfjobs[i]->count)));
-        ui->tableWidget->setItem(row, 2, new QTableWidgetItem(QString::number(dfjobs[i]->pending)));
-        ui->tableWidget->setItem(row, 3, new QTableWidgetItem(QString::number(dfjobs[i]->target)));
+        ui->tableWidget->setItem(row, 2, new QTableWidgetItem(QString::number(dfjobs[i]->sourcecount)));
+        ui->tableWidget->setItem(row, 3, new QTableWidgetItem(QString::number(dfjobs[i]->pending)));
+        ui->tableWidget->setItem(row, 4, new QTableWidgetItem(QString::number(dfjobs[i]->target)));
         if(dfjobs[i]->target > 0)
             ui->tableWidget->setItem(row, 4, new QTableWidgetItem(QString::number(dfjobs[i]->count*100/dfjobs[i]->target).append("%")));
         row++;

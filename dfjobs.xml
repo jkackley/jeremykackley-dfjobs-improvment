@@ -1,6 +1,7 @@
 <dfjobs>
     <dfjob name="wood door" category="carpenter" type="69" materialType="wood">
         <item type="door" material="all" />
+        <source type="wood" material="all" />
     </dfjob>
     <dfjob name="stone door" category="mason" type="69" materialType="other" other="INORGANIC">
         <item type="door" material="all" />

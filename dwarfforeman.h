@@ -48,6 +48,7 @@ struct dfjob {
     QString catagory;
     uint32_t target;
     uint32_t count;
+    uint32_t sourcecount;
     uint32_t pending;
     uint32_t stack;
     uint8_t type;
@@ -58,6 +59,7 @@ struct dfjob {
     std::string subtype;
     uint32_t reactionPtr;
     std::vector<std::map<std::string, std::string> > result;
+    std::vector<std::map<std::string, std::string> > source;
     bool enabled;
 };
 

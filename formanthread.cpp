@@ -80,6 +80,15 @@ void FormanThread::run()
             }
         }
 
+        for (unsigned int i = 0; i < dfjobs.size() ; i++ )
+        {
+            dfjobs[i]->sourcecount = 0;
+            for (unsigned int j = 0; j < dfjobs[i]->source.size() ; j++)
+            {
+                dfjobs[i]->sourcecount += itemCount[dfjobs[i]->source[j]["type"]][dfjobs[i]->source[j]["material"]];
+            }
+        }
+
         countPending();
 
         for (unsigned int i = 0; i < dfjobs.size() ; i++ )
