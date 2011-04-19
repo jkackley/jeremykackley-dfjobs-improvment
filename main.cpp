@@ -134,7 +134,7 @@ public:
                 else if( attrs.localName( i ) == "material" )
                     item["material"] = attrs.value( i ).toStdString();
             }
-            job->result.push_back(item);
+            job->source.push_back(item);
         }
 
         return true;

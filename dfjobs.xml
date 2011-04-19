@@ -5,33 +5,71 @@
     </dfjob>
     <dfjob name="stone door" category="mason" type="69" materialType="other" other="INORGANIC">
         <item type="door" material="all" />
+        <source type="boulder" material="all" />
     </dfjob>
     <dfjob name="green glass door" category="glass" type="69" materialType="other" other="GLASS_GREEN">
         <item type="door" material="all" />
+        <source type="powder_misc" material="SAND_WHITE" />
+        <source type="powder_misc" material="SAND_TAN" />
+        <source type="powder_misc" material="SAND_BLACK" />
+        <source type="powder_misc" material="SAND_RED" />
+        <source type="powder_misc" material="SAND_YELLOW" />
     </dfjob>
     <dfjob name="clear glass door" category="glass" type="69" materialType="other" other="GLASS_CLEAR">
         <item type="door" material="all" />
-    </dfjob>
-    <dfjob name="crystal glass door" category="glass" type="69" materialType="other" other="GLASS_CRYSTAL">
-        <item type="door" material="all" />
+        <source type="powder_misc" material="SAND_WHITE" />
+        <source type="powder_misc" material="SAND_TAN" />
+        <source type="powder_misc" material="SAND_BLACK" />
+        <source type="powder_misc" material="SAND_RED" />
+        <source type="powder_misc" material="SAND_YELLOW" />
+        <soure type="bar" material="PEARLASH" />
     </dfjob>
     <dfjob name="iron door" category="forge" type="69" materialType="inorganic" inorganic="IRON">
         <item type="door" material="all" />
+        <source type="bar" material="IRON" />
     </dfjob>
     <dfjob name="gold door" category="forge" type="69" materialType="inorganic" inorganic="GOLD">
         <item type="door" material="all" />
+        <source type="bar" material="GOLD" />
+    </dfjob>
+    <dfjob name="steel door" category="forge" type="69" materialType="inorganic" inorganic="STEEL">
+        <item type="door" material="all" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="wooden bed" category="carpenter" type="71" materialType="wood">
+        <item type="bed" material="all" />
+        <source type="wood" material="all" />
+    </dfjob>
+    <dfjob name="wooden chair" category="carpenter" type="72" materialType="wood">
+        <item type="chair" material="all" />
+        <source type="wood" material="all" />
+    </dfjob>
+    <dfjob name="stone chair" category="mason" type="72" materialType="other" other="INORGANIC">
+        <item type="chair" material="all" />
+        <source type="boulder" material="all" />
     </dfjob>
     <dfjob name="wooden bolt" category="craft" type="131" subtype="bolt" materialType="wood" stack="25">
         <item type="bolt" material="organic" />
+        <source type="wood" material="all" />
+    </dfjob>
+    <dfjob name="wooden bolt" category="craft" type="131" subtype="bolt" materialType="wood" stack="25">
+        <item type="bolt" material="organic" />
+        <source type="wood" material="all" />
     </dfjob>
     <dfjob name="bone bolt" category="craft" type="131" subtype="bolt" materialType="bone" stack="5">
         <item type="bolt" material="creature" />
     </dfjob>
+    <dfjob name="copper bolt" category="forge" type="131" subtype="bolt" materialType="inorganic" inorganic="COPPER" stack="25">
+        <item type="bolt" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
     <dfjob name="iron bolt" category="forge" type="131" subtype="bolt" materialType="inorganic" inorganic="IRON" stack="25">
         <item type="bolt" material="IRON" />
+        <source type="bar" material="IRON" />
     </dfjob>
     <dfjob name="steel bolt" category="forge" type="131" subtype="bolt" materialType="inorganic" inorganic="STEEL" stack="25">
         <item type="bolt" material="STEEL" />
+        <source type="bar" material="STEEL" />
     </dfjob>
     <dfjob name="charcoal" category="wood furnace" type="186">
         <item type="bar" material="COAL" />
@@ -41,12 +79,15 @@
     </dfjob>
     <dfjob name="lye" category="ashery" type="188">
         <item type="liquid_misc" material="LYE" />
+        <source type="bar" material="ASH" />
     </dfjob>
     <dfjob name="potash from lye" category="ashery" type="189">
         <item type="bar" material="POTASH" />
+        <source type="liquid_misc" material="LYE" />
     </dfjob>
     <dfjob name="potash from ash" category="ashery" type="191">
         <item type="bar" material="POTASH" />
+        <source type="bar" material="ASH" />
     </dfjob>
     <dfjob name="drink" category="still" type="150" stack="5">
         <item type="drink" material="all" />	
@@ -67,6 +108,7 @@
     </dfjob>
     <dfjob name="pearlash" category="kiln" reaction="MAKE_PEARLASH">
         <item type="bar" material="PEARLASH" />
+        <source type="bar" material="POTASH" />
     </dfjob>
     <dfjob name="coke from coal" category="smelter" reaction="BITUMINOUS_COAL_TO_COKE">
         <item type="bar" material="COAL" />

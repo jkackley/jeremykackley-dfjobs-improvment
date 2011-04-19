@@ -437,6 +437,7 @@ void FormanThread::countItems(bool forbid)
         strcpy(className, className+5);
         if (strcmp(className,"corpse") == 0) continue; // corpses are weird
         if (strcmp(className,"remains") == 0) continue; // so are remains lol
+        if (strcmp(className,"corpsepiece") == 0) continue; // ... and thier pieces
 
         if ((strcmp(className,"bin") == 0) || (strcmp(className,"barrel") == 0))
         {
