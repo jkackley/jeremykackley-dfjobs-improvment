@@ -103,51 +103,6 @@ void FormanThread::run()
         actionNeeded.wait(&mutex);
         mutex.unlock();
     }
-
-
-//    // Millable Products
-//    dfitems[ITEM_DYE].pending = 0;
-//    dfitems[ITEM_FLOUR].pending = 0;
-//    dfitems[ITEM_SUGAR].pending = 0;
-//    const uint16_t jobType = 0x006B;
-//    const uint8_t data[54] = ITEM_DYE_DATA;
-//    dfitems[ITEM_DYE].count = itemCount[69][-1][420][15];
-//    dfitems[ITEM_DYE].count += itemCount[69][-1][420][16];
-//    dfitems[ITEM_DYE].count += itemCount[69][-1][420][17];
-//    dfitems[ITEM_DYE].count += itemCount[69][-1][421][18];
-//    dfitems[ITEM_FLOUR].count = itemCount[69][-1][421][2];
-//    dfitems[ITEM_FLOUR].count += itemCount[69][-1][421][10];
-//    dfitems[ITEM_FLOUR].count += itemCount[69][-1][421][20];
-//    dfitems[ITEM_SUGAR].count = itemCount[69][-1][421][3];
-
-//    uint16_t amount = 0;
-//    if (dfitems[ITEM_DYE].enabled && (dfitems[ITEM_DYE].count < dfitems[ITEM_DYE].max))
-//    {
-//        dfitems[ITEM_DYE].pending = dfitems[ITEM_DYE].max - dfitems[ITEM_DYE].count;
-//        amount += dfitems[ITEM_DYE].max - dfitems[ITEM_DYE].count;
-//    }
-//    if (dfitems[ITEM_SUGAR].enabled && (dfitems[ITEM_SUGAR].count < dfitems[ITEM_SUGAR].max))
-//    {
-//        dfitems[ITEM_SUGAR].pending = dfitems[ITEM_SUGAR].max - dfitems[ITEM_SUGAR].count;
-//        amount += dfitems[ITEM_SUGAR].max - dfitems[ITEM_SUGAR].count;
-//    }
-//    if (dfitems[ITEM_FLOUR].enabled && (dfitems[ITEM_FLOUR].count < dfitems[ITEM_FLOUR].max))
-//    {
-//        dfitems[ITEM_FLOUR].pending = dfitems[ITEM_FLOUR].max - dfitems[ITEM_FLOUR].count;
-//        amount += dfitems[ITEM_FLOUR].max - dfitems[ITEM_FLOUR].count;
-//    }
-
-//    pendingCount[jobType] = pendingCount[jobType] + insertOrder(jobType, data, amount, 0, pendingCount[jobType]);
-//    cullOrder(jobType, data, amount, 0, pendingCount[jobType]);
-
-//    //forbid millable items not part of the group
-//    if (dfitems[ITEM_DYE].enabled || dfitems[ITEM_SUGAR].enabled || dfitems[ITEM_FLOUR].enabled)
-//    {
-//        if ((dfitems[ITEM_DYE].pending > 0) || (dfitems[ITEM_SUGAR].pending > 0) || (dfitems[ITEM_FLOUR].pending > 0))
-//        {
-//            countItems(true);
-//        }
-//    }
 }
 
 bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
@@ -156,15 +111,8 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
     ReadProcessMemory(hDF, (void *)jobptr, (void *) &data, 56, 0);
 
     const uint8_t type = data[0];
-    //const int16_t subtype3 = *((int16_t *)(data+0x02));
-    //const int16_t subtype2 = *((int16_t *)(data+0x04));
-    const int16_t subtype1 = *((int16_t *)(data+0x24));
-    //const int16_t matid = *((int16_t *)(data+0x28));
-    //const int16_t gembitmask = *((int16_t *)(data+0x2C));
-    //const int16_t memorial = *((int16_t *)(data+0x30));
-    //const int16_t bitmask = *((int16_t *)(data+34));
-    //const int16_t left = *((int16_t *)(data+0x38));
-    //const int16_t total = *((int16_t *)(data+0x3A));
+    const int16_t matid = *((int16_t *)(data+0x24));
+    const int16_t mattype = *((int16_t *)(data + 52));
 
     if (type == 0xD5)
     {
@@ -176,19 +124,17 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
     if (job->type == type)
     {
         if (job->materialType.empty()) return true;
-        if ((job->materialType == "bone") &&
-                (data[4] == 0x00) && (data[5] == 0x00) && (data[52] == 0x20))
-            return true;
-        if ((job->materialType == "wood") && (data[52] == 0x02))
-            return true;
-        if ((job->materialType == "other") && ((int16_t)otherMaterials.size() > subtype1) &&
-                (otherMaterials[subtype1] == job->other))
-            return true;
-        if ((job->materialType == "inorganic") && ((int16_t)inorganicMaterials.size() > subtype1) &&
-                (inorganicMaterials[subtype1] == job->inorganic))
-            return true;
+        if ((job->materialType == "wood")    && (mattype == 0x02)) return true; else if (mattype == 0x02) return false;
+        if ((job->materialType == "cloth")   && (mattype == 0x04)) return true; else if (mattype == 0x04) return false;
+        if ((job->materialType == "silk")    && (mattype == 0x08)) return true; else if (mattype == 0x08) return false;
+        if ((job->materialType == "leather") && (mattype == 0x10)) return true; else if (mattype == 0x10) return false;
+        if ((job->materialType == "bone")    && (mattype == 0x20)) return true; else if (mattype == 0x20) return false;
+        if ((job->materialType == "yarn")    && (mattype == 0x1000)) return true; else if (mattype == 0x1000) return false;
+        if ((job->materialType == "other") && (matid > 0) && (matid < 20) &&
+                (otherMaterials[matid] == job->other)) return true;
+        if ((job->materialType == "inorganic") && ((int16_t)inorganicMaterials.size() > matid) &&
+                (matid != -1) && (inorganicMaterials[matid] == job->inorganic)) return true;
     }
-
     return false;
 }
 
@@ -312,19 +258,17 @@ void FormanThread::insertOrder(dfjob *job)
     else
     {
         data[0] = job->type;
-        if (job->materialType == "bone")
-        {
-            data[4] = 0x00;
-            data[5] = 0x00;
-            data[52] = 0x20;
-        }
-        if (job->materialType == "wood")
-        {
-            data[52] = 0x02;
-        }
+
+        if (job->materialType == "wood")    data[52] = 0x02;
+        if (job->materialType == "cloth")   data[52] = 0x04;
+        if (job->materialType == "silk")    data[52] = 0x08;
+        if (job->materialType == "leather") data[52] = 0x10;
+        if (job->materialType == "bone")    data[52] = 0x20;
+        if (job->materialType == "yarn")    data[53] = 0x10;
+
         if (job->materialType == "other")
         {
-            for (unsigned short i = 0; i <= otherMaterials.size(); i++)
+            for (uint16_t i = 0; i <= otherMaterials.size(); i++)
             {
                 if (i == otherMaterials.size())
                 {
@@ -340,7 +284,7 @@ void FormanThread::insertOrder(dfjob *job)
         }
         if (job->materialType == "inorganic")
         {
-            for (unsigned int i = 0; i <= inorganicMaterials.size(); i++)
+            for (uint32_t i = 0; i <= inorganicMaterials.size(); i++)
             {
                 if (i == inorganicMaterials.size())
                 {
@@ -439,7 +383,7 @@ void FormanThread::countItems(bool forbid)
         if (strcmp(className,"remains") == 0) continue; // so are remains lol
         if (strcmp(className,"corpsepiece") == 0) continue; // ... and thier pieces
 
-        if ((strcmp(className,"bin") == 0) || (strcmp(className,"barrel") == 0))
+        if ((strcmp(className,"bin") == 0) || (strcmp(className,"barrel") == 0) || (strcmp(className,"box") == 0))
         {
             const uint32_t csize = (readDWord(items[i] + 0x2c) - readDWord(items[i] + 0x28))/sizeof(uint32_t);
             if (csize > 1) continue;
@@ -457,6 +401,10 @@ void FormanThread::countItems(bool forbid)
         case 27: // shields
         case 28: // helms
         case 29: // gloves
+        case 30: // box/bags
+            if ((typeC != 420) && (typeC >= 19))
+                strcpy(className,"bag");
+            break;
         case 38: // ammo
         case 59: // pants
         case 64: // siege ammo
@@ -514,46 +462,7 @@ void FormanThread::countItems(bool forbid)
 
     }
     free((uint32_t *) items);
-
-
-//    // unforbid all millable plants
-//    if (!forbid)
-//    {
-//        uint8_t statusFlags[4];
-//        DF->ReadRaw(p_items[i]+0xC,4,statusFlags);
-//        if (statusFlags[1] == 0xC0) continue; // caravan
-//
-//        if ((type == 53) && (typeB== -1) && (typeC == 419) &&
-//                ((typeD == 2)||(typeD == 3)||(typeD == 10)||(typeD == 15)||(typeD == 16)||(typeD == 17)||(typeD == 18)||(typeD == 20)))
-//        {
-//            //actionLog("trying to clear forbidden status");
-//            p->writeByte(p_items[i]+0xE, 0x00);
-//        }
-//        itemCount[className][matDesc] += p->readWord(p_items[i]+0x68);
-//        itemCount[className]["all"] += p->readWord(p_items[i]+0x68);
-//        if ((typec > 419) && (typec < 618))
-//            itemCount[className]["organic"] += p->readWord(p_items[i]+0x68);
-//    }
-
-//    if (forbid)
-//    {
-//        if ((dfitems[ITEM_DYE].pending==0) && (type == 53) && (typeB== -1) && (typeC == 419) &&
-//                ((typeD == 15)||(typeD == 16)||(typeD == 17)||(typeD == 18)))
-//        {
-//            p->writeByte(p_items[i]+0xE,8);
-//        }
-//        if ((dfitems[ITEM_FLOUR].pending==0) && (type == 53) && (typeB== -1) && (typeC == 419) &&
-//                ((typeD == 2)||(typeD == 10)||(typeD == 20)))
-//        {
-//            p->writeByte(p_items[i]+0xE,8);
-//        }
-//        if ((dfitems[ITEM_SUGAR].pending==0) && (type == 53) && (typeB== -1) && (typeC == 419) && (typeD == 3))
-//        {
-//            p->writeByte(p_items[i]+0xE,8);
-//        }
-//    }
 }
-
 
 bool FormanThread::attach()
 {
