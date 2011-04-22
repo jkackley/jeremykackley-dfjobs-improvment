@@ -401,10 +401,6 @@ void FormanThread::countItems(bool forbid)
         case 27: // shields
         case 28: // helms
         case 29: // gloves
-        case 30: // box/bags
-            if ((typeC != 420) && (typeC >= 19))
-                strcpy(className,"bag");
-            break;
         case 38: // ammo
         case 59: // pants
         case 64: // siege ammo
@@ -413,6 +409,10 @@ void FormanThread::countItems(bool forbid)
             break;
         case 71: // food
             subtype = readSTLString(readDWord(items[i]+0x90)+0x24);
+            break;
+        case 30: // box/bags
+            if ((typeC != 420) && (typeC >= 19))
+                strcpy(className,"bag");
             break;
         }
 
