@@ -48,6 +48,24 @@
         <item type="chair" material="all" />
         <source type="boulder" material="all" />
     </dfjob>
+    <dfjob name="cloth bag" category="clothier" type="75" materialType="cloth">
+        <item type="bag" material="all" />
+    </dfjob>
+    <dfjob name="silk bag" category="clothier" type="75" materialType="silk">
+        <item type="bag" material="all" />
+    </dfjob>
+    <dfjob name="yarn bag" category="clothier" type="75" materialType="yarn">
+        <item type="bag" material="all" />
+    </dfjob>
+    <dfjob name="leather bag" category="leatherworks" type="75" materialType="leather">
+        <item type="bag" material="all" />
+    </dfjob>
+    <dfjob name="smelt native gold" category="smelter" type="90" materialType="inorganic" inorganic="NATIVE_GOLD">
+        <item type="bar" material="gold" />
+    </dfjob>
+    <dfjob name="smelt magnetite" category="smelter" type="90" materialType="inorganic" inorganic="MAGNETITE">
+        <item type="bar" material="iron" />
+    </dfjob>
     <dfjob name="wooden bolt" category="craft" type="131" subtype="bolt" materialType="wood" stack="25">
         <item type="bolt" material="organic" />
         <source type="wood" material="all" />
