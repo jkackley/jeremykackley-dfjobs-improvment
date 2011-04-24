@@ -48,6 +48,7 @@ std::vector<uint32_t> usedMemory;
 typedef map<std::string, map<std::string, uint32_t> > itemMap;
 itemMap itemCount;
 map<uint16_t, int> pendingCount;
+map<std::string, uint16_t> itemSubTypes;
 
 HANDLE hDF;
 
@@ -111,6 +112,7 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
     ReadProcessMemory(hDF, (void *)jobptr, (void *) &data, 56, 0);
 
     const uint8_t type = data[0];
+    const uint16_t subtype = *((int16_t *)(data+0x04));
     const int16_t matid = *((int16_t *)(data+0x24));
     const int16_t matsubid = *((int16_t *)(data+0x28));
     const int16_t mattype = *((int16_t *)(data + 52));
@@ -124,6 +126,7 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
     }
     if (job->type == type)
     {
+        if ((!job->subtype.empty()) && (subtype != itemSubTypes[job->subtype])) return false;
         if (job->materialType.empty()) return true;
         if ((job->materialType == "wood")    && (mattype == 0x02)) return true; else if (mattype == 0x02) return false;
         if ((job->materialType == "cloth")   && (mattype == 0x04)) return true; else if (mattype == 0x04) return false;
@@ -303,7 +306,7 @@ void FormanThread::insertOrder(dfjob *job)
         }
     }
 
-    if (job->subtype == "bolt") memset (data+4, 0, 2); // UGLY HACK JUST FOR NOW
+    if (!job->subtype.empty()) memcpy (data+4, &itemSubTypes[job->subtype], 2);
 
     memcpy (data+56, &amount, 2);
     memcpy (data+58, &amount, 2);
@@ -517,7 +520,7 @@ bool FormanThread::attach()
 
 
     uint32_t *dfvector = 0;
-    uint32_t trash = 0;
+    uint32_t trash,rtti,typeinfo = 0;
     char className[256] = {0};
     std:: string tstring;
     uint32_t strsize = 0;
@@ -564,6 +567,23 @@ bool FormanThread::attach()
                     goto vectorsearchdone;
                 }
             }
+
+            if(!ReadProcessMemory(hDF, (void *)(*(dfvector)), (void *)&trash, 4, 0)) goto readclassfail;
+            if(!ReadProcessMemory(hDF, (void *)(trash - 0x4), (void *)&rtti, 4, 0)) goto readclassfail;
+            if(!ReadProcessMemory(hDF, (void *)(rtti + 0xC), (void *)&typeinfo, 4, 0)) goto readclassfail;
+            if(!ReadProcessMemory(hDF, (void *)(typeinfo + 0xC), (void *)&className, 255, 0)) goto readclassfail;
+            className[255] = '\0';
+            if (strlen(className) > 2) className[strlen(className)-2] = '\0';
+            if(strncmp(className,"itemdef_",8) == 0)
+            {
+                for (trash = 0; trash < (size / 4); trash++)
+                {
+                    tstring = readSTLString(*(dfvector+trash) + 0x24);
+                    itemSubTypes[tstring] = readWord(*(dfvector+trash) + 0x20);
+                }
+            }
+            goto vectorsearchdone;
+            readclassfail:
 
             for (uint32_t ipad = 0; ipad < (size / 4); ipad++)
             {

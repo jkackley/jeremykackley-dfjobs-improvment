@@ -89,6 +89,14 @@
         <item type="bolt" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
+    <dfjob name="steel disc" category="forge" type="142" subtype="disc" materialType="inorganic" inorganic="STEEL">
+        <item type="disc" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="steel spike" category="forge" type="142" subtype="spike" materialType="inorganic" inorganic="STEEL">
+        <item type="spike" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
     <dfjob name="charcoal" category="wood furnace" type="186">
         <item type="bar" material="COAL" />
     </dfjob>
