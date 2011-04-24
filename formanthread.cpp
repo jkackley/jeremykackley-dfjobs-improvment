@@ -134,7 +134,7 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
         if ((job->materialType == "leather") && (mattype == 0x10)) return true; else if (mattype == 0x10) return false;
         if ((job->materialType == "bone")    && (mattype == 0x20)) return true; else if (mattype == 0x20) return false;
         if ((job->materialType == "yarn")    && (mattype == 0x1000)) return true; else if (mattype == 0x1000) return false;
-        if ((job->materialType == "other") && (matid > 0) && (matid < 20) &&
+        if ((job->materialType == "other") && (matid >= 0) && (matid < 20) &&
                 (otherMaterials[matid] == job->other)) return true;
         if ((job->materialType == "inorganic") && ((int16_t)inorganicMaterials.size() > matsubid) &&
                 (matid == 0) && (matsubid != -1) && (inorganicMaterials[matsubid] == job->inorganic)) return true;
