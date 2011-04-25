@@ -61,6 +61,7 @@ struct dfjob {
     std::vector<std::map<std::string, std::string> > result;
     std::vector<std::map<std::string, std::string> > source;
     bool enabled;
+    bool all;
 };
 
 #endif // DWARFFOREMAN_H

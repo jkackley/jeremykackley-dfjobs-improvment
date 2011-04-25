@@ -84,7 +84,7 @@ public:
         if ( name == "job" )
         {
             QString name;
-            bool enabled = false;
+            bool enabled = false,all = false;
             uint32_t target = 0;
 
             for ( int i = 0; i < attrs.count(); i++ )
@@ -95,6 +95,8 @@ public:
                     target = attrs.value( i ).toUInt();
                 else if ( attrs.localName( i ) == "enabled" )
                     enabled = (attrs.value( i ) == "true");
+                else if ( attrs.localName( i ) == "all" )
+                    all = (attrs.value( i ) == "true");
             }
 
             if ( name.size() > 0 )
@@ -105,6 +107,7 @@ public:
                     {
                         dfjobs[i]->enabled = enabled;
                         dfjobs[i]->target = target;
+                        dfjobs[i]->all = all;
                         return true;
                     }
                 }
@@ -213,6 +216,7 @@ void MainWindow::save()
         writer.writeStartElement("job");
         writer.writeAttribute("name", dfjobs[i]->name);
         writer.writeAttribute("enabled", dfjobs[i]->enabled ? "true" : "false");
+        writer.writeAttribute("all", dfjobs[i]->all ? "true" : "false");
         writer.writeAttribute("target", QString::number(dfjobs[i]->target));
         writer.writeEndElement();
     }

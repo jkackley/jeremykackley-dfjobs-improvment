@@ -82,6 +82,10 @@ void ConfigFrame::onItemChanged(QTreeWidgetItem * item, int t)
     {
         job->enabled = (item->checkState(1) == Qt::Checked);
     }
+    else if (t == 3)
+    {
+        job->all = (item->checkState(3) == Qt::Checked);
+    }
     else if (t == 2)
     {
         const int a = item->text(t).toInt();
@@ -127,6 +131,7 @@ void ConfigFrame::configUpdated()
         item->setText(0, dfjobs[i]->name);
         item->setCheckState(1, lookup[dfjobs[i]->enabled]);
         item->setText(2, QString::number(dfjobs[i]->target));
+        item->setCheckState(3, lookup[dfjobs[i]->all]);
     }
 }
 
