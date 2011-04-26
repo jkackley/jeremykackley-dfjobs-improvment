@@ -128,11 +128,17 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
     {
         if ((!job->subtype.empty()) && (subtype != itemSubTypes[job->subtype])) return false;
         if (job->materialType.empty()) return true;
+        if ((job->materialType == "plant")   && (mattype == 0x01)) return true; else if (mattype == 0x01) return false;
         if ((job->materialType == "wood")    && (mattype == 0x02)) return true; else if (mattype == 0x02) return false;
         if ((job->materialType == "cloth")   && (mattype == 0x04)) return true; else if (mattype == 0x04) return false;
         if ((job->materialType == "silk")    && (mattype == 0x08)) return true; else if (mattype == 0x08) return false;
         if ((job->materialType == "leather") && (mattype == 0x10)) return true; else if (mattype == 0x10) return false;
         if ((job->materialType == "bone")    && (mattype == 0x20)) return true; else if (mattype == 0x20) return false;
+        if ((job->materialType == "shell")   && (mattype == 0x40)) return true; else if (mattype == 0x40) return false;
+        if ((job->materialType == "soap")    && (mattype == 0x0100)) return true; else if (mattype == 0x0100) return false;
+        if ((job->materialType == "tooth")   && (mattype == 0x0200)) return true; else if (mattype == 0x0200) return false;
+        if ((job->materialType == "horn")    && (mattype == 0x0400)) return true; else if (mattype == 0x0400) return false;
+        if ((job->materialType == "pearl")   && (mattype == 0x0800)) return true; else if (mattype == 0x0800) return false;
         if ((job->materialType == "yarn")    && (mattype == 0x1000)) return true; else if (mattype == 0x1000) return false;
         if ((job->materialType == "other") && (matid >= 0) && (matid < 20) &&
                 (otherMaterials[matid] == job->other)) return true;
@@ -145,13 +151,27 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
 void FormanThread::cullOrder(dfjob *job)
 {
     if (job->pending == 0) return;
-    if ((job->count + job->pending) <= job->target) return;
-    if (((job->count + job->pending) - job->target)  > 10000) return;
-    uint32_t amount = (job->count + job->pending) - job->target;
-    if (amount > job->pending) amount = job->pending;
-    if (amount <= settings.buffer) return;
-    amount -= settings.buffer;
+    uint16_t amount = 0;
+
+    if (job->all)
+    {
+        if ((int)job->pending <= ((int)job->sourcecount - (int)job->target)) return;
+        if (((int)job->pending - ((int)job->sourcecount - (int)job->target)) > 10000) return;
+        amount = job->pending - (job->sourcecount - job->target);
+    }
+    else
+    {
+        if ((job->count + job->pending) <= job->target) return;
+        if (((job->count + job->pending) - job->target)  > 10000) return;
+        amount = (job->count + job->pending) - job->target;
+        if (amount > job->pending) amount = job->pending;
+        if (amount <= settings.buffer) return;
+        amount -= settings.buffer;
+        //actionLog(QString::number(amount));
+    }
+
     //actionLog(QString::number(amount));
+    if (amount >= job->pending) amount = job->pending - 1;
     amount = amount / job->stack;
     if (!amount) return;
 
@@ -199,11 +219,22 @@ void FormanThread::cullOrder(dfjob *job)
 
 void FormanThread::insertOrder(dfjob *job)
 {
+    uint16_t amount = 0;
 
-    if ((job->count + job->pending) >= job->target) return;
-    if ((job->target - (job->count + job->pending) > 10000)) return;
-    uint16_t amount = job->target - (job->count + job->pending);
-    amount += settings.buffer;
+    if (job->all)
+    {
+        if (job->pending >= (job->sourcecount - job->target)) return;
+        if (((job->sourcecount - job->target) - job->pending) > 10000) return;
+        amount = (job->sourcecount - job->target) - job->pending;
+    }
+    else
+    {
+        if ((job->count + job->pending) >= job->target) return;
+        if ((job->target - (job->count + job->pending) > 10000)) return;
+        amount = job->target - (job->count + job->pending);
+        amount += settings.buffer;
+    }
+
     amount = amount / job->stack;
     if (!amount) return;
 
@@ -263,11 +294,17 @@ void FormanThread::insertOrder(dfjob *job)
     {
         data[0] = job->type;
 
+        if (job->materialType == "plant")   data[52] = 0x01;
         if (job->materialType == "wood")    data[52] = 0x02;
         if (job->materialType == "cloth")   data[52] = 0x04;
         if (job->materialType == "silk")    data[52] = 0x08;
         if (job->materialType == "leather") data[52] = 0x10;
         if (job->materialType == "bone")    data[52] = 0x20;
+        if (job->materialType == "shell")   data[52] = 0x40;
+        if (job->materialType == "soap")    data[53] = 0x01;
+        if (job->materialType == "tooth")   data[53] = 0x02;
+        if (job->materialType == "horn")    data[53] = 0x04;
+        if (job->materialType == "pearl")   data[53] = 0x08;
         if (job->materialType == "yarn")    data[53] = 0x10;
 
         if (job->materialType == "other")
@@ -371,7 +408,7 @@ void FormanThread::countItems(bool forbid)
         uint8_t statusFlags[4];
         ReadProcessMemory(hDF,(void *)(items[i]+0xC),statusFlags,4,0);
         if((statusFlags[1] == 0xC0) || // Caravan
-                (statusFlags[2] > 0) || // Marked forbidden or dumped
+                ((statusFlags[2] > 0) && (statusFlags[2] != 0x80)) || // Marked forbidden or dumped(but not melt)
                 (statusFlags[0] == 2) || // Assigned to a task
                 ((statusFlags[1] & 4) == 4) || // A wall or floor or something
                 (statusFlags[0] == 32))  // Part of a building
@@ -462,6 +499,13 @@ void FormanThread::countItems(bool forbid)
             itemCount[subtype][material] += quantity;
             itemCount[subtype][materialType] += quantity;
             itemCount[subtype]["all"] += quantity;
+        }
+
+        if (statusFlags[2] == 0x80)
+        {
+            itemCount["melt"][material] += quantity;
+            itemCount["melt"][materialType] += quantity;
+            itemCount["melt"]["all"] += quantity;
         }
 
     }

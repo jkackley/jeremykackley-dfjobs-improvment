@@ -190,7 +190,7 @@
      </column>
      <column>
       <property name="text">
-       <string>all</string>
+       <string>all except target</string>
       </property>
      </column>
     </widget>

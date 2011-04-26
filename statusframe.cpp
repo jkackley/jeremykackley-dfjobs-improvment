@@ -76,7 +76,7 @@ void StatusFrame::updateStatus()
         ui->tableWidget->setItem(row, 3, new QTableWidgetItem(QString::number(dfjobs[i]->pending)));
         ui->tableWidget->setItem(row, 4, new QTableWidgetItem(dfjobs[i]->all ? ("(" % QString::number(dfjobs[i]->target) % ")") : QString::number(dfjobs[i]->target)));
         if(dfjobs[i]->target > 0)
-            ui->tableWidget->setItem(row, 5, new QTableWidgetItem(QString::number(dfjobs[i]->count*100/dfjobs[i]->target).append("%")));
+            ui->tableWidget->setItem(row, 5, new QTableWidgetItem(dfjobs[i]->all ? "" : QString::number(dfjobs[i]->count*100/dfjobs[i]->target).append("%")));
         row++;
     }
 

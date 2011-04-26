@@ -66,9 +66,8 @@
     <dfjob name="smelt magnetite" category="smelter" type="90" materialType="inorganic" inorganic="MAGNETITE">
         <item type="bar" material="iron" />
     </dfjob>
-    <dfjob name="wooden bolt" category="craft" type="131" subtype="bolt" materialType="wood" stack="25">
-        <item type="bolt" material="organic" />
-        <source type="wood" material="all" />
+    <dfjob name="melt metal" category="smelter" type="91">
+        <source type="melt" material="all" />
     </dfjob>
     <dfjob name="wooden bolt" category="craft" type="131" subtype="bolt" materialType="wood" stack="25">
         <item type="bolt" material="organic" />
