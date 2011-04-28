@@ -53,7 +53,7 @@ map<std::string, uint16_t> itemSubTypes;
 HANDLE hDF;
 
 uint32_t queuePointer = 0, itemPointer = 0, inorganicPointer = 0, otherPointer = 0, organicAllPointer = 0,
-    organicPlantPointer = 0, organicTreePointer = 0, creatureTypePointer = 0, reactionPointer = 0;
+    organicPlantPointer = 0, organicTreePointer = 0, creatureTypePointer = 0, reactionPointer = 0, mapPointer = 0;
 vector<string> inorganicMaterials, organicMaterials, otherMaterials, creatureTypes, reactionTypes;
 
 void FormanThread::run()
@@ -628,6 +628,12 @@ bool FormanThread::attach()
             }
             goto vectorsearchdone;
             readclassfail:
+
+            if ((readDWord(*(dfvector))==0x00010063))
+            {
+                mapPointer = (a*4) + dfbase - 4;
+                actionLog("Mapdata Array Found: " % QString::number(mapPointer,16));
+            }
 
             for (uint32_t ipad = 0; ipad < (size / 4); ipad++)
             {
