@@ -47,7 +47,7 @@ signals:
 private:
     bool compareJob(const dfjob *job, const uint32_t jobptr);
     void countPending();
-    void countItems(bool);
+    void countItems();
     void cullOrder(dfjob *job);
     void insertOrder(dfjob *job);
     bool attach();

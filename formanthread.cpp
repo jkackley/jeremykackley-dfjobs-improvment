@@ -25,14 +25,14 @@
  *
  */
 
+#include <windows.h>
+#include <tlhelp32.h>
 #include <QMutex>
 #include <QWaitCondition>
 #include <QString>
-#include <windows.h>
-#include <tlhelp32.h>
+#include <QStringBuilder>
 #include <vector>
 #include <algorithm>
-#include <QStringBuilder>
 #include "dwarfforeman.h"
 #include "formanthread.h"
 
@@ -40,66 +40,55 @@ using namespace std;
 
 extern QWaitCondition actionNeeded;
 extern dfsettings settings;
-extern std::vector<dfjob *> dfjobs;
-
-QMutex mutex;
-
-std::vector<uint32_t> usedMemory;
-typedef map<std::string, map<std::string, uint32_t> > itemMap;
-itemMap itemCount;
-map<uint16_t, int> pendingCount;
-map<std::string, uint16_t> itemSubTypes;
+extern vector<dfjob *> dfjobs;
 
 HANDLE hDF;
+QMutex mutex;
 
-uint32_t queuePointer = 0, itemPointer = 0, inorganicPointer = 0, otherPointer = 0, organicAllPointer = 0,
-    organicPlantPointer = 0, organicTreePointer = 0, creatureTypePointer = 0, reactionPointer = 0, mapPointer = 0;
+vector<uint32_t> usedMemory;
+map<string, map<string, uint32_t> > itemCount;
+map<uint16_t, int> pendingCount;
+map<string, uint32_t> itemSubTypes;
 vector<string> inorganicMaterials, organicMaterials, otherMaterials, creatureTypes, reactionTypes;
+
+uint32_t queuePointer = 0, itemPointer = 0, inorganicPointer = 0, otherPointer = 0,
+    organicAllPointer = 0, creatureTypePointer = 0, reactionPointer = 0;
 
 void FormanThread::run()
 {
-    emit actionStatus("Connecting..");
-
+    actionStatus("Connecting..");
     if(!attach()) return;
 
     while(true)
     {
-        countItems(false);
+        countItems();
         settings.logcount = itemCount["wood"]["all"];
-
-        for (unsigned int i = 0; i < dfjobs.size() ; i++ )
+        for (unsigned int i = 0; i < dfjobs.size(); i++)
         {
-            //qDebug() << dfjobs[i]->name;
             dfjobs[i]->count = 0;
-            for (unsigned int j = 0; j < dfjobs[i]->result.size() ; j++)
+            for (unsigned int j = 0; j < dfjobs[i]->result.size(); j++)
             {
                 dfjobs[i]->count += itemCount[dfjobs[i]->result[j]["type"]][dfjobs[i]->result[j]["material"]];
-                //qDebug() << dfjobs[i]->result[j]["type"].c_str();
-                //std::map<std::string, std::string> k;
-                //k =  dfjobs[i]->result[j];
-                //qDebug() << "[" << k["type"].c_str() << "] [" << k["material"].c_str() << "]";
             }
         }
-
-        for (unsigned int i = 0; i < dfjobs.size() ; i++ )
+        for (unsigned int i = 0; i < dfjobs.size(); i++)
         {
             dfjobs[i]->sourcecount = 0;
-            for (unsigned int j = 0; j < dfjobs[i]->source.size() ; j++)
+            for (unsigned int j = 0; j < dfjobs[i]->source.size(); j++)
             {
                 dfjobs[i]->sourcecount += itemCount[dfjobs[i]->source[j]["type"]][dfjobs[i]->source[j]["material"]];
             }
         }
 
         countPending();
-
-        for (unsigned int i = 0; i < dfjobs.size() ; i++ )
+        for (unsigned int i = 0; i < dfjobs.size(); i++)
         {
             if (!dfjobs[i]->enabled) continue;
             insertOrder(dfjobs[i]);
             cullOrder(dfjobs[i]);
         }
 
-        emit actionDone();
+        actionDone();
         mutex.lock();
         actionNeeded.wait(&mutex);
         mutex.unlock();
@@ -112,18 +101,19 @@ bool FormanThread::compareJob(const dfjob *job, const uint32_t jobptr)
     ReadProcessMemory(hDF, (void *)jobptr, (void *) &data, 56, 0);
 
     const uint8_t type = data[0];
-    const uint16_t subtype = *((int16_t *)(data+0x04));
+    const uint16_t subtype = *((uint16_t *)(data+0x04));
     const int16_t matid = *((int16_t *)(data+0x24));
     const int16_t matsubid = *((int16_t *)(data+0x28));
     const int16_t mattype = *((int16_t *)(data + 52));
 
     if (type == 0xD5)
     {
-        std::string text = readSTLString(jobptr+8);
+        string text = readSTLString(jobptr+8);
         if (job->reaction.empty() || text.empty()) return false;
         if (job->reaction == text) return true;
         return false;
     }
+
     if (job->type == type)
     {
         if ((!job->subtype.empty()) && (subtype != itemSubTypes[job->subtype])) return false;
@@ -382,9 +372,9 @@ void FormanThread::countPending()
     }
 }
 
-void FormanThread::countItems(bool forbid)
+void FormanThread::countItems()
 {
-    if(!forbid) itemCount.clear();
+    itemCount.clear();
 
     const uint32_t itembase = readDWord(itemPointer);
     const uint32_t itempos = readDWord(itemPointer+4);
@@ -431,7 +421,7 @@ void FormanThread::countItems(bool forbid)
             if ((csize == 1) && (statusFlags[0] != 0)) continue;
         }
 
-        std::string subtype;
+        string subtype;
         switch (type)
         {
         case 13: // instruments
@@ -566,7 +556,7 @@ bool FormanThread::attach()
     uint32_t *dfvector = 0;
     uint32_t trash,rtti,typeinfo = 0;
     char className[256] = {0};
-    std:: string tstring;
+    string tstring;
     uint32_t strsize = 0;
     uint32_t strmode = 0;
     uint32_t size = 0;
@@ -629,12 +619,6 @@ bool FormanThread::attach()
             goto vectorsearchdone;
             readclassfail:
 
-            if ((readDWord(*(dfvector))==0x00010063))
-            {
-                mapPointer = (a*4) + dfbase - 4;
-                actionLog("Mapdata Array Found: " % QString::number(mapPointer,16));
-            }
-
             for (uint32_t ipad = 0; ipad < (size / 4); ipad++)
             {
                 trash = 0;
@@ -681,16 +665,6 @@ bool FormanThread::attach()
                         organicMaterials.push_back(tstring);
                     }
                 }
-                if ((organicPlantPointer == 0) && (strcmp(className,"MUSHROOM_HELMET_PLUMP") == 0))
-                {
-                    organicPlantPointer = (a*4) + dfbase;
-                    actionLog("Organic Plant Pointer Found: " % QString::number(organicPlantPointer, 16));
-                }
-                if ((organicTreePointer == 0) && (strcmp(className,"MANGROVE") == 0))
-                {
-                    organicTreePointer = (a*4) + dfbase;
-                    actionLog("Organic Tree Pointer Found: " % QString::number(organicTreePointer, 16));
-                }
                 if ((creatureTypePointer == 0) && (strcmp(className,"TOAD") == 0))
                 {
                     creatureTypePointer = (a*4) + dfbase;
@@ -721,8 +695,7 @@ bool FormanThread::attach()
 
         vectorsearchdone:
 
-
-            // not a bug here, the stuff we're looking for is always in the first 1/4th of memory space while vectors can be found later
+        // not a bug here, the stuff we're looking for is always in the first 1/4th of memory space while vectors can be found later
         if ((memory8[a] == 0x8b)    && (memory8[a+1] == 0x15) && (memory8[a+6] == 0x8b)  && (memory8[a+7] == 0x34) &&
             (memory8[a+8] == 0x8a)  && (memory8[a+9] == 0x85) && (memory8[a+10] == 0xf6) && (memory8[a+11] == 0x74) &&
             (memory8[a+12] == 0x0f) && (memory8[a+13] == 0xe8))
@@ -743,7 +716,7 @@ bool FormanThread::attach()
     }
     free((uint8_t *)memory8);
 
-    if (queuePointer && itemPointer && inorganicPointer && organicAllPointer && organicPlantPointer && organicTreePointer &&
+    if (queuePointer && itemPointer && inorganicPointer && organicAllPointer &&
             creatureTypePointer && reactionPointer)
     {
         actionLog("All vectors successfully found!");
@@ -784,8 +757,8 @@ bool FormanThread::attach()
         const LPVOID lpvResult = VirtualAllocEx(hDF, NULL, 0x20000, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
         if(lpvResult == NULL)
         {
-                actionPopup("Allocating memory failed.", true);
-                return false;
+            actionPopup("Allocating memory failed.", true);
+            return false;
         }
         actionLog("Allocated memory at " % QString::number((uint32_t)lpvResult, 16));
 
@@ -902,7 +875,7 @@ bool FormanThread::writeByte(const uint32_t address, const uint8_t data)
     return(WriteProcessMemory(hDF, (LPVOID)address, (LPCVOID)&data, (SIZE_T)1, (SIZE_T)NULL));
 }
 
-const std::string FormanThread::readSTLString(const uint32_t addr)
+const string FormanThread::readSTLString(const uint32_t addr)
 {
     const uint32_t strsize = readDWord(addr + 0x10);
     const uint32_t strmode = readDWord(addr + 0x14);
@@ -924,6 +897,6 @@ const std::string FormanThread::readSTLString(const uint32_t addr)
     }
 
     text[strsize] = '\0';
-    std::string stlstring(text);
+    string stlstring(text);
     return stlstring;
 }

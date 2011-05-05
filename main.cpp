@@ -83,6 +83,7 @@ public:
         {
             job = new dfjob;
             job->enabled = false;
+            job->all = false;
             job->target = 0;
             job->count = 0;
             job->sourcecount = 0;
