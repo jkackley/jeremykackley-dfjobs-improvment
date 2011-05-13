@@ -235,10 +235,13 @@
         <item type="bar" material="creature" />
     </dfjob>	
 	
+   
+<!--		Waiting until I can make these so I can get the actual item information.   
+   
     <dfjob name="Make plaster powder" category="kiln" reaction="MAKE_PLASTER_POWDER">
         <item type="bar" material="creature" />
     </dfjob>	
-
+  -->
 
     <dfjob name="Crutch, Wood" category="WOOD" type="208" materialType="wood">
         <item type="crutch" material="all" />
