@@ -142,7 +142,7 @@
         <item type="bar" material="STEEL" />
     </dfjob>
     
-    <!--- Begin JK Insert; these were done by hand for various reasons and can't be casually regenerated.  Possibly some will transition to the bottom as I adapt them for 'many types'. --->
+    <!-- Begin JK Insert; these were done by hand for various reasons and can't be casually regenerated.  Possibly some will transition to the bottom as I adapt them for 'many types'. -->
     
     
 	    <dfjob name="Adamantine bolt" category="ADAMANTINE" type="131" subtype="bolt" materialType="inorganic" inorganic="ADAMANTINE" stack="25">
@@ -316,7 +316,7 @@
 	
     
     
-    <!--- The lines at the bottom were generated from a template.  Ergo they might contain some really retarded mistake. The possibile necessity of regeneration is why they are sitting at the bottom of the file. --->
+    <!-- The lines at the bottom were generated from a template.  Ergo they might contain some really retarded mistake. The possibile necessity of regeneration is why they are sitting at the bottom of the file. -->
 	
 	 <dfjob name="Helm, IRON" category="IRON" type="102" subtype="helm" materialType="inorganic" inorganic="IRON">
         <item type="helm" material="IRON" />;
@@ -565,7 +565,7 @@
     </dfjob>
 
 
-<!--- Warning, bins are buggy! --->
+<!-- Warning, bins are buggy! -->
 
     <dfjob name="Bin, IRON" category="IRON" type="76" materialType="inorganic" inorganic="IRON">
         <item type="bin" material="IRON" />
