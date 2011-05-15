@@ -115,7 +115,7 @@
         <source type="bar" material="ASH" />
     </dfjob>
     <dfjob name="drink" category="still" type="150" stack="5">
-        <item type="drink" material="all" />	
+        <item type="drink" material="all" />    
     </dfjob>
     <dfjob name="collect sand" category="kiln" type="22">
         <item type="powder_misc" material="SAND_WHITE" />
@@ -145,62 +145,65 @@
     <!-- Begin JK Insert; these were done by hand for various reasons and can't be casually regenerated.  Possibly some will transition to the bottom as I adapt them for 'many types'. -->
     
     
-	    <dfjob name="Adamantine bolt" category="ADAMANTINE" type="131" subtype="bolt" materialType="inorganic" inorganic="ADAMANTINE" stack="25">
+            <dfjob name="Adamantine bolt" category="ADAMANTINE" type="131" subtype="bolt" materialType="inorganic" inorganic="ADAMANTINE" stack="25">
         <item type="bolt" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
-	
-	    <dfjob name="Silver bolt" category="SILVER" type="131" subtype="bolt" materialType="inorganic" inorganic="SILVER" stack="25">
+        
+            <dfjob name="Silver bolt" category="SILVER" type="131" subtype="bolt" materialType="inorganic" inorganic="SILVER" stack="25">
         <item type="bolt" material="SILVER" />
         <source type="bar" material="SILVER" />
     </dfjob>
-	
-	    <dfjob name="Copper bolt" category="COPPER" type="131" subtype="bolt" materialType="inorganic" inorganic="COPPER" stack="25">
+        
+            <dfjob name="Copper bolt" category="COPPER" type="131" subtype="bolt" materialType="inorganic" inorganic="COPPER" stack="25">
         <item type="bolt" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-	
-	    <dfjob name="Bronze bolt" category="BRONZE" type="131" subtype="bolt" materialType="inorganic" inorganic="BRONZE" stack="25">
+        
+            <dfjob name="Bronze bolt" category="BRONZE" type="131" subtype="bolt" materialType="inorganic" inorganic="BRONZE" stack="25">
         <item type="bolt" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
-	
-	    <dfjob name="Bismuth Bronze bolt" category="BISMUTH_BRONZE" type="131" subtype="bolt" materialType="inorganic" inorganic="BISMUTH_BRONZE" stack="25">
+        
+            <dfjob name="Bismuth Bronze bolt" category="BISMUTH_BRONZE" type="131" subtype="bolt" materialType="inorganic" inorganic="BISMUTH_BRONZE" stack="25">
         <item type="bolt" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
+        
+
 	
-    <dfjob name="stone block" category="mason" type="81" materialType="other" other="INORGANIC">
+	    <dfjob name="stone block" category="mason" type="81" materialType="other" other="INORGANIC">
         <item type="blocks" material="all" />
         <source type="boulder" material="all" />
     </dfjob>
-    <dfjob name="stone Armor Stand" category="mason" type="77" materialType="other" other="INORGANIC">
+	
+    <dfjob name="Armor Stand, Stone" category="mason" type="77" materialType="other" other="INORGANIC">
         <item type="armorstand" material="all" />
         <source type="boulder" material="all" />
     </dfjob>
-    <dfjob name="stone Weapon Rack" category="mason" type="78" materialType="other" other="INORGANIC">
+    <dfjob name="Weapon Rack, Stone" category="mason" type="78" materialType="other" other="INORGANIC">
         <item type="weaponrack" material="all" />
         <source type="boulder" material="all" />
     </dfjob>
-    <dfjob name="stone Table" category="mason" type="74" materialType="other" other="INORGANIC">
+    <dfjob name="Table, Stone" category="mason" type="74" materialType="other" other="INORGANIC">
         <item type="table" material="all" />
         <source type="boulder" material="all" />
     </dfjob>
-    <dfjob name="stone Coffin" category="mason" type="73" materialType="other" other="INORGANIC">
+    <dfjob name="Coffin, Stone" category="mason" type="73" materialType="other" other="INORGANIC">
         <item type="coffin" material="all" />
         <source type="boulder" material="all" />
     </dfjob>
-    <dfjob name="stone Chest" category="mason" type="75" materialType="other" other="INORGANIC">
+    <dfjob name="Chest, Stone (Coffer)" category="mason" type="75" materialType="other" other="INORGANIC">
         <item type="box" material="all" />
         <source type="boulder" material="all" />
     </dfjob>
-	
+        
 <dfjob name="Crossbow, WOOD" category="WOOD" type="97" subtype="crossbow" materialType="WOOD">
         <item type="crossbow" material="WOOD" />
         <source type="WOOD" material="all" />
     </dfjob>
-	
-	<dfjob name="Crossbow, BONE" category="BONE" type="97" subtype="crossbow" materialType="bone">
+        
+        <dfjob name="Crossbow, BONE" category="BONE" type="97" subtype="crossbow" materialType="bone">
         <item type="crossbow" material="creature" />
     </dfjob>
 <dfjob name="Spear, WOOD" category="WOOD" type="97" subtype="spear" materialType="WOOD">
@@ -208,16 +211,32 @@
         <source type="wood" material="all" />
     </dfjob>
 
-
-	<dfjob name="Short sword, ROCK" category="ROCK" type="97" subtype="short sword" materialType="other" other="INORGANIC">
+<!-- This one might not work.  hasn't been tested.-->
+        <dfjob name="Short sword, ROCK" category="other" type="97" subtype="short sword" materialType="other" other="INORGANIC">
         <item type="short sword" material="all" />
-        <source type="boulder" material="IRON" />
+        <source type="boulder" material="Obsidian" />
+        <source type="wood" material="all" />
     </dfjob>
-	
-	
-	
-	
+       
+    <dfjob name="Make Totem" category="Other" type="130"  materialType="bone">
+        <item type="totem" material="all" />       
+    </dfjob>
+        
 		
+<!--		This one is an oddity, the other material types seem to work fine, but this one does
+	'make unknown material cage' in game.  here is the dump from jobs for a cage.:
+
+Job Address: 222454c8
+7800ffffffff6e20000000000000000000000000000000000000000000000000726f7720ffff7572ffffffff00000000ffffffff020000000100010000000000
+Type: 120 Subtype1: -1 Subtype2: -1 Subtype3: -1 matid: -1 gembitmask: 0 Memorial:: -1 matType: 2 Left: 1 Total: 1
+Material: wood
+	
+	<dfjob name="Cage, WOOD" category="WOOD" type="120"  materialType="WOOD">
+        <item type="cage" material="all" />
+        <source type="wood" material="all" />
+    </dfjob>
+    
+-->>	
     <dfjob name="Adamantite Wafers" category="smelter" reaction="ADAMANTINE_WAFERS">
         <item type="bar" material="ADAMANTINE" />
     </dfjob>
@@ -225,98 +244,96 @@
 
     <dfjob name="BISMUTH_BRONZE " category="smelter" reaction="BISMUTH_BRONZE_MAKING">
         <item type="bar" material="BISMUTH_BRONZE" />
-    </dfjob>	
-	
+    </dfjob>    
+        
     <dfjob name="Render Fat (Tallow) " category="kitchen" reaction="RENDER_FAT">
         <item type="glob" material="all" />
-    </dfjob>	
-		
+    </dfjob>    
+                
     <dfjob name="Make Soap from Tallow " category="Other" reaction="MAKE_SOAP_FROM_TALLOW">
         <item type="bar" material="creature" />
-    </dfjob>	
-	
-   
-<!--		Waiting until I can make these so I can get the actual item information.   
-   
+    </dfjob>    
+        
+<!--		Waiting until I can make these so I can get the actual item information.
     <dfjob name="Make plaster powder" category="kiln" reaction="MAKE_PLASTER_POWDER">
         <item type="bar" material="creature" />
-    </dfjob>	
-  -->
+    </dfjob>    
+-->
 
     <dfjob name="Crutch, Wood" category="WOOD" type="208" materialType="wood">
         <item type="crutch" material="all" />
         <source type="wood" material="all" />
-    </dfjob>	
+    </dfjob>    
 
-	
-	
+        
+        
     <dfjob name="smelt Tin (Cassiterite)" category="smelter" type="90" materialType="inorganic" inorganic="CASSITERITE">
         <item type="bar" material="TIN" />
-        <source type="boulder" material="CASSITERITE" />		
-    </dfjob>	
-	
+        <source type="boulder" material="CASSITERITE" />                
+    </dfjob>    
+        
     <dfjob name="smelt Iron (LIMONITE)" category="smelter" type="90" materialType="inorganic" inorganic="LIMONITE">
         <item type="bar" material="IRON" />
-        <source type="boulder" material="LIMONITE" />	
-    </dfjob>	
-	
-		
+        <source type="boulder" material="LIMONITE" />   
+    </dfjob>    
+        
+                
     <dfjob name="smelt Iron (Hematite)" category="smelter" type="90" materialType="inorganic" inorganic="HEMATITE">
         <item type="bar" material="IRON" />
-        <source type="boulder" material="HEMATITE" />	
-    </dfjob>	
-	
-	
+        <source type="boulder" material="HEMATITE" />   
+    </dfjob>    
+        
+        
     <dfjob name="smelt Silver, native" category="smelter" type="90" materialType="inorganic" inorganic="NATIVE_SILVER">
         <item type="bar" material="SILVER" />
-        <source type="boulder" material="NATIVE_SILVER" />	
-    </dfjob>	 
-	
+        <source type="boulder" material="NATIVE_SILVER" />      
+    </dfjob>     
+        
     <dfjob name="smelt Silver (Horn Silver)" category="smelter" type="90" materialType="inorganic" inorganic="HORN_SILVER">
         <item type="bar" material="SILVER" />
-        <source type="boulder" material="HORN_SILVER" />	
-    </dfjob>	 
-	
-	<dfjob name="smelt Copper, native" category="smelter" type="90" materialType="inorganic" inorganic="NATIVE_COPPER">
+        <source type="boulder" material="HORN_SILVER" />        
+    </dfjob>     
+        
+        <dfjob name="smelt Copper, native" category="smelter" type="90" materialType="inorganic" inorganic="NATIVE_COPPER">
         <item type="bar" material="COPPER" />
-        <source type="boulder" material="NATIVE_COPPER" />	
-    </dfjob>	
-	
-	<dfjob name="smelt Copper (Malachite)" category="smelter" type="90" materialType="inorganic" inorganic="MALACHITE">
+        <source type="boulder" material="NATIVE_COPPER" />      
+    </dfjob>    
+        
+        <dfjob name="smelt Copper (Malachite)" category="smelter" type="90" materialType="inorganic" inorganic="MALACHITE">
         <item type="bar" material="COPPER" />
-        <source type="boulder" material="MALACHITE" />	
-    </dfjob>	
-	
-	<dfjob name="smelt Lead (GALENA)" category="smelter" type="90" materialType="inorganic" inorganic="GALENA">
-        <item type="bar" material="LEAD" />	
-        <source type="boulder" material="GALENA" />	
-    </dfjob>	
-		
-	<dfjob name="smelt Zinc (SPHALERITE)" category="smelter" type="90" materialType="inorganic" inorganic="SPHALERITE">
+        <source type="boulder" material="MALACHITE" />  
+    </dfjob>    
+        
+        <dfjob name="smelt Lead (GALENA)" category="smelter" type="90" materialType="inorganic" inorganic="GALENA">
+        <item type="bar" material="LEAD" />     
+        <source type="boulder" material="GALENA" />     
+    </dfjob>    
+                
+        <dfjob name="smelt Zinc (SPHALERITE)" category="smelter" type="90" materialType="inorganic" inorganic="SPHALERITE">
         <item type="bar" material="ZINC" />
-        <source type="boulder" material="SPHALERITE" />	
-    </dfjob>	
-	
-	<dfjob name="smelt Platinum, Native" category="smelter" type="90" materialType="inorganic" inorganic="NATIVE_PLATINUM">
+        <source type="boulder" material="SPHALERITE" /> 
+    </dfjob>    
+        
+        <dfjob name="smelt Platinum, Native" category="smelter" type="90" materialType="inorganic" inorganic="NATIVE_PLATINUM">
         <item type="bar" material="PLATINUM" />
-        <source type="boulder" material="NATIVE_PLATINUM" />	
-    </dfjob>	
-	
-	<dfjob name="smelt Aluminum, Native" category="smelter" type="90" materialType="inorganic" inorganic="NATIVE_ALUMINUM">
+        <source type="boulder" material="NATIVE_PLATINUM" />    
+    </dfjob>    
+        
+        <dfjob name="smelt Aluminum, Native" category="smelter" type="90" materialType="inorganic" inorganic="NATIVE_ALUMINUM">
         <item type="bar" material="ALUMINUM" />
-        <source type="boulder" material="NATIVE_ALUMINUM" />	
-    </dfjob>	
-	
-	<dfjob name="smelt Copper (TETRAHEDRITE)" category="smelter" type="90" materialType="inorganic" inorganic="TETRAHEDRITE">
+        <source type="boulder" material="NATIVE_ALUMINUM" />    
+    </dfjob>    
+        
+        <dfjob name="smelt Copper (TETRAHEDRITE)" category="smelter" type="90" materialType="inorganic" inorganic="TETRAHEDRITE">
         <item type="bar" material="COPPER" />
-        <source type="boulder" material="TETRAHEDRITE" />	
-    </dfjob>		
-	
-	<dfjob name="smelt Nickel (Garnierite)" category="smelter" type="90" materialType="inorganic" inorganic="Garnierite">
+        <source type="boulder" material="TETRAHEDRITE" />       
+    </dfjob>            
+        
+        <dfjob name="smelt Nickel (Garnierite)" category="smelter" type="90" materialType="inorganic" inorganic="Garnierite">
         <item type="bar" material="NICKEL" />
-        <source type="boulder" material="Garnierite" />	
-    </dfjob>	
-	
+        <source type="boulder" material="Garnierite" /> 
+    </dfjob>              
+    
 	<!-- Crazy generated stuff after this point -->
 
 
@@ -1508,627 +1525,627 @@
         <item type="box" material="PEWTER_FINE" />
         <source type="bar" material="PEWTER_FINE" />
     </dfjob>
-      <dfjob name="Cut Gem, RUBY_STAR" category="gems" type="90" materialType="inorganic" inorganic="RUBY_STAR">
+      <dfjob name="Cut Gem, RUBY_STAR" category="gems" type="85" materialType="inorganic" inorganic="RUBY_STAR">
         <item type="gem" material="RUBY_STAR" />
         <item type="smallgem" material="RUBY_STAR" />
         <source type="rough" material="RUBY_STAR" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SAPPHIRE_STAR" category="gems" type="90" materialType="inorganic" inorganic="SAPPHIRE_STAR">
+      <dfjob name="Cut Gem, SAPPHIRE_STAR" category="gems" type="85" materialType="inorganic" inorganic="SAPPHIRE_STAR">
         <item type="gem" material="SAPPHIRE_STAR" />
         <item type="smallgem" material="SAPPHIRE_STAR" />
         <source type="rough" material="SAPPHIRE_STAR" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, DIAMOND_BLACK" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_BLACK">
+      <dfjob name="Cut Gem, DIAMOND_BLACK" category="gems" type="85" materialType="inorganic" inorganic="DIAMOND_BLACK">
         <item type="gem" material="DIAMOND_BLACK" />
         <item type="smallgem" material="DIAMOND_BLACK" />
         <source type="rough" material="DIAMOND_BLACK" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, DIAMOND_YELLOW" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_YELLOW">
+      <dfjob name="Cut Gem, DIAMOND_YELLOW" category="gems" type="85" materialType="inorganic" inorganic="DIAMOND_YELLOW">
         <item type="gem" material="DIAMOND_YELLOW" />
         <item type="smallgem" material="DIAMOND_YELLOW" />
         <source type="rough" material="DIAMOND_YELLOW" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, DIAMOND_BLUE" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_BLUE">
+      <dfjob name="Cut Gem, DIAMOND_BLUE" category="gems" type="85" materialType="inorganic" inorganic="DIAMOND_BLUE">
         <item type="gem" material="DIAMOND_BLUE" />
         <item type="smallgem" material="DIAMOND_BLUE" />
         <source type="rough" material="DIAMOND_BLUE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, DIAMOND_GREEN" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_GREEN">
+      <dfjob name="Cut Gem, DIAMOND_GREEN" category="gems" type="85" materialType="inorganic" inorganic="DIAMOND_GREEN">
         <item type="gem" material="DIAMOND_GREEN" />
         <item type="smallgem" material="DIAMOND_GREEN" />
         <source type="rough" material="DIAMOND_GREEN" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, DIAMOND_RED" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_RED">
+      <dfjob name="Cut Gem, DIAMOND_RED" category="gems" type="85" materialType="inorganic" inorganic="DIAMOND_RED">
         <item type="gem" material="DIAMOND_RED" />
         <item type="smallgem" material="DIAMOND_RED" />
         <source type="rough" material="DIAMOND_RED" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, DIAMOND_CLEAR" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_CLEAR">
+      <dfjob name="Cut Gem, DIAMOND_CLEAR" category="gems" type="85" materialType="inorganic" inorganic="DIAMOND_CLEAR">
         <item type="gem" material="DIAMOND_CLEAR" />
         <item type="smallgem" material="DIAMOND_CLEAR" />
         <source type="rough" material="DIAMOND_CLEAR" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SAPPHIRE" category="gems" type="90" materialType="inorganic" inorganic="SAPPHIRE">
+      <dfjob name="Cut Gem, SAPPHIRE" category="gems" type="85" materialType="inorganic" inorganic="SAPPHIRE">
         <item type="gem" material="SAPPHIRE" />
         <item type="smallgem" material="SAPPHIRE" />
         <source type="rough" material="SAPPHIRE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, RUBY" category="gems" type="90" materialType="inorganic" inorganic="RUBY">
+      <dfjob name="Cut Gem, RUBY" category="gems" type="85" materialType="inorganic" inorganic="RUBY">
         <item type="gem" material="RUBY" />
         <item type="smallgem" material="RUBY" />
         <source type="rough" material="RUBY" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, EMERALD" category="gems" type="90" materialType="inorganic" inorganic="EMERALD">
+      <dfjob name="Cut Gem, EMERALD" category="gems" type="85" materialType="inorganic" inorganic="EMERALD">
         <item type="gem" material="EMERALD" />
         <item type="smallgem" material="EMERALD" />
         <source type="rough" material="EMERALD" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, DIAMOND_FY" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_FY">
+      <dfjob name="Cut Gem, DIAMOND_FY" category="gems" type="85" materialType="inorganic" inorganic="DIAMOND_FY">
         <item type="gem" material="DIAMOND_FY" />
         <item type="smallgem" material="DIAMOND_FY" />
         <source type="rough" material="DIAMOND_FY" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, DIAMOND_LY" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_LY">
+      <dfjob name="Cut Gem, DIAMOND_LY" category="gems" type="85" materialType="inorganic" inorganic="DIAMOND_LY">
         <item type="gem" material="DIAMOND_LY" />
         <item type="smallgem" material="DIAMOND_LY" />
         <source type="rough" material="DIAMOND_LY" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_BANDFIRE" category="gems" type="90" materialType="inorganic" inorganic="OPAL_BANDFIRE">
+      <dfjob name="Cut Gem, OPAL_BANDFIRE" category="gems" type="85" materialType="inorganic" inorganic="OPAL_BANDFIRE">
         <item type="gem" material="OPAL_BANDFIRE" />
         <item type="smallgem" material="OPAL_BANDFIRE" />
         <source type="rough" material="OPAL_BANDFIRE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_PINFIRE" category="gems" type="90" materialType="inorganic" inorganic="OPAL_PINFIRE">
+      <dfjob name="Cut Gem, OPAL_PINFIRE" category="gems" type="85" materialType="inorganic" inorganic="OPAL_PINFIRE">
         <item type="gem" material="OPAL_PINFIRE" />
         <item type="smallgem" material="OPAL_PINFIRE" />
         <source type="rough" material="OPAL_PINFIRE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_HARLEQUIN" category="gems" type="90" materialType="inorganic" inorganic="OPAL_HARLEQUIN">
+      <dfjob name="Cut Gem, OPAL_HARLEQUIN" category="gems" type="85" materialType="inorganic" inorganic="OPAL_HARLEQUIN">
         <item type="gem" material="OPAL_HARLEQUIN" />
         <item type="smallgem" material="OPAL_HARLEQUIN" />
         <source type="rough" material="OPAL_HARLEQUIN" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_LEVIN" category="gems" type="90" materialType="inorganic" inorganic="OPAL_LEVIN">
+      <dfjob name="Cut Gem, OPAL_LEVIN" category="gems" type="85" materialType="inorganic" inorganic="OPAL_LEVIN">
         <item type="gem" material="OPAL_LEVIN" />
         <item type="smallgem" material="OPAL_LEVIN" />
         <source type="rough" material="OPAL_LEVIN" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_CLARO" category="gems" type="90" materialType="inorganic" inorganic="OPAL_CLARO">
+      <dfjob name="Cut Gem, OPAL_CLARO" category="gems" type="85" materialType="inorganic" inorganic="OPAL_CLARO">
         <item type="gem" material="OPAL_CLARO" />
         <item type="smallgem" material="OPAL_CLARO" />
         <source type="rough" material="OPAL_CLARO" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_CRYSTAL" category="gems" type="90" materialType="inorganic" inorganic="OPAL_CRYSTAL">
+      <dfjob name="Cut Gem, OPAL_CRYSTAL" category="gems" type="85" materialType="inorganic" inorganic="OPAL_CRYSTAL">
         <item type="gem" material="OPAL_CRYSTAL" />
         <item type="smallgem" material="OPAL_CRYSTAL" />
         <source type="rough" material="OPAL_CRYSTAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_WHITE" category="gems" type="90" materialType="inorganic" inorganic="OPAL_WHITE">
+      <dfjob name="Cut Gem, OPAL_WHITE" category="gems" type="85" materialType="inorganic" inorganic="OPAL_WHITE">
         <item type="gem" material="OPAL_WHITE" />
         <item type="smallgem" material="OPAL_WHITE" />
         <source type="rough" material="OPAL_WHITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_BLACK" category="gems" type="90" materialType="inorganic" inorganic="OPAL_BLACK">
+      <dfjob name="Cut Gem, OPAL_BLACK" category="gems" type="85" materialType="inorganic" inorganic="OPAL_BLACK">
         <item type="gem" material="OPAL_BLACK" />
         <item type="smallgem" material="OPAL_BLACK" />
         <source type="rough" material="OPAL_BLACK" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_REDFLASH" category="gems" type="90" materialType="inorganic" inorganic="OPAL_REDFLASH">
+      <dfjob name="Cut Gem, OPAL_REDFLASH" category="gems" type="85" materialType="inorganic" inorganic="OPAL_REDFLASH">
         <item type="gem" material="OPAL_REDFLASH" />
         <item type="smallgem" material="OPAL_REDFLASH" />
         <source type="rough" material="OPAL_REDFLASH" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, OPAL_PFIRE" category="gems" type="90" materialType="inorganic" inorganic="OPAL_PFIRE">
+      <dfjob name="Cut Gem, OPAL_PFIRE" category="gems" type="85" materialType="inorganic" inorganic="OPAL_PFIRE">
         <item type="gem" material="OPAL_PFIRE" />
         <item type="smallgem" material="OPAL_PFIRE" />
         <source type="rough" material="OPAL_PFIRE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CHRYSOBERYL" category="gems" type="90" materialType="inorganic" inorganic="CHRYSOBERYL">
+      <dfjob name="Cut Gem, CHRYSOBERYL" category="gems" type="85" materialType="inorganic" inorganic="CHRYSOBERYL">
         <item type="gem" material="CHRYSOBERYL" />
         <item type="smallgem" material="CHRYSOBERYL" />
         <source type="rough" material="CHRYSOBERYL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SPINEL_RED" category="gems" type="90" materialType="inorganic" inorganic="SPINEL_RED">
+      <dfjob name="Cut Gem, SPINEL_RED" category="gems" type="85" materialType="inorganic" inorganic="SPINEL_RED">
         <item type="gem" material="SPINEL_RED" />
         <item type="smallgem" material="SPINEL_RED" />
         <source type="rough" material="SPINEL_RED" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, AQUAMARINE" category="gems" type="90" materialType="inorganic" inorganic="AQUAMARINE">
+      <dfjob name="Cut Gem, AQUAMARINE" category="gems" type="85" materialType="inorganic" inorganic="AQUAMARINE">
         <item type="gem" material="AQUAMARINE" />
         <item type="smallgem" material="AQUAMARINE" />
         <source type="rough" material="AQUAMARINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, AMETHYST" category="gems" type="90" materialType="inorganic" inorganic="AMETHYST">
+      <dfjob name="Cut Gem, AMETHYST" category="gems" type="85" materialType="inorganic" inorganic="AMETHYST">
         <item type="gem" material="AMETHYST" />
         <item type="smallgem" material="AMETHYST" />
         <source type="rough" material="AMETHYST" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CLEAR ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="CLEAR ZIRCON">
+      <dfjob name="Cut Gem, CLEAR ZIRCON" category="gems" type="85" materialType="inorganic" inorganic="CLEAR ZIRCON">
         <item type="gem" material="CLEAR ZIRCON" />
         <item type="smallgem" material="CLEAR ZIRCON" />
         <source type="rough" material="CLEAR ZIRCON" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CAT'S EYE" category="gems" type="90" materialType="inorganic" inorganic="CAT'S EYE">
+      <dfjob name="Cut Gem, CAT'S EYE" category="gems" type="85" materialType="inorganic" inorganic="CAT'S EYE">
         <item type="gem" material="CAT'S EYE" />
         <item type="smallgem" material="CAT'S EYE" />
         <source type="rough" material="CAT'S EYE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, GOSHENITE" category="gems" type="90" materialType="inorganic" inorganic="GOSHENITE">
+      <dfjob name="Cut Gem, GOSHENITE" category="gems" type="85" materialType="inorganic" inorganic="GOSHENITE">
         <item type="gem" material="GOSHENITE" />
         <item type="smallgem" material="GOSHENITE" />
         <source type="rough" material="GOSHENITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CLEAR GARNET" category="gems" type="90" materialType="inorganic" inorganic="CLEAR GARNET">
+      <dfjob name="Cut Gem, CLEAR GARNET" category="gems" type="85" materialType="inorganic" inorganic="CLEAR GARNET">
         <item type="gem" material="CLEAR GARNET" />
         <item type="smallgem" material="CLEAR GARNET" />
         <source type="rough" material="CLEAR GARNET" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, RUBICELLE" category="gems" type="90" materialType="inorganic" inorganic="RUBICELLE">
+      <dfjob name="Cut Gem, RUBICELLE" category="gems" type="85" materialType="inorganic" inorganic="RUBICELLE">
         <item type="gem" material="RUBICELLE" />
         <item type="smallgem" material="RUBICELLE" />
         <source type="rough" material="RUBICELLE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, YELLOW GROSSULAR" category="gems" type="90" materialType="inorganic" inorganic="YELLOW GROSSULAR">
+      <dfjob name="Cut Gem, YELLOW GROSSULAR" category="gems" type="85" materialType="inorganic" inorganic="YELLOW GROSSULAR">
         <item type="gem" material="YELLOW GROSSULAR" />
         <item type="smallgem" material="YELLOW GROSSULAR" />
         <source type="rough" material="YELLOW GROSSULAR" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, TOPAZOLITE" category="gems" type="90" materialType="inorganic" inorganic="TOPAZOLITE">
+      <dfjob name="Cut Gem, TOPAZOLITE" category="gems" type="85" materialType="inorganic" inorganic="TOPAZOLITE">
         <item type="gem" material="TOPAZOLITE" />
         <item type="smallgem" material="TOPAZOLITE" />
         <source type="rough" material="TOPAZOLITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, TOPAZ" category="gems" type="90" materialType="inorganic" inorganic="TOPAZ">
+      <dfjob name="Cut Gem, TOPAZ" category="gems" type="85" materialType="inorganic" inorganic="TOPAZ">
         <item type="gem" material="TOPAZ" />
         <item type="smallgem" material="TOPAZ" />
         <source type="rough" material="TOPAZ" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, YELLOW SPESSARTINE" category="gems" type="90" materialType="inorganic" inorganic="YELLOW SPESSARTINE">
+      <dfjob name="Cut Gem, YELLOW SPESSARTINE" category="gems" type="85" materialType="inorganic" inorganic="YELLOW SPESSARTINE">
         <item type="gem" material="YELLOW SPESSARTINE" />
         <item type="smallgem" material="YELLOW SPESSARTINE" />
         <source type="rough" material="YELLOW SPESSARTINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, GOLDEN BERYL" category="gems" type="90" materialType="inorganic" inorganic="GOLDEN BERYL">
+      <dfjob name="Cut Gem, GOLDEN BERYL" category="gems" type="85" materialType="inorganic" inorganic="GOLDEN BERYL">
         <item type="gem" material="GOLDEN BERYL" />
         <item type="smallgem" material="GOLDEN BERYL" />
         <source type="rough" material="GOLDEN BERYL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, YELLOW ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="YELLOW ZIRCON">
+      <dfjob name="Cut Gem, YELLOW ZIRCON" category="gems" type="85" materialType="inorganic" inorganic="YELLOW ZIRCON">
         <item type="gem" material="YELLOW ZIRCON" />
         <item type="smallgem" material="YELLOW ZIRCON" />
         <source type="rough" material="YELLOW ZIRCON" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, BROWN ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="BROWN ZIRCON">
+      <dfjob name="Cut Gem, BROWN ZIRCON" category="gems" type="85" materialType="inorganic" inorganic="BROWN ZIRCON">
         <item type="gem" material="BROWN ZIRCON" />
         <item type="smallgem" material="BROWN ZIRCON" />
         <source type="rough" material="BROWN ZIRCON" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, JELLY OPAL" category="gems" type="90" materialType="inorganic" inorganic="JELLY OPAL">
+      <dfjob name="Cut Gem, JELLY OPAL" category="gems" type="85" materialType="inorganic" inorganic="JELLY OPAL">
         <item type="gem" material="JELLY OPAL" />
         <item type="smallgem" material="JELLY OPAL" />
         <source type="rough" material="JELLY OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, HONEY YELLOW BERYL" category="gems" type="90" materialType="inorganic" inorganic="HONEY YELLOW BERYL">
+      <dfjob name="Cut Gem, HONEY YELLOW BERYL" category="gems" type="85" materialType="inorganic" inorganic="HONEY YELLOW BERYL">
         <item type="gem" material="HONEY YELLOW BERYL" />
         <item type="smallgem" material="HONEY YELLOW BERYL" />
         <source type="rough" material="HONEY YELLOW BERYL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CINNAMON GROSSULAR" category="gems" type="90" materialType="inorganic" inorganic="CINNAMON GROSSULAR">
+      <dfjob name="Cut Gem, CINNAMON GROSSULAR" category="gems" type="85" materialType="inorganic" inorganic="CINNAMON GROSSULAR">
         <item type="gem" material="CINNAMON GROSSULAR" />
         <item type="smallgem" material="CINNAMON GROSSULAR" />
         <source type="rough" material="CINNAMON GROSSULAR" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, KUNZITE" category="gems" type="90" materialType="inorganic" inorganic="KUNZITE">
+      <dfjob name="Cut Gem, KUNZITE" category="gems" type="85" materialType="inorganic" inorganic="KUNZITE">
         <item type="gem" material="KUNZITE" />
         <item type="smallgem" material="KUNZITE" />
         <source type="rough" material="KUNZITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PINK GARNET" category="gems" type="90" materialType="inorganic" inorganic="PINK GARNET">
+      <dfjob name="Cut Gem, PINK GARNET" category="gems" type="85" materialType="inorganic" inorganic="PINK GARNET">
         <item type="gem" material="PINK GARNET" />
         <item type="smallgem" material="PINK GARNET" />
         <source type="rough" material="PINK GARNET" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, MORGANITE" category="gems" type="90" materialType="inorganic" inorganic="MORGANITE">
+      <dfjob name="Cut Gem, MORGANITE" category="gems" type="85" materialType="inorganic" inorganic="MORGANITE">
         <item type="gem" material="MORGANITE" />
         <item type="smallgem" material="MORGANITE" />
         <source type="rough" material="MORGANITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, TANZANITE" category="gems" type="90" materialType="inorganic" inorganic="TANZANITE">
+      <dfjob name="Cut Gem, TANZANITE" category="gems" type="85" materialType="inorganic" inorganic="TANZANITE">
         <item type="gem" material="TANZANITE" />
         <item type="smallgem" material="TANZANITE" />
         <source type="rough" material="TANZANITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, ALEXANDRITE" category="gems" type="90" materialType="inorganic" inorganic="ALEXANDRITE">
+      <dfjob name="Cut Gem, ALEXANDRITE" category="gems" type="85" materialType="inorganic" inorganic="ALEXANDRITE">
         <item type="gem" material="ALEXANDRITE" />
         <item type="smallgem" material="ALEXANDRITE" />
         <source type="rough" material="ALEXANDRITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SPINEL_PURPLE" category="gems" type="90" materialType="inorganic" inorganic="SPINEL_PURPLE">
+      <dfjob name="Cut Gem, SPINEL_PURPLE" category="gems" type="85" materialType="inorganic" inorganic="SPINEL_PURPLE">
         <item type="gem" material="SPINEL_PURPLE" />
         <item type="smallgem" material="SPINEL_PURPLE" />
         <source type="rough" material="SPINEL_PURPLE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, RHODOLITE" category="gems" type="90" materialType="inorganic" inorganic="RHODOLITE">
+      <dfjob name="Cut Gem, RHODOLITE" category="gems" type="85" materialType="inorganic" inorganic="RHODOLITE">
         <item type="gem" material="RHODOLITE" />
         <item type="smallgem" material="RHODOLITE" />
         <source type="rough" material="RHODOLITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, FIRE OPAL" category="gems" type="90" materialType="inorganic" inorganic="FIRE OPAL">
+      <dfjob name="Cut Gem, FIRE OPAL" category="gems" type="85" materialType="inorganic" inorganic="FIRE OPAL">
         <item type="gem" material="FIRE OPAL" />
         <item type="smallgem" material="FIRE OPAL" />
         <source type="rough" material="FIRE OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, RED BERYL" category="gems" type="90" materialType="inorganic" inorganic="RED BERYL">
+      <dfjob name="Cut Gem, RED BERYL" category="gems" type="85" materialType="inorganic" inorganic="RED BERYL">
         <item type="gem" material="RED BERYL" />
         <item type="smallgem" material="RED BERYL" />
         <source type="rough" material="RED BERYL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PINK TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="PINK TOURMALINE">
+      <dfjob name="Cut Gem, PINK TOURMALINE" category="gems" type="85" materialType="inorganic" inorganic="PINK TOURMALINE">
         <item type="gem" material="PINK TOURMALINE" />
         <item type="smallgem" material="PINK TOURMALINE" />
         <source type="rough" material="PINK TOURMALINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, RED GROSSULAR" category="gems" type="90" materialType="inorganic" inorganic="RED GROSSULAR">
+      <dfjob name="Cut Gem, RED GROSSULAR" category="gems" type="85" materialType="inorganic" inorganic="RED GROSSULAR">
         <item type="gem" material="RED GROSSULAR" />
         <item type="smallgem" material="RED GROSSULAR" />
         <source type="rough" material="RED GROSSULAR" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, ALMANDINE" category="gems" type="90" materialType="inorganic" inorganic="ALMANDINE">
+      <dfjob name="Cut Gem, ALMANDINE" category="gems" type="85" materialType="inorganic" inorganic="ALMANDINE">
         <item type="gem" material="ALMANDINE" />
         <item type="smallgem" material="ALMANDINE" />
         <source type="rough" material="ALMANDINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, RED PYROPE" category="gems" type="90" materialType="inorganic" inorganic="RED PYROPE">
+      <dfjob name="Cut Gem, RED PYROPE" category="gems" type="85" materialType="inorganic" inorganic="RED PYROPE">
         <item type="gem" material="RED PYROPE" />
         <item type="smallgem" material="RED PYROPE" />
         <source type="rough" material="RED PYROPE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, RED TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="RED TOURMALINE">
+      <dfjob name="Cut Gem, RED TOURMALINE" category="gems" type="85" materialType="inorganic" inorganic="RED TOURMALINE">
         <item type="gem" material="RED TOURMALINE" />
         <item type="smallgem" material="RED TOURMALINE" />
         <source type="rough" material="RED TOURMALINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, RED ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="RED ZIRCON">
+      <dfjob name="Cut Gem, RED ZIRCON" category="gems" type="85" materialType="inorganic" inorganic="RED ZIRCON">
         <item type="gem" material="RED ZIRCON" />
         <item type="smallgem" material="RED ZIRCON" />
         <source type="rough" material="RED ZIRCON" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PERIDOT" category="gems" type="90" materialType="inorganic" inorganic="PERIDOT">
+      <dfjob name="Cut Gem, PERIDOT" category="gems" type="85" materialType="inorganic" inorganic="PERIDOT">
         <item type="gem" material="PERIDOT" />
         <item type="smallgem" material="PERIDOT" />
         <source type="rough" material="PERIDOT" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, HELIODOR" category="gems" type="90" materialType="inorganic" inorganic="HELIODOR">
+      <dfjob name="Cut Gem, HELIODOR" category="gems" type="85" materialType="inorganic" inorganic="HELIODOR">
         <item type="gem" material="HELIODOR" />
         <item type="smallgem" material="HELIODOR" />
         <source type="rough" material="HELIODOR" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, GREEN JADE" category="gems" type="90" materialType="inorganic" inorganic="GREEN JADE">
+      <dfjob name="Cut Gem, GREEN JADE" category="gems" type="85" materialType="inorganic" inorganic="GREEN JADE">
         <item type="gem" material="GREEN JADE" />
         <item type="smallgem" material="GREEN JADE" />
         <source type="rough" material="GREEN JADE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, GREEN ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="GREEN ZIRCON">
+      <dfjob name="Cut Gem, GREEN ZIRCON" category="gems" type="85" materialType="inorganic" inorganic="GREEN ZIRCON">
         <item type="gem" material="GREEN ZIRCON" />
         <item type="smallgem" material="GREEN ZIRCON" />
         <source type="rough" material="GREEN ZIRCON" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, DEMANTOID" category="gems" type="90" materialType="inorganic" inorganic="DEMANTOID">
+      <dfjob name="Cut Gem, DEMANTOID" category="gems" type="85" materialType="inorganic" inorganic="DEMANTOID">
         <item type="gem" material="DEMANTOID" />
         <item type="smallgem" material="DEMANTOID" />
         <source type="rough" material="DEMANTOID" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, GREEN TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="GREEN TOURMALINE">
+      <dfjob name="Cut Gem, GREEN TOURMALINE" category="gems" type="85" materialType="inorganic" inorganic="GREEN TOURMALINE">
         <item type="gem" material="GREEN TOURMALINE" />
         <item type="smallgem" material="GREEN TOURMALINE" />
         <source type="rough" material="GREEN TOURMALINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, TSAVORITE" category="gems" type="90" materialType="inorganic" inorganic="TSAVORITE">
+      <dfjob name="Cut Gem, TSAVORITE" category="gems" type="85" materialType="inorganic" inorganic="TSAVORITE">
         <item type="gem" material="TSAVORITE" />
         <item type="smallgem" material="TSAVORITE" />
         <source type="rough" material="TSAVORITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, BLUE GARNET" category="gems" type="90" materialType="inorganic" inorganic="BLUE GARNET">
+      <dfjob name="Cut Gem, BLUE GARNET" category="gems" type="85" materialType="inorganic" inorganic="BLUE GARNET">
         <item type="gem" material="BLUE GARNET" />
         <item type="smallgem" material="BLUE GARNET" />
         <source type="rough" material="BLUE GARNET" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, INDIGO TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="INDIGO TOURMALINE">
+      <dfjob name="Cut Gem, INDIGO TOURMALINE" category="gems" type="85" materialType="inorganic" inorganic="INDIGO TOURMALINE">
         <item type="gem" material="INDIGO TOURMALINE" />
         <item type="smallgem" material="INDIGO TOURMALINE" />
         <source type="rough" material="INDIGO TOURMALINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, MELANITE" category="gems" type="90" materialType="inorganic" inorganic="MELANITE">
+      <dfjob name="Cut Gem, MELANITE" category="gems" type="85" materialType="inorganic" inorganic="MELANITE">
         <item type="gem" material="MELANITE" />
         <item type="smallgem" material="MELANITE" />
         <source type="rough" material="MELANITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, BLACK PYROPE" category="gems" type="90" materialType="inorganic" inorganic="BLACK PYROPE">
+      <dfjob name="Cut Gem, BLACK PYROPE" category="gems" type="85" materialType="inorganic" inorganic="BLACK PYROPE">
         <item type="gem" material="BLACK PYROPE" />
         <item type="smallgem" material="BLACK PYROPE" />
         <source type="rough" material="BLACK PYROPE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, BLACK ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="BLACK ZIRCON">
+      <dfjob name="Cut Gem, BLACK ZIRCON" category="gems" type="85" materialType="inorganic" inorganic="BLACK ZIRCON">
         <item type="gem" material="BLACK ZIRCON" />
         <item type="smallgem" material="BLACK ZIRCON" />
         <source type="rough" material="BLACK ZIRCON" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CRYSTAL_ROCK" category="gems" type="90" materialType="inorganic" inorganic="CRYSTAL_ROCK">
+      <dfjob name="Cut Gem, CRYSTAL_ROCK" category="gems" type="85" materialType="inorganic" inorganic="CRYSTAL_ROCK">
         <item type="gem" material="CRYSTAL_ROCK" />
         <item type="smallgem" material="CRYSTAL_ROCK" />
         <source type="rough" material="CRYSTAL_ROCK" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, QUARTZ_ROSE" category="gems" type="90" materialType="inorganic" inorganic="QUARTZ_ROSE">
+      <dfjob name="Cut Gem, QUARTZ_ROSE" category="gems" type="85" materialType="inorganic" inorganic="QUARTZ_ROSE">
         <item type="gem" material="QUARTZ_ROSE" />
         <item type="smallgem" material="QUARTZ_ROSE" />
         <source type="rough" material="QUARTZ_ROSE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, TURQUOISE" category="gems" type="90" materialType="inorganic" inorganic="TURQUOISE">
+      <dfjob name="Cut Gem, TURQUOISE" category="gems" type="85" materialType="inorganic" inorganic="TURQUOISE">
         <item type="gem" material="TURQUOISE" />
         <item type="smallgem" material="TURQUOISE" />
         <source type="rough" material="TURQUOISE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, AVENTURINE" category="gems" type="90" materialType="inorganic" inorganic="AVENTURINE">
+      <dfjob name="Cut Gem, AVENTURINE" category="gems" type="85" materialType="inorganic" inorganic="AVENTURINE">
         <item type="gem" material="AVENTURINE" />
         <item type="smallgem" material="AVENTURINE" />
         <source type="rough" material="AVENTURINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PIPE OPAL" category="gems" type="90" materialType="inorganic" inorganic="PIPE OPAL">
+      <dfjob name="Cut Gem, PIPE OPAL" category="gems" type="85" materialType="inorganic" inorganic="PIPE OPAL">
         <item type="gem" material="PIPE OPAL" />
         <item type="smallgem" material="PIPE OPAL" />
         <source type="rough" material="PIPE OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, MILK OPAL" category="gems" type="90" materialType="inorganic" inorganic="MILK OPAL">
+      <dfjob name="Cut Gem, MILK OPAL" category="gems" type="85" materialType="inorganic" inorganic="MILK OPAL">
         <item type="gem" material="MILK OPAL" />
         <item type="smallgem" material="MILK OPAL" />
         <source type="rough" material="MILK OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, ONYX OPAL" category="gems" type="90" materialType="inorganic" inorganic="ONYX OPAL">
+      <dfjob name="Cut Gem, ONYX OPAL" category="gems" type="85" materialType="inorganic" inorganic="ONYX OPAL">
         <item type="gem" material="ONYX OPAL" />
         <item type="smallgem" material="ONYX OPAL" />
         <source type="rough" material="ONYX OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PINEAPPLE OPAL" category="gems" type="90" materialType="inorganic" inorganic="PINEAPPLE OPAL">
+      <dfjob name="Cut Gem, PINEAPPLE OPAL" category="gems" type="85" materialType="inorganic" inorganic="PINEAPPLE OPAL">
         <item type="gem" material="PINEAPPLE OPAL" />
         <item type="smallgem" material="PINEAPPLE OPAL" />
         <source type="rough" material="PINEAPPLE OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, JASPER OPAL" category="gems" type="90" materialType="inorganic" inorganic="JASPER OPAL">
+      <dfjob name="Cut Gem, JASPER OPAL" category="gems" type="85" materialType="inorganic" inorganic="JASPER OPAL">
         <item type="gem" material="JASPER OPAL" />
         <item type="smallgem" material="JASPER OPAL" />
         <source type="rough" material="JASPER OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, WHITE JADE" category="gems" type="90" materialType="inorganic" inorganic="WHITE JADE">
+      <dfjob name="Cut Gem, WHITE JADE" category="gems" type="85" materialType="inorganic" inorganic="WHITE JADE">
         <item type="gem" material="WHITE JADE" />
         <item type="smallgem" material="WHITE JADE" />
         <source type="rough" material="WHITE JADE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, MOONSTONE" category="gems" type="90" materialType="inorganic" inorganic="MOONSTONE">
+      <dfjob name="Cut Gem, MOONSTONE" category="gems" type="85" materialType="inorganic" inorganic="MOONSTONE">
         <item type="gem" material="MOONSTONE" />
         <item type="smallgem" material="MOONSTONE" />
         <source type="rough" material="MOONSTONE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, MILK QUARTZ" category="gems" type="90" materialType="inorganic" inorganic="MILK QUARTZ">
+      <dfjob name="Cut Gem, MILK QUARTZ" category="gems" type="85" materialType="inorganic" inorganic="MILK QUARTZ">
         <item type="gem" material="MILK QUARTZ" />
         <item type="smallgem" material="MILK QUARTZ" />
         <source type="rough" material="MILK QUARTZ" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, FORTIFICATION AGATE" category="gems" type="90" materialType="inorganic" inorganic="FORTIFICATION AGATE">
+      <dfjob name="Cut Gem, FORTIFICATION AGATE" category="gems" type="85" materialType="inorganic" inorganic="FORTIFICATION AGATE">
         <item type="gem" material="FORTIFICATION AGATE" />
         <item type="smallgem" material="FORTIFICATION AGATE" />
         <source type="rough" material="FORTIFICATION AGATE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, WHITE CHALCEDONY" category="gems" type="90" materialType="inorganic" inorganic="WHITE CHALCEDONY">
+      <dfjob name="Cut Gem, WHITE CHALCEDONY" category="gems" type="85" materialType="inorganic" inorganic="WHITE CHALCEDONY">
         <item type="gem" material="WHITE CHALCEDONY" />
         <item type="smallgem" material="WHITE CHALCEDONY" />
         <source type="rough" material="WHITE CHALCEDONY" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, BONE OPAL" category="gems" type="90" materialType="inorganic" inorganic="BONE OPAL">
+      <dfjob name="Cut Gem, BONE OPAL" category="gems" type="85" materialType="inorganic" inorganic="BONE OPAL">
         <item type="gem" material="BONE OPAL" />
         <item type="smallgem" material="BONE OPAL" />
         <source type="rough" material="BONE OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SHELL OPAL" category="gems" type="90" materialType="inorganic" inorganic="SHELL OPAL">
+      <dfjob name="Cut Gem, SHELL OPAL" category="gems" type="85" materialType="inorganic" inorganic="SHELL OPAL">
         <item type="gem" material="SHELL OPAL" />
         <item type="smallgem" material="SHELL OPAL" />
         <source type="rough" material="SHELL OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, GRAY CHALCEDONY" category="gems" type="90" materialType="inorganic" inorganic="GRAY CHALCEDONY">
+      <dfjob name="Cut Gem, GRAY CHALCEDONY" category="gems" type="85" materialType="inorganic" inorganic="GRAY CHALCEDONY">
         <item type="gem" material="GRAY CHALCEDONY" />
         <item type="smallgem" material="GRAY CHALCEDONY" />
         <source type="rough" material="GRAY CHALCEDONY" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CLEAR TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="CLEAR TOURMALINE">
+      <dfjob name="Cut Gem, CLEAR TOURMALINE" category="gems" type="85" materialType="inorganic" inorganic="CLEAR TOURMALINE">
         <item type="gem" material="CLEAR TOURMALINE" />
         <item type="smallgem" material="CLEAR TOURMALINE" />
         <source type="rough" material="CLEAR TOURMALINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PYRITE" category="gems" type="90" materialType="inorganic" inorganic="PYRITE">
+      <dfjob name="Cut Gem, PYRITE" category="gems" type="85" materialType="inorganic" inorganic="PYRITE">
         <item type="gem" material="PYRITE" />
         <item type="smallgem" material="PYRITE" />
         <source type="rough" material="PYRITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, RESIN OPAL" category="gems" type="90" materialType="inorganic" inorganic="RESIN OPAL">
+      <dfjob name="Cut Gem, RESIN OPAL" category="gems" type="85" materialType="inorganic" inorganic="RESIN OPAL">
         <item type="gem" material="RESIN OPAL" />
         <item type="smallgem" material="RESIN OPAL" />
         <source type="rough" material="RESIN OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SUNSTONE" category="gems" type="90" materialType="inorganic" inorganic="SUNSTONE">
+      <dfjob name="Cut Gem, SUNSTONE" category="gems" type="85" materialType="inorganic" inorganic="SUNSTONE">
         <item type="gem" material="SUNSTONE" />
         <item type="smallgem" material="SUNSTONE" />
         <source type="rough" material="SUNSTONE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, TIGER IRON" category="gems" type="90" materialType="inorganic" inorganic="TIGER IRON">
+      <dfjob name="Cut Gem, TIGER IRON" category="gems" type="85" materialType="inorganic" inorganic="TIGER IRON">
         <item type="gem" material="TIGER IRON" />
         <item type="smallgem" material="TIGER IRON" />
         <source type="rough" material="TIGER IRON" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, TIGEREYE" category="gems" type="90" materialType="inorganic" inorganic="TIGEREYE">
+      <dfjob name="Cut Gem, TIGEREYE" category="gems" type="85" materialType="inorganic" inorganic="TIGEREYE">
         <item type="gem" material="TIGEREYE" />
         <item type="smallgem" material="TIGEREYE" />
         <source type="rough" material="TIGEREYE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, YELLOW JASPER" category="gems" type="90" materialType="inorganic" inorganic="YELLOW JASPER">
+      <dfjob name="Cut Gem, YELLOW JASPER" category="gems" type="85" materialType="inorganic" inorganic="YELLOW JASPER">
         <item type="gem" material="YELLOW JASPER" />
         <item type="smallgem" material="YELLOW JASPER" />
         <source type="rough" material="YELLOW JASPER" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CITRINE" category="gems" type="90" materialType="inorganic" inorganic="CITRINE">
+      <dfjob name="Cut Gem, CITRINE" category="gems" type="85" materialType="inorganic" inorganic="CITRINE">
         <item type="gem" material="CITRINE" />
         <item type="smallgem" material="CITRINE" />
         <source type="rough" material="CITRINE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, GOLD OPAL" category="gems" type="90" materialType="inorganic" inorganic="GOLD OPAL">
+      <dfjob name="Cut Gem, GOLD OPAL" category="gems" type="85" materialType="inorganic" inorganic="GOLD OPAL">
         <item type="gem" material="GOLD OPAL" />
         <item type="smallgem" material="GOLD OPAL" />
         <source type="rough" material="GOLD OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, AMBER OPAL" category="gems" type="90" materialType="inorganic" inorganic="AMBER OPAL">
+      <dfjob name="Cut Gem, AMBER OPAL" category="gems" type="85" materialType="inorganic" inorganic="AMBER OPAL">
         <item type="gem" material="AMBER OPAL" />
         <item type="smallgem" material="AMBER OPAL" />
         <source type="rough" material="AMBER OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, WOOD OPAL" category="gems" type="90" materialType="inorganic" inorganic="WOOD OPAL">
+      <dfjob name="Cut Gem, WOOD OPAL" category="gems" type="85" materialType="inorganic" inorganic="WOOD OPAL">
         <item type="gem" material="WOOD OPAL" />
         <item type="smallgem" material="WOOD OPAL" />
         <source type="rough" material="WOOD OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, WAX OPAL" category="gems" type="90" materialType="inorganic" inorganic="WAX OPAL">
+      <dfjob name="Cut Gem, WAX OPAL" category="gems" type="85" materialType="inorganic" inorganic="WAX OPAL">
         <item type="gem" material="WAX OPAL" />
         <item type="smallgem" material="WAX OPAL" />
         <source type="rough" material="WAX OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SMOKY QUARTZ" category="gems" type="90" materialType="inorganic" inorganic="SMOKY QUARTZ">
+      <dfjob name="Cut Gem, SMOKY QUARTZ" category="gems" type="85" materialType="inorganic" inorganic="SMOKY QUARTZ">
         <item type="gem" material="SMOKY QUARTZ" />
         <item type="smallgem" material="SMOKY QUARTZ" />
         <source type="rough" material="SMOKY QUARTZ" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PICTURE JASPER" category="gems" type="90" materialType="inorganic" inorganic="PICTURE JASPER">
+      <dfjob name="Cut Gem, PICTURE JASPER" category="gems" type="85" materialType="inorganic" inorganic="PICTURE JASPER">
         <item type="gem" material="PICTURE JASPER" />
         <item type="smallgem" material="PICTURE JASPER" />
         <source type="rough" material="PICTURE JASPER" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, BROWN JASPER" category="gems" type="90" materialType="inorganic" inorganic="BROWN JASPER">
+      <dfjob name="Cut Gem, BROWN JASPER" category="gems" type="85" materialType="inorganic" inorganic="BROWN JASPER">
         <item type="gem" material="BROWN JASPER" />
         <item type="smallgem" material="BROWN JASPER" />
         <source type="rough" material="BROWN JASPER" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PLUME AGATE" category="gems" type="90" materialType="inorganic" inorganic="PLUME AGATE">
+      <dfjob name="Cut Gem, PLUME AGATE" category="gems" type="85" materialType="inorganic" inorganic="PLUME AGATE">
         <item type="gem" material="PLUME AGATE" />
         <item type="smallgem" material="PLUME AGATE" />
         <source type="rough" material="PLUME AGATE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, FIRE AGATE" category="gems" type="90" materialType="inorganic" inorganic="FIRE AGATE">
+      <dfjob name="Cut Gem, FIRE AGATE" category="gems" type="85" materialType="inorganic" inorganic="FIRE AGATE">
         <item type="gem" material="FIRE AGATE" />
         <item type="smallgem" material="FIRE AGATE" />
         <source type="rough" material="FIRE AGATE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, TUBE AGATE" category="gems" type="90" materialType="inorganic" inorganic="TUBE AGATE">
+      <dfjob name="Cut Gem, TUBE AGATE" category="gems" type="85" materialType="inorganic" inorganic="TUBE AGATE">
         <item type="gem" material="TUBE AGATE" />
         <item type="smallgem" material="TUBE AGATE" />
         <source type="rough" material="TUBE AGATE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PINK JADE" category="gems" type="90" materialType="inorganic" inorganic="PINK JADE">
+      <dfjob name="Cut Gem, PINK JADE" category="gems" type="85" materialType="inorganic" inorganic="PINK JADE">
         <item type="gem" material="PINK JADE" />
         <item type="smallgem" material="PINK JADE" />
         <source type="rough" material="PINK JADE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, LAVENDER JADE" category="gems" type="90" materialType="inorganic" inorganic="LAVENDER JADE">
+      <dfjob name="Cut Gem, LAVENDER JADE" category="gems" type="85" materialType="inorganic" inorganic="LAVENDER JADE">
         <item type="gem" material="LAVENDER JADE" />
         <item type="smallgem" material="LAVENDER JADE" />
         <source type="rough" material="LAVENDER JADE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CHERRY OPAL" category="gems" type="90" materialType="inorganic" inorganic="CHERRY OPAL">
+      <dfjob name="Cut Gem, CHERRY OPAL" category="gems" type="85" materialType="inorganic" inorganic="CHERRY OPAL">
         <item type="gem" material="CHERRY OPAL" />
         <item type="smallgem" material="CHERRY OPAL" />
         <source type="rough" material="CHERRY OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SARDONYX" category="gems" type="90" materialType="inorganic" inorganic="SARDONYX">
+      <dfjob name="Cut Gem, SARDONYX" category="gems" type="85" materialType="inorganic" inorganic="SARDONYX">
         <item type="gem" material="SARDONYX" />
         <item type="smallgem" material="SARDONYX" />
         <source type="rough" material="SARDONYX" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, BANDED AGATE" category="gems" type="90" materialType="inorganic" inorganic="BANDED AGATE">
+      <dfjob name="Cut Gem, BANDED AGATE" category="gems" type="85" materialType="inorganic" inorganic="BANDED AGATE">
         <item type="gem" material="BANDED AGATE" />
         <item type="smallgem" material="BANDED AGATE" />
         <source type="rough" material="BANDED AGATE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CARNELIAN" category="gems" type="90" materialType="inorganic" inorganic="CARNELIAN">
+      <dfjob name="Cut Gem, CARNELIAN" category="gems" type="85" materialType="inorganic" inorganic="CARNELIAN">
         <item type="gem" material="CARNELIAN" />
         <item type="smallgem" material="CARNELIAN" />
         <source type="rough" material="CARNELIAN" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SARD" category="gems" type="90" materialType="inorganic" inorganic="SARD">
+      <dfjob name="Cut Gem, SARD" category="gems" type="85" materialType="inorganic" inorganic="SARD">
         <item type="gem" material="SARD" />
         <item type="smallgem" material="SARD" />
         <source type="rough" material="SARD" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CHRYSOCOLLA" category="gems" type="90" materialType="inorganic" inorganic="CHRYSOCOLLA">
+      <dfjob name="Cut Gem, CHRYSOCOLLA" category="gems" type="85" materialType="inorganic" inorganic="CHRYSOCOLLA">
         <item type="gem" material="CHRYSOCOLLA" />
         <item type="smallgem" material="CHRYSOCOLLA" />
         <source type="rough" material="CHRYSOCOLLA" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, CHRYSOPRASE" category="gems" type="90" materialType="inorganic" inorganic="CHRYSOPRASE">
+      <dfjob name="Cut Gem, CHRYSOPRASE" category="gems" type="85" materialType="inorganic" inorganic="CHRYSOPRASE">
         <item type="gem" material="CHRYSOPRASE" />
         <item type="smallgem" material="CHRYSOPRASE" />
         <source type="rough" material="CHRYSOPRASE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, VARISCITE" category="gems" type="90" materialType="inorganic" inorganic="VARISCITE">
+      <dfjob name="Cut Gem, VARISCITE" category="gems" type="85" materialType="inorganic" inorganic="VARISCITE">
         <item type="gem" material="VARISCITE" />
         <item type="smallgem" material="VARISCITE" />
         <source type="rough" material="VARISCITE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, MOSS OPAL" category="gems" type="90" materialType="inorganic" inorganic="MOSS OPAL">
+      <dfjob name="Cut Gem, MOSS OPAL" category="gems" type="85" materialType="inorganic" inorganic="MOSS OPAL">
         <item type="gem" material="MOSS OPAL" />
         <item type="smallgem" material="MOSS OPAL" />
         <source type="rough" material="MOSS OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, MOSS AGATE" category="gems" type="90" materialType="inorganic" inorganic="MOSS AGATE">
+      <dfjob name="Cut Gem, MOSS AGATE" category="gems" type="85" materialType="inorganic" inorganic="MOSS AGATE">
         <item type="gem" material="MOSS AGATE" />
         <item type="smallgem" material="MOSS AGATE" />
         <source type="rough" material="MOSS AGATE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, BLOODSTONE" category="gems" type="90" materialType="inorganic" inorganic="BLOODSTONE">
+      <dfjob name="Cut Gem, BLOODSTONE" category="gems" type="85" materialType="inorganic" inorganic="BLOODSTONE">
         <item type="gem" material="BLOODSTONE" />
         <item type="smallgem" material="BLOODSTONE" />
         <source type="rough" material="BLOODSTONE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PRASE OPAL" category="gems" type="90" materialType="inorganic" inorganic="PRASE OPAL">
+      <dfjob name="Cut Gem, PRASE OPAL" category="gems" type="85" materialType="inorganic" inorganic="PRASE OPAL">
         <item type="gem" material="PRASE OPAL" />
         <item type="smallgem" material="PRASE OPAL" />
         <source type="rough" material="PRASE OPAL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, PRASE" category="gems" type="90" materialType="inorganic" inorganic="PRASE">
+      <dfjob name="Cut Gem, PRASE" category="gems" type="85" materialType="inorganic" inorganic="PRASE">
         <item type="gem" material="PRASE" />
         <item type="smallgem" material="PRASE" />
         <source type="rough" material="PRASE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, LAPIS LAZULI" category="gems" type="90" materialType="inorganic" inorganic="LAPIS LAZULI">
+      <dfjob name="Cut Gem, LAPIS LAZULI" category="gems" type="85" materialType="inorganic" inorganic="LAPIS LAZULI">
         <item type="gem" material="LAPIS LAZULI" />
         <item type="smallgem" material="LAPIS LAZULI" />
         <source type="rough" material="LAPIS LAZULI" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, BLUE JADE" category="gems" type="90" materialType="inorganic" inorganic="BLUE JADE">
+      <dfjob name="Cut Gem, BLUE JADE" category="gems" type="85" materialType="inorganic" inorganic="BLUE JADE">
         <item type="gem" material="BLUE JADE" />
         <item type="smallgem" material="BLUE JADE" />
         <source type="rough" material="BLUE JADE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, LACE AGATE" category="gems" type="90" materialType="inorganic" inorganic="LACE AGATE">
+      <dfjob name="Cut Gem, LACE AGATE" category="gems" type="85" materialType="inorganic" inorganic="LACE AGATE">
         <item type="gem" material="LACE AGATE" />
         <item type="smallgem" material="LACE AGATE" />
         <source type="rough" material="LACE AGATE" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, SCHORL" category="gems" type="90" materialType="inorganic" inorganic="SCHORL">
+      <dfjob name="Cut Gem, SCHORL" category="gems" type="85" materialType="inorganic" inorganic="SCHORL">
         <item type="gem" material="SCHORL" />
         <item type="smallgem" material="SCHORL" />
         <source type="rough" material="SCHORL" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, MORION" category="gems" type="90" materialType="inorganic" inorganic="MORION">
+      <dfjob name="Cut Gem, MORION" category="gems" type="85" materialType="inorganic" inorganic="MORION">
         <item type="gem" material="MORION" />
         <item type="smallgem" material="MORION" />
         <source type="rough" material="MORION" /> 
     </dfjob>                  
-      <dfjob name="Cut Gem, ONYX" category="gems" type="90" materialType="inorganic" inorganic="ONYX">
+      <dfjob name="Cut Gem, ONYX" category="gems" type="85" materialType="inorganic" inorganic="ONYX">
         <item type="gem" material="ONYX" />
         <item type="smallgem" material="ONYX" />
         <source type="rough" material="ONYX" /> 
