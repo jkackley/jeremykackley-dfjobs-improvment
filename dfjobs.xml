@@ -317,24 +317,43 @@
         <source type="boulder" material="Garnierite" />	
     </dfjob>	
 	
-    
-    
-    <!-- The lines at the bottom were generated from a template.  Ergo they might contain some really retarded mistake. The possibile necessity of regeneration is why they are sitting at the bottom of the file. -->
-	
-	 <dfjob name="Helm, IRON" category="IRON" type="102" subtype="helm" materialType="inorganic" inorganic="IRON">
+	<!-- Crazy generated stuff after this point -->
+
+
+    <dfjob name="Helm, IRON" category="IRON" type="102" subtype="helm" materialType="inorganic" inorganic="IRON">
         <item type="helm" material="IRON" />;
+        <source type="bar" material="IRON" />
+    </dfjob>
+    <dfjob name="Cap, IRON" category="IRON" type="102" subtype="cap" materialType="inorganic" inorganic="IRON">
+        <item type="cap" material="IRON" />;
         <source type="bar" material="IRON" />
     </dfjob>
     <dfjob name="Shield, IRON" category="IRON" type="119" subtype="shield" materialType="inorganic" inorganic="IRON">
         <item type="shield" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
+    <dfjob name="Buckler, IRON" category="IRON" type="119" subtype="buckler" materialType="inorganic" inorganic="IRON">
+        <item type="buckler" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
    <dfjob name="Greave, IRON" category="IRON" type="103" subtype="greaves" materialType="inorganic" inorganic="IRON">
         <item type="greaves" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
+   <dfjob name="Leggings, IRON" category="IRON" type="103" subtype="2" materialType="inorganic" inorganic="IRON">
+        <item type="leggings" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
  <dfjob name="High boots, IRON" category="IRON" type="118" subtype="high boot" materialType="inorganic" inorganic="IRON">
         <item type="high boot" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
+ <dfjob name="Low boots, IRON" category="IRON" type="118" subtype="2" materialType="inorganic" inorganic="IRON">
+        <item type="low boot" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
+	 <dfjob name="Warhammer, IRON" category="IRON" type="97" subtype="2" materialType="inorganic" inorganic="IRON">
+        <item type="war hammer" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
 	 <dfjob name="Pick, IRON" category="IRON" type="97" subtype="pick" materialType="inorganic" inorganic="IRON">
@@ -353,29 +372,60 @@
         <item type="spear" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
-    <dfjob name="Battle Axe, IRON" category="IRON" type="101" subtype="battle axe" materialType="inorganic" inorganic="IRON">
+    <dfjob name="Battle Axe, IRON" category="IRON" type="97" subtype="battle axe" materialType="inorganic" inorganic="IRON">
         <item type="battle axe" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
-    <dfjob name="Breastplate, IRON" category="IRON" type="101" subtype="breastplate" materialType="inorganic" inorganic="IRON">
+    <dfjob name="Breastplate, IRON" category="IRON" type="101" subtype="2" materialType="inorganic" inorganic="IRON">
         <item type="breastplate" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
-
+    <dfjob name="Mail Shirt, IRON" category="IRON" type="101" subtype="1" materialType="inorganic" inorganic="IRON">
+        <item type="mail shirt" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
+    <dfjob name="Ballista Arrow, IRON" category="IRON" type="136" materialType="inorganic" inorganic="IRON">
+        <item type="siegeammo" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
+    <dfjob name="Ballista Arrow Head, IRON" category="IRON" type="135" materialType="inorganic" inorganic="IRON">
+        <item type="ballistaarrowhead" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
     <dfjob name="Helm, COPPER" category="COPPER" type="102" subtype="helm" materialType="inorganic" inorganic="COPPER">
         <item type="helm" material="COPPER" />;
+        <source type="bar" material="COPPER" />
+    </dfjob>
+    <dfjob name="Cap, COPPER" category="COPPER" type="102" subtype="cap" materialType="inorganic" inorganic="COPPER">
+        <item type="cap" material="COPPER" />;
         <source type="bar" material="COPPER" />
     </dfjob>
     <dfjob name="Shield, COPPER" category="COPPER" type="119" subtype="shield" materialType="inorganic" inorganic="COPPER">
         <item type="shield" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
+    <dfjob name="Buckler, COPPER" category="COPPER" type="119" subtype="buckler" materialType="inorganic" inorganic="COPPER">
+        <item type="buckler" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
    <dfjob name="Greave, COPPER" category="COPPER" type="103" subtype="greaves" materialType="inorganic" inorganic="COPPER">
         <item type="greaves" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
+   <dfjob name="Leggings, COPPER" category="COPPER" type="103" subtype="2" materialType="inorganic" inorganic="COPPER">
+        <item type="leggings" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
  <dfjob name="High boots, COPPER" category="COPPER" type="118" subtype="high boot" materialType="inorganic" inorganic="COPPER">
         <item type="high boot" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
+ <dfjob name="Low boots, COPPER" category="COPPER" type="118" subtype="2" materialType="inorganic" inorganic="COPPER">
+        <item type="low boot" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
+	 <dfjob name="Warhammer, COPPER" category="COPPER" type="97" subtype="2" materialType="inorganic" inorganic="COPPER">
+        <item type="war hammer" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
 	 <dfjob name="Pick, COPPER" category="COPPER" type="97" subtype="pick" materialType="inorganic" inorganic="COPPER">
@@ -394,29 +444,60 @@
         <item type="spear" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-    <dfjob name="Battle Axe, COPPER" category="COPPER" type="101" subtype="battle axe" materialType="inorganic" inorganic="COPPER">
+    <dfjob name="Battle Axe, COPPER" category="COPPER" type="97" subtype="battle axe" materialType="inorganic" inorganic="COPPER">
         <item type="battle axe" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-    <dfjob name="Breastplate, COPPER" category="COPPER" type="101" subtype="breastplate" materialType="inorganic" inorganic="COPPER">
+    <dfjob name="Breastplate, COPPER" category="COPPER" type="101" subtype="2" materialType="inorganic" inorganic="COPPER">
         <item type="breastplate" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-
+    <dfjob name="Mail Shirt, COPPER" category="COPPER" type="101" subtype="1" materialType="inorganic" inorganic="COPPER">
+        <item type="mail shirt" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
+    <dfjob name="Ballista Arrow, COPPER" category="COPPER" type="136" materialType="inorganic" inorganic="COPPER">
+        <item type="siegeammo" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
+    <dfjob name="Ballista Arrow Head, COPPER" category="COPPER" type="135" materialType="inorganic" inorganic="COPPER">
+        <item type="ballistaarrowhead" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
     <dfjob name="Helm, BRONZE" category="BRONZE" type="102" subtype="helm" materialType="inorganic" inorganic="BRONZE">
         <item type="helm" material="BRONZE" />;
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+    <dfjob name="Cap, BRONZE" category="BRONZE" type="102" subtype="cap" materialType="inorganic" inorganic="BRONZE">
+        <item type="cap" material="BRONZE" />;
         <source type="bar" material="BRONZE" />
     </dfjob>
     <dfjob name="Shield, BRONZE" category="BRONZE" type="119" subtype="shield" materialType="inorganic" inorganic="BRONZE">
         <item type="shield" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
+    <dfjob name="Buckler, BRONZE" category="BRONZE" type="119" subtype="buckler" materialType="inorganic" inorganic="BRONZE">
+        <item type="buckler" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
    <dfjob name="Greave, BRONZE" category="BRONZE" type="103" subtype="greaves" materialType="inorganic" inorganic="BRONZE">
         <item type="greaves" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
+   <dfjob name="Leggings, BRONZE" category="BRONZE" type="103" subtype="2" materialType="inorganic" inorganic="BRONZE">
+        <item type="leggings" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
  <dfjob name="High boots, BRONZE" category="BRONZE" type="118" subtype="high boot" materialType="inorganic" inorganic="BRONZE">
         <item type="high boot" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+ <dfjob name="Low boots, BRONZE" category="BRONZE" type="118" subtype="2" materialType="inorganic" inorganic="BRONZE">
+        <item type="low boot" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+	 <dfjob name="Warhammer, BRONZE" category="BRONZE" type="97" subtype="2" materialType="inorganic" inorganic="BRONZE">
+        <item type="war hammer" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
 	 <dfjob name="Pick, BRONZE" category="BRONZE" type="97" subtype="pick" materialType="inorganic" inorganic="BRONZE">
@@ -435,29 +516,60 @@
         <item type="spear" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
-    <dfjob name="Battle Axe, BRONZE" category="BRONZE" type="101" subtype="battle axe" materialType="inorganic" inorganic="BRONZE">
+    <dfjob name="Battle Axe, BRONZE" category="BRONZE" type="97" subtype="battle axe" materialType="inorganic" inorganic="BRONZE">
         <item type="battle axe" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
-    <dfjob name="Breastplate, BRONZE" category="BRONZE" type="101" subtype="breastplate" materialType="inorganic" inorganic="BRONZE">
+    <dfjob name="Breastplate, BRONZE" category="BRONZE" type="101" subtype="2" materialType="inorganic" inorganic="BRONZE">
         <item type="breastplate" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
-
+    <dfjob name="Mail Shirt, BRONZE" category="BRONZE" type="101" subtype="1" materialType="inorganic" inorganic="BRONZE">
+        <item type="mail shirt" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+    <dfjob name="Ballista Arrow, BRONZE" category="BRONZE" type="136" materialType="inorganic" inorganic="BRONZE">
+        <item type="siegeammo" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+    <dfjob name="Ballista Arrow Head, BRONZE" category="BRONZE" type="135" materialType="inorganic" inorganic="BRONZE">
+        <item type="ballistaarrowhead" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
     <dfjob name="Helm, STEEL" category="STEEL" type="102" subtype="helm" materialType="inorganic" inorganic="STEEL">
         <item type="helm" material="STEEL" />;
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="Cap, STEEL" category="STEEL" type="102" subtype="cap" materialType="inorganic" inorganic="STEEL">
+        <item type="cap" material="STEEL" />;
         <source type="bar" material="STEEL" />
     </dfjob>
     <dfjob name="Shield, STEEL" category="STEEL" type="119" subtype="shield" materialType="inorganic" inorganic="STEEL">
         <item type="shield" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
+    <dfjob name="Buckler, STEEL" category="STEEL" type="119" subtype="buckler" materialType="inorganic" inorganic="STEEL">
+        <item type="buckler" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
    <dfjob name="Greave, STEEL" category="STEEL" type="103" subtype="greaves" materialType="inorganic" inorganic="STEEL">
         <item type="greaves" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
+   <dfjob name="Leggings, STEEL" category="STEEL" type="103" subtype="2" materialType="inorganic" inorganic="STEEL">
+        <item type="leggings" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
  <dfjob name="High boots, STEEL" category="STEEL" type="118" subtype="high boot" materialType="inorganic" inorganic="STEEL">
         <item type="high boot" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+ <dfjob name="Low boots, STEEL" category="STEEL" type="118" subtype="2" materialType="inorganic" inorganic="STEEL">
+        <item type="low boot" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+	 <dfjob name="Warhammer, STEEL" category="STEEL" type="97" subtype="2" materialType="inorganic" inorganic="STEEL">
+        <item type="war hammer" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
 	 <dfjob name="Pick, STEEL" category="STEEL" type="97" subtype="pick" materialType="inorganic" inorganic="STEEL">
@@ -476,29 +588,60 @@
         <item type="spear" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
-    <dfjob name="Battle Axe, STEEL" category="STEEL" type="101" subtype="battle axe" materialType="inorganic" inorganic="STEEL">
+    <dfjob name="Battle Axe, STEEL" category="STEEL" type="97" subtype="battle axe" materialType="inorganic" inorganic="STEEL">
         <item type="battle axe" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
-    <dfjob name="Breastplate, STEEL" category="STEEL" type="101" subtype="breastplate" materialType="inorganic" inorganic="STEEL">
+    <dfjob name="Breastplate, STEEL" category="STEEL" type="101" subtype="2" materialType="inorganic" inorganic="STEEL">
         <item type="breastplate" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
-
+    <dfjob name="Mail Shirt, STEEL" category="STEEL" type="101" subtype="1" materialType="inorganic" inorganic="STEEL">
+        <item type="mail shirt" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="Ballista Arrow, STEEL" category="STEEL" type="136" materialType="inorganic" inorganic="STEEL">
+        <item type="siegeammo" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="Ballista Arrow Head, STEEL" category="STEEL" type="135" materialType="inorganic" inorganic="STEEL">
+        <item type="ballistaarrowhead" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
     <dfjob name="Helm, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="102" subtype="helm" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="helm" material="BISMUTH_BRONZE" />;
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+    <dfjob name="Cap, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="102" subtype="cap" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="cap" material="BISMUTH_BRONZE" />;
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
     <dfjob name="Shield, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="119" subtype="shield" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="shield" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
+    <dfjob name="Buckler, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="119" subtype="buckler" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="buckler" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
    <dfjob name="Greave, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="103" subtype="greaves" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="greaves" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
+   <dfjob name="Leggings, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="103" subtype="2" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="leggings" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
  <dfjob name="High boots, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="118" subtype="high boot" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="high boot" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+ <dfjob name="Low boots, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="118" subtype="2" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="low boot" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+	 <dfjob name="Warhammer, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="97" subtype="2" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="war hammer" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
 	 <dfjob name="Pick, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="97" subtype="pick" materialType="inorganic" inorganic="BISMUTH_BRONZE">
@@ -517,29 +660,60 @@
         <item type="spear" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
-    <dfjob name="Battle Axe, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="101" subtype="battle axe" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+    <dfjob name="Battle Axe, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="97" subtype="battle axe" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="battle axe" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
-    <dfjob name="Breastplate, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="101" subtype="breastplate" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+    <dfjob name="Breastplate, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="101" subtype="2" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="breastplate" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
-
+    <dfjob name="Mail Shirt, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="101" subtype="1" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="mail shirt" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+    <dfjob name="Ballista Arrow, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="136" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="siegeammo" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+    <dfjob name="Ballista Arrow Head, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="135" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="ballistaarrowhead" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
     <dfjob name="Helm, ADAMANTINE" category="ADAMANTINE" type="102" subtype="helm" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="helm" material="ADAMANTINE" />;
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+    <dfjob name="Cap, ADAMANTINE" category="ADAMANTINE" type="102" subtype="cap" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="cap" material="ADAMANTINE" />;
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
     <dfjob name="Shield, ADAMANTINE" category="ADAMANTINE" type="119" subtype="shield" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="shield" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
+    <dfjob name="Buckler, ADAMANTINE" category="ADAMANTINE" type="119" subtype="buckler" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="buckler" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
    <dfjob name="Greave, ADAMANTINE" category="ADAMANTINE" type="103" subtype="greaves" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="greaves" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
+   <dfjob name="Leggings, ADAMANTINE" category="ADAMANTINE" type="103" subtype="2" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="leggings" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
  <dfjob name="High boots, ADAMANTINE" category="ADAMANTINE" type="118" subtype="high boot" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="high boot" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+ <dfjob name="Low boots, ADAMANTINE" category="ADAMANTINE" type="118" subtype="2" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="low boot" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+	 <dfjob name="Warhammer, ADAMANTINE" category="ADAMANTINE" type="97" subtype="2" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="war hammer" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
 	 <dfjob name="Pick, ADAMANTINE" category="ADAMANTINE" type="97" subtype="pick" materialType="inorganic" inorganic="ADAMANTINE">
@@ -558,177 +732,1405 @@
         <item type="spear" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
-    <dfjob name="Battle Axe, ADAMANTINE" category="ADAMANTINE" type="101" subtype="battle axe" materialType="inorganic" inorganic="ADAMANTINE">
+    <dfjob name="Battle Axe, ADAMANTINE" category="ADAMANTINE" type="97" subtype="battle axe" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="battle axe" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
-    <dfjob name="Breastplate, ADAMANTINE" category="ADAMANTINE" type="101" subtype="breastplate" materialType="inorganic" inorganic="ADAMANTINE">
+    <dfjob name="Breastplate, ADAMANTINE" category="ADAMANTINE" type="101" subtype="2" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="breastplate" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
-
-
-<!-- Warning, bins are buggy! -->
-
+    <dfjob name="Mail Shirt, ADAMANTINE" category="ADAMANTINE" type="101" subtype="1" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="mail shirt" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+    <dfjob name="Ballista Arrow, ADAMANTINE" category="ADAMANTINE" type="136" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="siegeammo" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+    <dfjob name="Ballista Arrow Head, ADAMANTINE" category="ADAMANTINE" type="135" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="ballistaarrowhead" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
     <dfjob name="Bin, IRON" category="IRON" type="76" materialType="inorganic" inorganic="IRON">
         <item type="bin" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
-
+    <dfjob name="Crutch, IRON" category="IRON" type="208" materialType="inorganic" inorganic="IRON">
+        <item type="crutch" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
+         <dfjob name="Cage, IRON" category="IRON" type="120" materialType="inorganic" inorganic="IRON">
+        <item type="cage" material="IRON" />;
+        <source type="bar" material="IRON" />
+    </dfjob>
+    <dfjob name="Block, IRON" category="IRON" type="81" materialType="inorganic" inorganic="IRON">
+        <item type="blocks" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
+ <dfjob name="Armor Stand, IRON" category="IRON" type="77" materialType="inorganic" inorganic="IRON">
+        <item type="armorstand" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, IRON" category="IRON" type="78" materialType="inorganic" inorganic="IRON">
+        <item type="weaponrack" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
+    <dfjob name="Table, IRON" category="IRON" type="74" materialType="inorganic" inorganic="IRON">
+        <item type="table" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
+    <dfjob name="Coffin, IRON (Sarcophagus)" category="IRON" type="73" materialType="inorganic" inorganic="IRON">
+        <item type="coffin" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
+    <dfjob name="Chest, IRON" category="IRON" type="75" materialType="inorganic" inorganic="IRON">
+        <item type="box" material="IRON" />
+        <source type="bar" material="IRON" />
+    </dfjob>
     <dfjob name="Bin, COPPER" category="COPPER" type="76" materialType="inorganic" inorganic="COPPER">
         <item type="bin" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-
-    <dfjob name="Bin, BRONZE" category="BRONZE" type="76" materialType="inorganic" inorganic="BRONZE">
-        <item type="bin" material="BRONZE" />
-        <source type="bar" material="BRONZE" />
-    </dfjob>
-
-    <dfjob name="Bin, STEEL" category="STEEL" type="76" materialType="inorganic" inorganic="STEEL">
-        <item type="bin" material="STEEL" />
-        <source type="bar" material="STEEL" />
-    </dfjob>
-
-    <dfjob name="Bin, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="76" materialType="inorganic" inorganic="BISMUTH_BRONZE">
-        <item type="bin" material="BISMUTH_BRONZE" />
-        <source type="bar" material="BISMUTH_BRONZE" />
-    </dfjob>
-
-    <dfjob name="Bin, ADAMANTINE" category="ADAMANTINE" type="76" materialType="inorganic" inorganic="ADAMANTINE">
-        <item type="bin" material="ADAMANTINE" />
-        <source type="bar" material="ADAMANTINE" />
-    </dfjob>
-
-    <dfjob name="Bin, GOLD" category="GOLD" type="76" materialType="inorganic" inorganic="GOLD">
-        <item type="bin" material="GOLD" />
-        <source type="bar" material="GOLD" />
-    </dfjob>
-
-    <dfjob name="Bin, SILVER" category="SILVER" type="76" materialType="inorganic" inorganic="SILVER">
-        <item type="bin" material="SILVER" />
-        <source type="bar" material="SILVER" />
-    </dfjob>
-
-    <dfjob name="Bin, NICKEL" category="NICKEL" type="76" materialType="inorganic" inorganic="NICKEL">
-        <item type="bin" material="NICKEL" />
-        <source type="bar" material="NICKEL" />
-    </dfjob>
-
-    <dfjob name="Bin, ZINC" category="ZINC" type="76" materialType="inorganic" inorganic="ZINC">
-        <item type="bin" material="ZINC" />
-        <source type="bar" material="ZINC" />
-    </dfjob>
-
-    <dfjob name="Bin, BRASS" category="BRASS" type="76" materialType="inorganic" inorganic="BRASS">
-        <item type="bin" material="BRASS" />
-        <source type="bar" material="BRASS" />
-    </dfjob>
-
-    <dfjob name="Bin, PLATINUM" category="PLATINUM" type="76" materialType="inorganic" inorganic="PLATINUM">
-        <item type="bin" material="PLATINUM" />
-        <source type="bar" material="PLATINUM" />
-    </dfjob>
-
-    <dfjob name="Bin, ELECTRUM" category="ELECTRUM" type="76" materialType="inorganic" inorganic="ELECTRUM">
-        <item type="bin" material="ELECTRUM" />
-        <source type="bar" material="ELECTRUM" />
-    </dfjob>
-
-    <dfjob name="Bin, TIN" category="TIN" type="76" materialType="inorganic" inorganic="TIN">
-        <item type="bin" material="TIN" />
-        <source type="bar" material="TIN" />
-    </dfjob>
-
-    <dfjob name="Bin, LEAD" category="LEAD" type="76" materialType="inorganic" inorganic="LEAD">
-        <item type="bin" material="LEAD" />
-        <source type="bar" material="LEAD" />
-    </dfjob>
-
-    <dfjob name="Bin, ALUMINUM" category="ALUMINUM" type="76" materialType="inorganic" inorganic="ALUMINUM">
-        <item type="bin" material="ALUMINUM" />
-        <source type="bar" material="ALUMINUM" />
-    </dfjob>
-    
-	    <dfjob name="Crutch, IRON" category="IRON" type="208" materialType="inorganic" inorganic="IRON">
-        <item type="crutch" material="IRON" />
-        <source type="bar" material="IRON" />
-    </dfjob>
-
     <dfjob name="Crutch, COPPER" category="COPPER" type="208" materialType="inorganic" inorganic="COPPER">
         <item type="crutch" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-
+         <dfjob name="Cage, COPPER" category="COPPER" type="120" materialType="inorganic" inorganic="COPPER">
+        <item type="cage" material="COPPER" />;
+        <source type="bar" material="COPPER" />
+    </dfjob>
+    <dfjob name="Block, COPPER" category="COPPER" type="81" materialType="inorganic" inorganic="COPPER">
+        <item type="blocks" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
+ <dfjob name="Armor Stand, COPPER" category="COPPER" type="77" materialType="inorganic" inorganic="COPPER">
+        <item type="armorstand" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, COPPER" category="COPPER" type="78" materialType="inorganic" inorganic="COPPER">
+        <item type="weaponrack" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
+    <dfjob name="Table, COPPER" category="COPPER" type="74" materialType="inorganic" inorganic="COPPER">
+        <item type="table" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
+    <dfjob name="Coffin, COPPER (Sarcophagus)" category="COPPER" type="73" materialType="inorganic" inorganic="COPPER">
+        <item type="coffin" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
+    <dfjob name="Chest, COPPER" category="COPPER" type="75" materialType="inorganic" inorganic="COPPER">
+        <item type="box" material="COPPER" />
+        <source type="bar" material="COPPER" />
+    </dfjob>
+    <dfjob name="Bin, BRONZE" category="BRONZE" type="76" materialType="inorganic" inorganic="BRONZE">
+        <item type="bin" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
     <dfjob name="Crutch, BRONZE" category="BRONZE" type="208" materialType="inorganic" inorganic="BRONZE">
         <item type="crutch" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
-
+         <dfjob name="Cage, BRONZE" category="BRONZE" type="120" materialType="inorganic" inorganic="BRONZE">
+        <item type="cage" material="BRONZE" />;
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+    <dfjob name="Block, BRONZE" category="BRONZE" type="81" materialType="inorganic" inorganic="BRONZE">
+        <item type="blocks" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+ <dfjob name="Armor Stand, BRONZE" category="BRONZE" type="77" materialType="inorganic" inorganic="BRONZE">
+        <item type="armorstand" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, BRONZE" category="BRONZE" type="78" materialType="inorganic" inorganic="BRONZE">
+        <item type="weaponrack" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+    <dfjob name="Table, BRONZE" category="BRONZE" type="74" materialType="inorganic" inorganic="BRONZE">
+        <item type="table" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+    <dfjob name="Coffin, BRONZE (Sarcophagus)" category="BRONZE" type="73" materialType="inorganic" inorganic="BRONZE">
+        <item type="coffin" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+    <dfjob name="Chest, BRONZE" category="BRONZE" type="75" materialType="inorganic" inorganic="BRONZE">
+        <item type="box" material="BRONZE" />
+        <source type="bar" material="BRONZE" />
+    </dfjob>
+    <dfjob name="Bin, STEEL" category="STEEL" type="76" materialType="inorganic" inorganic="STEEL">
+        <item type="bin" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
     <dfjob name="Crutch, STEEL" category="STEEL" type="208" materialType="inorganic" inorganic="STEEL">
         <item type="crutch" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
-
+         <dfjob name="Cage, STEEL" category="STEEL" type="120" materialType="inorganic" inorganic="STEEL">
+        <item type="cage" material="STEEL" />;
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="Block, STEEL" category="STEEL" type="81" materialType="inorganic" inorganic="STEEL">
+        <item type="blocks" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+ <dfjob name="Armor Stand, STEEL" category="STEEL" type="77" materialType="inorganic" inorganic="STEEL">
+        <item type="armorstand" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, STEEL" category="STEEL" type="78" materialType="inorganic" inorganic="STEEL">
+        <item type="weaponrack" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="Table, STEEL" category="STEEL" type="74" materialType="inorganic" inorganic="STEEL">
+        <item type="table" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="Coffin, STEEL (Sarcophagus)" category="STEEL" type="73" materialType="inorganic" inorganic="STEEL">
+        <item type="coffin" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="Chest, STEEL" category="STEEL" type="75" materialType="inorganic" inorganic="STEEL">
+        <item type="box" material="STEEL" />
+        <source type="bar" material="STEEL" />
+    </dfjob>
+    <dfjob name="Bin, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="76" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="bin" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
     <dfjob name="Crutch, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="208" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="crutch" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
-
+         <dfjob name="Cage, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="120" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="cage" material="BISMUTH_BRONZE" />;
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+    <dfjob name="Block, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="81" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="blocks" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+ <dfjob name="Armor Stand, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="77" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="armorstand" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="78" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="weaponrack" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+    <dfjob name="Table, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="74" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="table" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+    <dfjob name="Coffin, BISMUTH_BRONZE (Sarcophagus)" category="BISMUTH_BRONZE" type="73" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="coffin" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+    <dfjob name="Chest, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="75" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+        <item type="box" material="BISMUTH_BRONZE" />
+        <source type="bar" material="BISMUTH_BRONZE" />
+    </dfjob>
+    <dfjob name="Bin, ADAMANTINE" category="ADAMANTINE" type="76" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="bin" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
     <dfjob name="Crutch, ADAMANTINE" category="ADAMANTINE" type="208" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="crutch" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
-
+         <dfjob name="Cage, ADAMANTINE" category="ADAMANTINE" type="120" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="cage" material="ADAMANTINE" />;
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+    <dfjob name="Block, ADAMANTINE" category="ADAMANTINE" type="81" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="blocks" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+ <dfjob name="Armor Stand, ADAMANTINE" category="ADAMANTINE" type="77" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="armorstand" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, ADAMANTINE" category="ADAMANTINE" type="78" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="weaponrack" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+    <dfjob name="Table, ADAMANTINE" category="ADAMANTINE" type="74" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="table" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+    <dfjob name="Coffin, ADAMANTINE (Sarcophagus)" category="ADAMANTINE" type="73" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="coffin" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+    <dfjob name="Chest, ADAMANTINE" category="ADAMANTINE" type="75" materialType="inorganic" inorganic="ADAMANTINE">
+        <item type="box" material="ADAMANTINE" />
+        <source type="bar" material="ADAMANTINE" />
+    </dfjob>
+    <dfjob name="Bin, GOLD" category="GOLD" type="76" materialType="inorganic" inorganic="GOLD">
+        <item type="bin" material="GOLD" />
+        <source type="bar" material="GOLD" />
+    </dfjob>
     <dfjob name="Crutch, GOLD" category="GOLD" type="208" materialType="inorganic" inorganic="GOLD">
         <item type="crutch" material="GOLD" />
         <source type="bar" material="GOLD" />
     </dfjob>
-
+         <dfjob name="Cage, GOLD" category="GOLD" type="120" materialType="inorganic" inorganic="GOLD">
+        <item type="cage" material="GOLD" />;
+        <source type="bar" material="GOLD" />
+    </dfjob>
+    <dfjob name="Block, GOLD" category="GOLD" type="81" materialType="inorganic" inorganic="GOLD">
+        <item type="blocks" material="GOLD" />
+        <source type="bar" material="GOLD" />
+    </dfjob>
+ <dfjob name="Armor Stand, GOLD" category="GOLD" type="77" materialType="inorganic" inorganic="GOLD">
+        <item type="armorstand" material="GOLD" />
+        <source type="bar" material="GOLD" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, GOLD" category="GOLD" type="78" materialType="inorganic" inorganic="GOLD">
+        <item type="weaponrack" material="GOLD" />
+        <source type="bar" material="GOLD" />
+    </dfjob>
+    <dfjob name="Table, GOLD" category="GOLD" type="74" materialType="inorganic" inorganic="GOLD">
+        <item type="table" material="GOLD" />
+        <source type="bar" material="GOLD" />
+    </dfjob>
+    <dfjob name="Coffin, GOLD (Sarcophagus)" category="GOLD" type="73" materialType="inorganic" inorganic="GOLD">
+        <item type="coffin" material="GOLD" />
+        <source type="bar" material="GOLD" />
+    </dfjob>
+    <dfjob name="Chest, GOLD" category="GOLD" type="75" materialType="inorganic" inorganic="GOLD">
+        <item type="box" material="GOLD" />
+        <source type="bar" material="GOLD" />
+    </dfjob>
+    <dfjob name="Bin, SILVER" category="SILVER" type="76" materialType="inorganic" inorganic="SILVER">
+        <item type="bin" material="SILVER" />
+        <source type="bar" material="SILVER" />
+    </dfjob>
     <dfjob name="Crutch, SILVER" category="SILVER" type="208" materialType="inorganic" inorganic="SILVER">
         <item type="crutch" material="SILVER" />
         <source type="bar" material="SILVER" />
     </dfjob>
-
+         <dfjob name="Cage, SILVER" category="SILVER" type="120" materialType="inorganic" inorganic="SILVER">
+        <item type="cage" material="SILVER" />;
+        <source type="bar" material="SILVER" />
+    </dfjob>
+    <dfjob name="Block, SILVER" category="SILVER" type="81" materialType="inorganic" inorganic="SILVER">
+        <item type="blocks" material="SILVER" />
+        <source type="bar" material="SILVER" />
+    </dfjob>
+ <dfjob name="Armor Stand, SILVER" category="SILVER" type="77" materialType="inorganic" inorganic="SILVER">
+        <item type="armorstand" material="SILVER" />
+        <source type="bar" material="SILVER" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, SILVER" category="SILVER" type="78" materialType="inorganic" inorganic="SILVER">
+        <item type="weaponrack" material="SILVER" />
+        <source type="bar" material="SILVER" />
+    </dfjob>
+    <dfjob name="Table, SILVER" category="SILVER" type="74" materialType="inorganic" inorganic="SILVER">
+        <item type="table" material="SILVER" />
+        <source type="bar" material="SILVER" />
+    </dfjob>
+    <dfjob name="Coffin, SILVER (Sarcophagus)" category="SILVER" type="73" materialType="inorganic" inorganic="SILVER">
+        <item type="coffin" material="SILVER" />
+        <source type="bar" material="SILVER" />
+    </dfjob>
+    <dfjob name="Chest, SILVER" category="SILVER" type="75" materialType="inorganic" inorganic="SILVER">
+        <item type="box" material="SILVER" />
+        <source type="bar" material="SILVER" />
+    </dfjob>
+    <dfjob name="Bin, NICKEL" category="NICKEL" type="76" materialType="inorganic" inorganic="NICKEL">
+        <item type="bin" material="NICKEL" />
+        <source type="bar" material="NICKEL" />
+    </dfjob>
     <dfjob name="Crutch, NICKEL" category="NICKEL" type="208" materialType="inorganic" inorganic="NICKEL">
         <item type="crutch" material="NICKEL" />
         <source type="bar" material="NICKEL" />
     </dfjob>
-
+         <dfjob name="Cage, NICKEL" category="NICKEL" type="120" materialType="inorganic" inorganic="NICKEL">
+        <item type="cage" material="NICKEL" />;
+        <source type="bar" material="NICKEL" />
+    </dfjob>
+    <dfjob name="Block, NICKEL" category="NICKEL" type="81" materialType="inorganic" inorganic="NICKEL">
+        <item type="blocks" material="NICKEL" />
+        <source type="bar" material="NICKEL" />
+    </dfjob>
+ <dfjob name="Armor Stand, NICKEL" category="NICKEL" type="77" materialType="inorganic" inorganic="NICKEL">
+        <item type="armorstand" material="NICKEL" />
+        <source type="bar" material="NICKEL" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, NICKEL" category="NICKEL" type="78" materialType="inorganic" inorganic="NICKEL">
+        <item type="weaponrack" material="NICKEL" />
+        <source type="bar" material="NICKEL" />
+    </dfjob>
+    <dfjob name="Table, NICKEL" category="NICKEL" type="74" materialType="inorganic" inorganic="NICKEL">
+        <item type="table" material="NICKEL" />
+        <source type="bar" material="NICKEL" />
+    </dfjob>
+    <dfjob name="Coffin, NICKEL (Sarcophagus)" category="NICKEL" type="73" materialType="inorganic" inorganic="NICKEL">
+        <item type="coffin" material="NICKEL" />
+        <source type="bar" material="NICKEL" />
+    </dfjob>
+    <dfjob name="Chest, NICKEL" category="NICKEL" type="75" materialType="inorganic" inorganic="NICKEL">
+        <item type="box" material="NICKEL" />
+        <source type="bar" material="NICKEL" />
+    </dfjob>
+    <dfjob name="Bin, ZINC" category="ZINC" type="76" materialType="inorganic" inorganic="ZINC">
+        <item type="bin" material="ZINC" />
+        <source type="bar" material="ZINC" />
+    </dfjob>
     <dfjob name="Crutch, ZINC" category="ZINC" type="208" materialType="inorganic" inorganic="ZINC">
         <item type="crutch" material="ZINC" />
         <source type="bar" material="ZINC" />
     </dfjob>
-
+         <dfjob name="Cage, ZINC" category="ZINC" type="120" materialType="inorganic" inorganic="ZINC">
+        <item type="cage" material="ZINC" />;
+        <source type="bar" material="ZINC" />
+    </dfjob>
+    <dfjob name="Block, ZINC" category="ZINC" type="81" materialType="inorganic" inorganic="ZINC">
+        <item type="blocks" material="ZINC" />
+        <source type="bar" material="ZINC" />
+    </dfjob>
+ <dfjob name="Armor Stand, ZINC" category="ZINC" type="77" materialType="inorganic" inorganic="ZINC">
+        <item type="armorstand" material="ZINC" />
+        <source type="bar" material="ZINC" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, ZINC" category="ZINC" type="78" materialType="inorganic" inorganic="ZINC">
+        <item type="weaponrack" material="ZINC" />
+        <source type="bar" material="ZINC" />
+    </dfjob>
+    <dfjob name="Table, ZINC" category="ZINC" type="74" materialType="inorganic" inorganic="ZINC">
+        <item type="table" material="ZINC" />
+        <source type="bar" material="ZINC" />
+    </dfjob>
+    <dfjob name="Coffin, ZINC (Sarcophagus)" category="ZINC" type="73" materialType="inorganic" inorganic="ZINC">
+        <item type="coffin" material="ZINC" />
+        <source type="bar" material="ZINC" />
+    </dfjob>
+    <dfjob name="Chest, ZINC" category="ZINC" type="75" materialType="inorganic" inorganic="ZINC">
+        <item type="box" material="ZINC" />
+        <source type="bar" material="ZINC" />
+    </dfjob>
+    <dfjob name="Bin, BRASS" category="BRASS" type="76" materialType="inorganic" inorganic="BRASS">
+        <item type="bin" material="BRASS" />
+        <source type="bar" material="BRASS" />
+    </dfjob>
     <dfjob name="Crutch, BRASS" category="BRASS" type="208" materialType="inorganic" inorganic="BRASS">
         <item type="crutch" material="BRASS" />
         <source type="bar" material="BRASS" />
     </dfjob>
-
+         <dfjob name="Cage, BRASS" category="BRASS" type="120" materialType="inorganic" inorganic="BRASS">
+        <item type="cage" material="BRASS" />;
+        <source type="bar" material="BRASS" />
+    </dfjob>
+    <dfjob name="Block, BRASS" category="BRASS" type="81" materialType="inorganic" inorganic="BRASS">
+        <item type="blocks" material="BRASS" />
+        <source type="bar" material="BRASS" />
+    </dfjob>
+ <dfjob name="Armor Stand, BRASS" category="BRASS" type="77" materialType="inorganic" inorganic="BRASS">
+        <item type="armorstand" material="BRASS" />
+        <source type="bar" material="BRASS" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, BRASS" category="BRASS" type="78" materialType="inorganic" inorganic="BRASS">
+        <item type="weaponrack" material="BRASS" />
+        <source type="bar" material="BRASS" />
+    </dfjob>
+    <dfjob name="Table, BRASS" category="BRASS" type="74" materialType="inorganic" inorganic="BRASS">
+        <item type="table" material="BRASS" />
+        <source type="bar" material="BRASS" />
+    </dfjob>
+    <dfjob name="Coffin, BRASS (Sarcophagus)" category="BRASS" type="73" materialType="inorganic" inorganic="BRASS">
+        <item type="coffin" material="BRASS" />
+        <source type="bar" material="BRASS" />
+    </dfjob>
+    <dfjob name="Chest, BRASS" category="BRASS" type="75" materialType="inorganic" inorganic="BRASS">
+        <item type="box" material="BRASS" />
+        <source type="bar" material="BRASS" />
+    </dfjob>
+    <dfjob name="Bin, PLATINUM" category="PLATINUM" type="76" materialType="inorganic" inorganic="PLATINUM">
+        <item type="bin" material="PLATINUM" />
+        <source type="bar" material="PLATINUM" />
+    </dfjob>
     <dfjob name="Crutch, PLATINUM" category="PLATINUM" type="208" materialType="inorganic" inorganic="PLATINUM">
         <item type="crutch" material="PLATINUM" />
         <source type="bar" material="PLATINUM" />
     </dfjob>
-
+         <dfjob name="Cage, PLATINUM" category="PLATINUM" type="120" materialType="inorganic" inorganic="PLATINUM">
+        <item type="cage" material="PLATINUM" />;
+        <source type="bar" material="PLATINUM" />
+    </dfjob>
+    <dfjob name="Block, PLATINUM" category="PLATINUM" type="81" materialType="inorganic" inorganic="PLATINUM">
+        <item type="blocks" material="PLATINUM" />
+        <source type="bar" material="PLATINUM" />
+    </dfjob>
+ <dfjob name="Armor Stand, PLATINUM" category="PLATINUM" type="77" materialType="inorganic" inorganic="PLATINUM">
+        <item type="armorstand" material="PLATINUM" />
+        <source type="bar" material="PLATINUM" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, PLATINUM" category="PLATINUM" type="78" materialType="inorganic" inorganic="PLATINUM">
+        <item type="weaponrack" material="PLATINUM" />
+        <source type="bar" material="PLATINUM" />
+    </dfjob>
+    <dfjob name="Table, PLATINUM" category="PLATINUM" type="74" materialType="inorganic" inorganic="PLATINUM">
+        <item type="table" material="PLATINUM" />
+        <source type="bar" material="PLATINUM" />
+    </dfjob>
+    <dfjob name="Coffin, PLATINUM (Sarcophagus)" category="PLATINUM" type="73" materialType="inorganic" inorganic="PLATINUM">
+        <item type="coffin" material="PLATINUM" />
+        <source type="bar" material="PLATINUM" />
+    </dfjob>
+    <dfjob name="Chest, PLATINUM" category="PLATINUM" type="75" materialType="inorganic" inorganic="PLATINUM">
+        <item type="box" material="PLATINUM" />
+        <source type="bar" material="PLATINUM" />
+    </dfjob>
+    <dfjob name="Bin, ELECTRUM" category="ELECTRUM" type="76" materialType="inorganic" inorganic="ELECTRUM">
+        <item type="bin" material="ELECTRUM" />
+        <source type="bar" material="ELECTRUM" />
+    </dfjob>
     <dfjob name="Crutch, ELECTRUM" category="ELECTRUM" type="208" materialType="inorganic" inorganic="ELECTRUM">
         <item type="crutch" material="ELECTRUM" />
         <source type="bar" material="ELECTRUM" />
     </dfjob>
-
+         <dfjob name="Cage, ELECTRUM" category="ELECTRUM" type="120" materialType="inorganic" inorganic="ELECTRUM">
+        <item type="cage" material="ELECTRUM" />;
+        <source type="bar" material="ELECTRUM" />
+    </dfjob>
+    <dfjob name="Block, ELECTRUM" category="ELECTRUM" type="81" materialType="inorganic" inorganic="ELECTRUM">
+        <item type="blocks" material="ELECTRUM" />
+        <source type="bar" material="ELECTRUM" />
+    </dfjob>
+ <dfjob name="Armor Stand, ELECTRUM" category="ELECTRUM" type="77" materialType="inorganic" inorganic="ELECTRUM">
+        <item type="armorstand" material="ELECTRUM" />
+        <source type="bar" material="ELECTRUM" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, ELECTRUM" category="ELECTRUM" type="78" materialType="inorganic" inorganic="ELECTRUM">
+        <item type="weaponrack" material="ELECTRUM" />
+        <source type="bar" material="ELECTRUM" />
+    </dfjob>
+    <dfjob name="Table, ELECTRUM" category="ELECTRUM" type="74" materialType="inorganic" inorganic="ELECTRUM">
+        <item type="table" material="ELECTRUM" />
+        <source type="bar" material="ELECTRUM" />
+    </dfjob>
+    <dfjob name="Coffin, ELECTRUM (Sarcophagus)" category="ELECTRUM" type="73" materialType="inorganic" inorganic="ELECTRUM">
+        <item type="coffin" material="ELECTRUM" />
+        <source type="bar" material="ELECTRUM" />
+    </dfjob>
+    <dfjob name="Chest, ELECTRUM" category="ELECTRUM" type="75" materialType="inorganic" inorganic="ELECTRUM">
+        <item type="box" material="ELECTRUM" />
+        <source type="bar" material="ELECTRUM" />
+    </dfjob>
+    <dfjob name="Bin, TIN" category="TIN" type="76" materialType="inorganic" inorganic="TIN">
+        <item type="bin" material="TIN" />
+        <source type="bar" material="TIN" />
+    </dfjob>
     <dfjob name="Crutch, TIN" category="TIN" type="208" materialType="inorganic" inorganic="TIN">
         <item type="crutch" material="TIN" />
         <source type="bar" material="TIN" />
     </dfjob>
-
+         <dfjob name="Cage, TIN" category="TIN" type="120" materialType="inorganic" inorganic="TIN">
+        <item type="cage" material="TIN" />;
+        <source type="bar" material="TIN" />
+    </dfjob>
+    <dfjob name="Block, TIN" category="TIN" type="81" materialType="inorganic" inorganic="TIN">
+        <item type="blocks" material="TIN" />
+        <source type="bar" material="TIN" />
+    </dfjob>
+ <dfjob name="Armor Stand, TIN" category="TIN" type="77" materialType="inorganic" inorganic="TIN">
+        <item type="armorstand" material="TIN" />
+        <source type="bar" material="TIN" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, TIN" category="TIN" type="78" materialType="inorganic" inorganic="TIN">
+        <item type="weaponrack" material="TIN" />
+        <source type="bar" material="TIN" />
+    </dfjob>
+    <dfjob name="Table, TIN" category="TIN" type="74" materialType="inorganic" inorganic="TIN">
+        <item type="table" material="TIN" />
+        <source type="bar" material="TIN" />
+    </dfjob>
+    <dfjob name="Coffin, TIN (Sarcophagus)" category="TIN" type="73" materialType="inorganic" inorganic="TIN">
+        <item type="coffin" material="TIN" />
+        <source type="bar" material="TIN" />
+    </dfjob>
+    <dfjob name="Chest, TIN" category="TIN" type="75" materialType="inorganic" inorganic="TIN">
+        <item type="box" material="TIN" />
+        <source type="bar" material="TIN" />
+    </dfjob>
+    <dfjob name="Bin, LEAD" category="LEAD" type="76" materialType="inorganic" inorganic="LEAD">
+        <item type="bin" material="LEAD" />
+        <source type="bar" material="LEAD" />
+    </dfjob>
     <dfjob name="Crutch, LEAD" category="LEAD" type="208" materialType="inorganic" inorganic="LEAD">
         <item type="crutch" material="LEAD" />
         <source type="bar" material="LEAD" />
     </dfjob>
-
+         <dfjob name="Cage, LEAD" category="LEAD" type="120" materialType="inorganic" inorganic="LEAD">
+        <item type="cage" material="LEAD" />;
+        <source type="bar" material="LEAD" />
+    </dfjob>
+    <dfjob name="Block, LEAD" category="LEAD" type="81" materialType="inorganic" inorganic="LEAD">
+        <item type="blocks" material="LEAD" />
+        <source type="bar" material="LEAD" />
+    </dfjob>
+ <dfjob name="Armor Stand, LEAD" category="LEAD" type="77" materialType="inorganic" inorganic="LEAD">
+        <item type="armorstand" material="LEAD" />
+        <source type="bar" material="LEAD" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, LEAD" category="LEAD" type="78" materialType="inorganic" inorganic="LEAD">
+        <item type="weaponrack" material="LEAD" />
+        <source type="bar" material="LEAD" />
+    </dfjob>
+    <dfjob name="Table, LEAD" category="LEAD" type="74" materialType="inorganic" inorganic="LEAD">
+        <item type="table" material="LEAD" />
+        <source type="bar" material="LEAD" />
+    </dfjob>
+    <dfjob name="Coffin, LEAD (Sarcophagus)" category="LEAD" type="73" materialType="inorganic" inorganic="LEAD">
+        <item type="coffin" material="LEAD" />
+        <source type="bar" material="LEAD" />
+    </dfjob>
+    <dfjob name="Chest, LEAD" category="LEAD" type="75" materialType="inorganic" inorganic="LEAD">
+        <item type="box" material="LEAD" />
+        <source type="bar" material="LEAD" />
+    </dfjob>
+    <dfjob name="Bin, ALUMINUM" category="ALUMINUM" type="76" materialType="inorganic" inorganic="ALUMINUM">
+        <item type="bin" material="ALUMINUM" />
+        <source type="bar" material="ALUMINUM" />
+    </dfjob>
     <dfjob name="Crutch, ALUMINUM" category="ALUMINUM" type="208" materialType="inorganic" inorganic="ALUMINUM">
         <item type="crutch" material="ALUMINUM" />
         <source type="bar" material="ALUMINUM" />
     </dfjob>
-
-    
+         <dfjob name="Cage, ALUMINUM" category="ALUMINUM" type="120" materialType="inorganic" inorganic="ALUMINUM">
+        <item type="cage" material="ALUMINUM" />;
+        <source type="bar" material="ALUMINUM" />
+    </dfjob>
+    <dfjob name="Block, ALUMINUM" category="ALUMINUM" type="81" materialType="inorganic" inorganic="ALUMINUM">
+        <item type="blocks" material="ALUMINUM" />
+        <source type="bar" material="ALUMINUM" />
+    </dfjob>
+ <dfjob name="Armor Stand, ALUMINUM" category="ALUMINUM" type="77" materialType="inorganic" inorganic="ALUMINUM">
+        <item type="armorstand" material="ALUMINUM" />
+        <source type="bar" material="ALUMINUM" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, ALUMINUM" category="ALUMINUM" type="78" materialType="inorganic" inorganic="ALUMINUM">
+        <item type="weaponrack" material="ALUMINUM" />
+        <source type="bar" material="ALUMINUM" />
+    </dfjob>
+    <dfjob name="Table, ALUMINUM" category="ALUMINUM" type="74" materialType="inorganic" inorganic="ALUMINUM">
+        <item type="table" material="ALUMINUM" />
+        <source type="bar" material="ALUMINUM" />
+    </dfjob>
+    <dfjob name="Coffin, ALUMINUM (Sarcophagus)" category="ALUMINUM" type="73" materialType="inorganic" inorganic="ALUMINUM">
+        <item type="coffin" material="ALUMINUM" />
+        <source type="bar" material="ALUMINUM" />
+    </dfjob>
+    <dfjob name="Chest, ALUMINUM" category="ALUMINUM" type="75" materialType="inorganic" inorganic="ALUMINUM">
+        <item type="box" material="ALUMINUM" />
+        <source type="bar" material="ALUMINUM" />
+    </dfjob>
+    <dfjob name="Bin, STERLING_SILVER" category="STERLING_SILVER" type="76" materialType="inorganic" inorganic="STERLING_SILVER">
+        <item type="bin" material="STERLING_SILVER" />
+        <source type="bar" material="STERLING_SILVER" />
+    </dfjob>
+    <dfjob name="Crutch, STERLING_SILVER" category="STERLING_SILVER" type="208" materialType="inorganic" inorganic="STERLING_SILVER">
+        <item type="crutch" material="STERLING_SILVER" />
+        <source type="bar" material="STERLING_SILVER" />
+    </dfjob>
+         <dfjob name="Cage, STERLING_SILVER" category="STERLING_SILVER" type="120" materialType="inorganic" inorganic="STERLING_SILVER">
+        <item type="cage" material="STERLING_SILVER" />;
+        <source type="bar" material="STERLING_SILVER" />
+    </dfjob>
+    <dfjob name="Block, STERLING_SILVER" category="STERLING_SILVER" type="81" materialType="inorganic" inorganic="STERLING_SILVER">
+        <item type="blocks" material="STERLING_SILVER" />
+        <source type="bar" material="STERLING_SILVER" />
+    </dfjob>
+ <dfjob name="Armor Stand, STERLING_SILVER" category="STERLING_SILVER" type="77" materialType="inorganic" inorganic="STERLING_SILVER">
+        <item type="armorstand" material="STERLING_SILVER" />
+        <source type="bar" material="STERLING_SILVER" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, STERLING_SILVER" category="STERLING_SILVER" type="78" materialType="inorganic" inorganic="STERLING_SILVER">
+        <item type="weaponrack" material="STERLING_SILVER" />
+        <source type="bar" material="STERLING_SILVER" />
+    </dfjob>
+    <dfjob name="Table, STERLING_SILVER" category="STERLING_SILVER" type="74" materialType="inorganic" inorganic="STERLING_SILVER">
+        <item type="table" material="STERLING_SILVER" />
+        <source type="bar" material="STERLING_SILVER" />
+    </dfjob>
+    <dfjob name="Coffin, STERLING_SILVER (Sarcophagus)" category="STERLING_SILVER" type="73" materialType="inorganic" inorganic="STERLING_SILVER">
+        <item type="coffin" material="STERLING_SILVER" />
+        <source type="bar" material="STERLING_SILVER" />
+    </dfjob>
+    <dfjob name="Chest, STERLING_SILVER" category="STERLING_SILVER" type="75" materialType="inorganic" inorganic="STERLING_SILVER">
+        <item type="box" material="STERLING_SILVER" />
+        <source type="bar" material="STERLING_SILVER" />
+    </dfjob>
+    <dfjob name="Bin, NICKEL_SILVER" category="NICKEL_SILVER" type="76" materialType="inorganic" inorganic="NICKEL_SILVER">
+        <item type="bin" material="NICKEL_SILVER" />
+        <source type="bar" material="NICKEL_SILVER" />
+    </dfjob>
+    <dfjob name="Crutch, NICKEL_SILVER" category="NICKEL_SILVER" type="208" materialType="inorganic" inorganic="NICKEL_SILVER">
+        <item type="crutch" material="NICKEL_SILVER" />
+        <source type="bar" material="NICKEL_SILVER" />
+    </dfjob>
+         <dfjob name="Cage, NICKEL_SILVER" category="NICKEL_SILVER" type="120" materialType="inorganic" inorganic="NICKEL_SILVER">
+        <item type="cage" material="NICKEL_SILVER" />;
+        <source type="bar" material="NICKEL_SILVER" />
+    </dfjob>
+    <dfjob name="Block, NICKEL_SILVER" category="NICKEL_SILVER" type="81" materialType="inorganic" inorganic="NICKEL_SILVER">
+        <item type="blocks" material="NICKEL_SILVER" />
+        <source type="bar" material="NICKEL_SILVER" />
+    </dfjob>
+ <dfjob name="Armor Stand, NICKEL_SILVER" category="NICKEL_SILVER" type="77" materialType="inorganic" inorganic="NICKEL_SILVER">
+        <item type="armorstand" material="NICKEL_SILVER" />
+        <source type="bar" material="NICKEL_SILVER" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, NICKEL_SILVER" category="NICKEL_SILVER" type="78" materialType="inorganic" inorganic="NICKEL_SILVER">
+        <item type="weaponrack" material="NICKEL_SILVER" />
+        <source type="bar" material="NICKEL_SILVER" />
+    </dfjob>
+    <dfjob name="Table, NICKEL_SILVER" category="NICKEL_SILVER" type="74" materialType="inorganic" inorganic="NICKEL_SILVER">
+        <item type="table" material="NICKEL_SILVER" />
+        <source type="bar" material="NICKEL_SILVER" />
+    </dfjob>
+    <dfjob name="Coffin, NICKEL_SILVER (Sarcophagus)" category="NICKEL_SILVER" type="73" materialType="inorganic" inorganic="NICKEL_SILVER">
+        <item type="coffin" material="NICKEL_SILVER" />
+        <source type="bar" material="NICKEL_SILVER" />
+    </dfjob>
+    <dfjob name="Chest, NICKEL_SILVER" category="NICKEL_SILVER" type="75" materialType="inorganic" inorganic="NICKEL_SILVER">
+        <item type="box" material="NICKEL_SILVER" />
+        <source type="bar" material="NICKEL_SILVER" />
+    </dfjob>
+    <dfjob name="Bin, PEWTER_LAY" category="PEWTER_LAY" type="76" materialType="inorganic" inorganic="PEWTER_LAY">
+        <item type="bin" material="PEWTER_LAY" />
+        <source type="bar" material="PEWTER_LAY" />
+    </dfjob>
+    <dfjob name="Crutch, PEWTER_LAY" category="PEWTER_LAY" type="208" materialType="inorganic" inorganic="PEWTER_LAY">
+        <item type="crutch" material="PEWTER_LAY" />
+        <source type="bar" material="PEWTER_LAY" />
+    </dfjob>
+         <dfjob name="Cage, PEWTER_LAY" category="PEWTER_LAY" type="120" materialType="inorganic" inorganic="PEWTER_LAY">
+        <item type="cage" material="PEWTER_LAY" />;
+        <source type="bar" material="PEWTER_LAY" />
+    </dfjob>
+    <dfjob name="Block, PEWTER_LAY" category="PEWTER_LAY" type="81" materialType="inorganic" inorganic="PEWTER_LAY">
+        <item type="blocks" material="PEWTER_LAY" />
+        <source type="bar" material="PEWTER_LAY" />
+    </dfjob>
+ <dfjob name="Armor Stand, PEWTER_LAY" category="PEWTER_LAY" type="77" materialType="inorganic" inorganic="PEWTER_LAY">
+        <item type="armorstand" material="PEWTER_LAY" />
+        <source type="bar" material="PEWTER_LAY" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, PEWTER_LAY" category="PEWTER_LAY" type="78" materialType="inorganic" inorganic="PEWTER_LAY">
+        <item type="weaponrack" material="PEWTER_LAY" />
+        <source type="bar" material="PEWTER_LAY" />
+    </dfjob>
+    <dfjob name="Table, PEWTER_LAY" category="PEWTER_LAY" type="74" materialType="inorganic" inorganic="PEWTER_LAY">
+        <item type="table" material="PEWTER_LAY" />
+        <source type="bar" material="PEWTER_LAY" />
+    </dfjob>
+    <dfjob name="Coffin, PEWTER_LAY (Sarcophagus)" category="PEWTER_LAY" type="73" materialType="inorganic" inorganic="PEWTER_LAY">
+        <item type="coffin" material="PEWTER_LAY" />
+        <source type="bar" material="PEWTER_LAY" />
+    </dfjob>
+    <dfjob name="Chest, PEWTER_LAY" category="PEWTER_LAY" type="75" materialType="inorganic" inorganic="PEWTER_LAY">
+        <item type="box" material="PEWTER_LAY" />
+        <source type="bar" material="PEWTER_LAY" />
+    </dfjob>
+    <dfjob name="Bin, PEWTER_TRIFLE" category="PEWTER_TRIFLE" type="76" materialType="inorganic" inorganic="PEWTER_TRIFLE">
+        <item type="bin" material="PEWTER_TRIFLE" />
+        <source type="bar" material="PEWTER_TRIFLE" />
+    </dfjob>
+    <dfjob name="Crutch, PEWTER_TRIFLE" category="PEWTER_TRIFLE" type="208" materialType="inorganic" inorganic="PEWTER_TRIFLE">
+        <item type="crutch" material="PEWTER_TRIFLE" />
+        <source type="bar" material="PEWTER_TRIFLE" />
+    </dfjob>
+         <dfjob name="Cage, PEWTER_TRIFLE" category="PEWTER_TRIFLE" type="120" materialType="inorganic" inorganic="PEWTER_TRIFLE">
+        <item type="cage" material="PEWTER_TRIFLE" />;
+        <source type="bar" material="PEWTER_TRIFLE" />
+    </dfjob>
+    <dfjob name="Block, PEWTER_TRIFLE" category="PEWTER_TRIFLE" type="81" materialType="inorganic" inorganic="PEWTER_TRIFLE">
+        <item type="blocks" material="PEWTER_TRIFLE" />
+        <source type="bar" material="PEWTER_TRIFLE" />
+    </dfjob>
+ <dfjob name="Armor Stand, PEWTER_TRIFLE" category="PEWTER_TRIFLE" type="77" materialType="inorganic" inorganic="PEWTER_TRIFLE">
+        <item type="armorstand" material="PEWTER_TRIFLE" />
+        <source type="bar" material="PEWTER_TRIFLE" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, PEWTER_TRIFLE" category="PEWTER_TRIFLE" type="78" materialType="inorganic" inorganic="PEWTER_TRIFLE">
+        <item type="weaponrack" material="PEWTER_TRIFLE" />
+        <source type="bar" material="PEWTER_TRIFLE" />
+    </dfjob>
+    <dfjob name="Table, PEWTER_TRIFLE" category="PEWTER_TRIFLE" type="74" materialType="inorganic" inorganic="PEWTER_TRIFLE">
+        <item type="table" material="PEWTER_TRIFLE" />
+        <source type="bar" material="PEWTER_TRIFLE" />
+    </dfjob>
+    <dfjob name="Coffin, PEWTER_TRIFLE (Sarcophagus)" category="PEWTER_TRIFLE" type="73" materialType="inorganic" inorganic="PEWTER_TRIFLE">
+        <item type="coffin" material="PEWTER_TRIFLE" />
+        <source type="bar" material="PEWTER_TRIFLE" />
+    </dfjob>
+    <dfjob name="Chest, PEWTER_TRIFLE" category="PEWTER_TRIFLE" type="75" materialType="inorganic" inorganic="PEWTER_TRIFLE">
+        <item type="box" material="PEWTER_TRIFLE" />
+        <source type="bar" material="PEWTER_TRIFLE" />
+    </dfjob>
+    <dfjob name="Bin, PEWTER_FINE" category="PEWTER_FINE" type="76" materialType="inorganic" inorganic="PEWTER_FINE">
+        <item type="bin" material="PEWTER_FINE" />
+        <source type="bar" material="PEWTER_FINE" />
+    </dfjob>
+    <dfjob name="Crutch, PEWTER_FINE" category="PEWTER_FINE" type="208" materialType="inorganic" inorganic="PEWTER_FINE">
+        <item type="crutch" material="PEWTER_FINE" />
+        <source type="bar" material="PEWTER_FINE" />
+    </dfjob>
+         <dfjob name="Cage, PEWTER_FINE" category="PEWTER_FINE" type="120" materialType="inorganic" inorganic="PEWTER_FINE">
+        <item type="cage" material="PEWTER_FINE" />;
+        <source type="bar" material="PEWTER_FINE" />
+    </dfjob>
+    <dfjob name="Block, PEWTER_FINE" category="PEWTER_FINE" type="81" materialType="inorganic" inorganic="PEWTER_FINE">
+        <item type="blocks" material="PEWTER_FINE" />
+        <source type="bar" material="PEWTER_FINE" />
+    </dfjob>
+ <dfjob name="Armor Stand, PEWTER_FINE" category="PEWTER_FINE" type="77" materialType="inorganic" inorganic="PEWTER_FINE">
+        <item type="armorstand" material="PEWTER_FINE" />
+        <source type="bar" material="PEWTER_FINE" />
+    </dfjob>    
+    <dfjob name="Weapon Rack, PEWTER_FINE" category="PEWTER_FINE" type="78" materialType="inorganic" inorganic="PEWTER_FINE">
+        <item type="weaponrack" material="PEWTER_FINE" />
+        <source type="bar" material="PEWTER_FINE" />
+    </dfjob>
+    <dfjob name="Table, PEWTER_FINE" category="PEWTER_FINE" type="74" materialType="inorganic" inorganic="PEWTER_FINE">
+        <item type="table" material="PEWTER_FINE" />
+        <source type="bar" material="PEWTER_FINE" />
+    </dfjob>
+    <dfjob name="Coffin, PEWTER_FINE (Sarcophagus)" category="PEWTER_FINE" type="73" materialType="inorganic" inorganic="PEWTER_FINE">
+        <item type="coffin" material="PEWTER_FINE" />
+        <source type="bar" material="PEWTER_FINE" />
+    </dfjob>
+    <dfjob name="Chest, PEWTER_FINE" category="PEWTER_FINE" type="75" materialType="inorganic" inorganic="PEWTER_FINE">
+        <item type="box" material="PEWTER_FINE" />
+        <source type="bar" material="PEWTER_FINE" />
+    </dfjob>
+      <dfjob name="Cut Gem, RUBY_STAR" category="gems" type="90" materialType="inorganic" inorganic="RUBY_STAR">
+        <item type="gem" material="RUBY_STAR" />
+        <item type="smallgem" material="RUBY_STAR" />
+        <source type="rough" material="RUBY_STAR" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SAPPHIRE_STAR" category="gems" type="90" materialType="inorganic" inorganic="SAPPHIRE_STAR">
+        <item type="gem" material="SAPPHIRE_STAR" />
+        <item type="smallgem" material="SAPPHIRE_STAR" />
+        <source type="rough" material="SAPPHIRE_STAR" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, DIAMOND_BLACK" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_BLACK">
+        <item type="gem" material="DIAMOND_BLACK" />
+        <item type="smallgem" material="DIAMOND_BLACK" />
+        <source type="rough" material="DIAMOND_BLACK" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, DIAMOND_YELLOW" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_YELLOW">
+        <item type="gem" material="DIAMOND_YELLOW" />
+        <item type="smallgem" material="DIAMOND_YELLOW" />
+        <source type="rough" material="DIAMOND_YELLOW" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, DIAMOND_BLUE" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_BLUE">
+        <item type="gem" material="DIAMOND_BLUE" />
+        <item type="smallgem" material="DIAMOND_BLUE" />
+        <source type="rough" material="DIAMOND_BLUE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, DIAMOND_GREEN" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_GREEN">
+        <item type="gem" material="DIAMOND_GREEN" />
+        <item type="smallgem" material="DIAMOND_GREEN" />
+        <source type="rough" material="DIAMOND_GREEN" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, DIAMOND_RED" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_RED">
+        <item type="gem" material="DIAMOND_RED" />
+        <item type="smallgem" material="DIAMOND_RED" />
+        <source type="rough" material="DIAMOND_RED" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, DIAMOND_CLEAR" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_CLEAR">
+        <item type="gem" material="DIAMOND_CLEAR" />
+        <item type="smallgem" material="DIAMOND_CLEAR" />
+        <source type="rough" material="DIAMOND_CLEAR" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SAPPHIRE" category="gems" type="90" materialType="inorganic" inorganic="SAPPHIRE">
+        <item type="gem" material="SAPPHIRE" />
+        <item type="smallgem" material="SAPPHIRE" />
+        <source type="rough" material="SAPPHIRE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, RUBY" category="gems" type="90" materialType="inorganic" inorganic="RUBY">
+        <item type="gem" material="RUBY" />
+        <item type="smallgem" material="RUBY" />
+        <source type="rough" material="RUBY" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, EMERALD" category="gems" type="90" materialType="inorganic" inorganic="EMERALD">
+        <item type="gem" material="EMERALD" />
+        <item type="smallgem" material="EMERALD" />
+        <source type="rough" material="EMERALD" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, DIAMOND_FY" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_FY">
+        <item type="gem" material="DIAMOND_FY" />
+        <item type="smallgem" material="DIAMOND_FY" />
+        <source type="rough" material="DIAMOND_FY" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, DIAMOND_LY" category="gems" type="90" materialType="inorganic" inorganic="DIAMOND_LY">
+        <item type="gem" material="DIAMOND_LY" />
+        <item type="smallgem" material="DIAMOND_LY" />
+        <source type="rough" material="DIAMOND_LY" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_BANDFIRE" category="gems" type="90" materialType="inorganic" inorganic="OPAL_BANDFIRE">
+        <item type="gem" material="OPAL_BANDFIRE" />
+        <item type="smallgem" material="OPAL_BANDFIRE" />
+        <source type="rough" material="OPAL_BANDFIRE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_PINFIRE" category="gems" type="90" materialType="inorganic" inorganic="OPAL_PINFIRE">
+        <item type="gem" material="OPAL_PINFIRE" />
+        <item type="smallgem" material="OPAL_PINFIRE" />
+        <source type="rough" material="OPAL_PINFIRE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_HARLEQUIN" category="gems" type="90" materialType="inorganic" inorganic="OPAL_HARLEQUIN">
+        <item type="gem" material="OPAL_HARLEQUIN" />
+        <item type="smallgem" material="OPAL_HARLEQUIN" />
+        <source type="rough" material="OPAL_HARLEQUIN" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_LEVIN" category="gems" type="90" materialType="inorganic" inorganic="OPAL_LEVIN">
+        <item type="gem" material="OPAL_LEVIN" />
+        <item type="smallgem" material="OPAL_LEVIN" />
+        <source type="rough" material="OPAL_LEVIN" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_CLARO" category="gems" type="90" materialType="inorganic" inorganic="OPAL_CLARO">
+        <item type="gem" material="OPAL_CLARO" />
+        <item type="smallgem" material="OPAL_CLARO" />
+        <source type="rough" material="OPAL_CLARO" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_CRYSTAL" category="gems" type="90" materialType="inorganic" inorganic="OPAL_CRYSTAL">
+        <item type="gem" material="OPAL_CRYSTAL" />
+        <item type="smallgem" material="OPAL_CRYSTAL" />
+        <source type="rough" material="OPAL_CRYSTAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_WHITE" category="gems" type="90" materialType="inorganic" inorganic="OPAL_WHITE">
+        <item type="gem" material="OPAL_WHITE" />
+        <item type="smallgem" material="OPAL_WHITE" />
+        <source type="rough" material="OPAL_WHITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_BLACK" category="gems" type="90" materialType="inorganic" inorganic="OPAL_BLACK">
+        <item type="gem" material="OPAL_BLACK" />
+        <item type="smallgem" material="OPAL_BLACK" />
+        <source type="rough" material="OPAL_BLACK" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_REDFLASH" category="gems" type="90" materialType="inorganic" inorganic="OPAL_REDFLASH">
+        <item type="gem" material="OPAL_REDFLASH" />
+        <item type="smallgem" material="OPAL_REDFLASH" />
+        <source type="rough" material="OPAL_REDFLASH" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, OPAL_PFIRE" category="gems" type="90" materialType="inorganic" inorganic="OPAL_PFIRE">
+        <item type="gem" material="OPAL_PFIRE" />
+        <item type="smallgem" material="OPAL_PFIRE" />
+        <source type="rough" material="OPAL_PFIRE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CHRYSOBERYL" category="gems" type="90" materialType="inorganic" inorganic="CHRYSOBERYL">
+        <item type="gem" material="CHRYSOBERYL" />
+        <item type="smallgem" material="CHRYSOBERYL" />
+        <source type="rough" material="CHRYSOBERYL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SPINEL_RED" category="gems" type="90" materialType="inorganic" inorganic="SPINEL_RED">
+        <item type="gem" material="SPINEL_RED" />
+        <item type="smallgem" material="SPINEL_RED" />
+        <source type="rough" material="SPINEL_RED" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, AQUAMARINE" category="gems" type="90" materialType="inorganic" inorganic="AQUAMARINE">
+        <item type="gem" material="AQUAMARINE" />
+        <item type="smallgem" material="AQUAMARINE" />
+        <source type="rough" material="AQUAMARINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, AMETHYST" category="gems" type="90" materialType="inorganic" inorganic="AMETHYST">
+        <item type="gem" material="AMETHYST" />
+        <item type="smallgem" material="AMETHYST" />
+        <source type="rough" material="AMETHYST" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CLEAR ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="CLEAR ZIRCON">
+        <item type="gem" material="CLEAR ZIRCON" />
+        <item type="smallgem" material="CLEAR ZIRCON" />
+        <source type="rough" material="CLEAR ZIRCON" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CAT'S EYE" category="gems" type="90" materialType="inorganic" inorganic="CAT'S EYE">
+        <item type="gem" material="CAT'S EYE" />
+        <item type="smallgem" material="CAT'S EYE" />
+        <source type="rough" material="CAT'S EYE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, GOSHENITE" category="gems" type="90" materialType="inorganic" inorganic="GOSHENITE">
+        <item type="gem" material="GOSHENITE" />
+        <item type="smallgem" material="GOSHENITE" />
+        <source type="rough" material="GOSHENITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CLEAR GARNET" category="gems" type="90" materialType="inorganic" inorganic="CLEAR GARNET">
+        <item type="gem" material="CLEAR GARNET" />
+        <item type="smallgem" material="CLEAR GARNET" />
+        <source type="rough" material="CLEAR GARNET" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, RUBICELLE" category="gems" type="90" materialType="inorganic" inorganic="RUBICELLE">
+        <item type="gem" material="RUBICELLE" />
+        <item type="smallgem" material="RUBICELLE" />
+        <source type="rough" material="RUBICELLE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, YELLOW GROSSULAR" category="gems" type="90" materialType="inorganic" inorganic="YELLOW GROSSULAR">
+        <item type="gem" material="YELLOW GROSSULAR" />
+        <item type="smallgem" material="YELLOW GROSSULAR" />
+        <source type="rough" material="YELLOW GROSSULAR" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, TOPAZOLITE" category="gems" type="90" materialType="inorganic" inorganic="TOPAZOLITE">
+        <item type="gem" material="TOPAZOLITE" />
+        <item type="smallgem" material="TOPAZOLITE" />
+        <source type="rough" material="TOPAZOLITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, TOPAZ" category="gems" type="90" materialType="inorganic" inorganic="TOPAZ">
+        <item type="gem" material="TOPAZ" />
+        <item type="smallgem" material="TOPAZ" />
+        <source type="rough" material="TOPAZ" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, YELLOW SPESSARTINE" category="gems" type="90" materialType="inorganic" inorganic="YELLOW SPESSARTINE">
+        <item type="gem" material="YELLOW SPESSARTINE" />
+        <item type="smallgem" material="YELLOW SPESSARTINE" />
+        <source type="rough" material="YELLOW SPESSARTINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, GOLDEN BERYL" category="gems" type="90" materialType="inorganic" inorganic="GOLDEN BERYL">
+        <item type="gem" material="GOLDEN BERYL" />
+        <item type="smallgem" material="GOLDEN BERYL" />
+        <source type="rough" material="GOLDEN BERYL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, YELLOW ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="YELLOW ZIRCON">
+        <item type="gem" material="YELLOW ZIRCON" />
+        <item type="smallgem" material="YELLOW ZIRCON" />
+        <source type="rough" material="YELLOW ZIRCON" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, BROWN ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="BROWN ZIRCON">
+        <item type="gem" material="BROWN ZIRCON" />
+        <item type="smallgem" material="BROWN ZIRCON" />
+        <source type="rough" material="BROWN ZIRCON" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, JELLY OPAL" category="gems" type="90" materialType="inorganic" inorganic="JELLY OPAL">
+        <item type="gem" material="JELLY OPAL" />
+        <item type="smallgem" material="JELLY OPAL" />
+        <source type="rough" material="JELLY OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, HONEY YELLOW BERYL" category="gems" type="90" materialType="inorganic" inorganic="HONEY YELLOW BERYL">
+        <item type="gem" material="HONEY YELLOW BERYL" />
+        <item type="smallgem" material="HONEY YELLOW BERYL" />
+        <source type="rough" material="HONEY YELLOW BERYL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CINNAMON GROSSULAR" category="gems" type="90" materialType="inorganic" inorganic="CINNAMON GROSSULAR">
+        <item type="gem" material="CINNAMON GROSSULAR" />
+        <item type="smallgem" material="CINNAMON GROSSULAR" />
+        <source type="rough" material="CINNAMON GROSSULAR" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, KUNZITE" category="gems" type="90" materialType="inorganic" inorganic="KUNZITE">
+        <item type="gem" material="KUNZITE" />
+        <item type="smallgem" material="KUNZITE" />
+        <source type="rough" material="KUNZITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PINK GARNET" category="gems" type="90" materialType="inorganic" inorganic="PINK GARNET">
+        <item type="gem" material="PINK GARNET" />
+        <item type="smallgem" material="PINK GARNET" />
+        <source type="rough" material="PINK GARNET" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, MORGANITE" category="gems" type="90" materialType="inorganic" inorganic="MORGANITE">
+        <item type="gem" material="MORGANITE" />
+        <item type="smallgem" material="MORGANITE" />
+        <source type="rough" material="MORGANITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, TANZANITE" category="gems" type="90" materialType="inorganic" inorganic="TANZANITE">
+        <item type="gem" material="TANZANITE" />
+        <item type="smallgem" material="TANZANITE" />
+        <source type="rough" material="TANZANITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, ALEXANDRITE" category="gems" type="90" materialType="inorganic" inorganic="ALEXANDRITE">
+        <item type="gem" material="ALEXANDRITE" />
+        <item type="smallgem" material="ALEXANDRITE" />
+        <source type="rough" material="ALEXANDRITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SPINEL_PURPLE" category="gems" type="90" materialType="inorganic" inorganic="SPINEL_PURPLE">
+        <item type="gem" material="SPINEL_PURPLE" />
+        <item type="smallgem" material="SPINEL_PURPLE" />
+        <source type="rough" material="SPINEL_PURPLE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, RHODOLITE" category="gems" type="90" materialType="inorganic" inorganic="RHODOLITE">
+        <item type="gem" material="RHODOLITE" />
+        <item type="smallgem" material="RHODOLITE" />
+        <source type="rough" material="RHODOLITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, FIRE OPAL" category="gems" type="90" materialType="inorganic" inorganic="FIRE OPAL">
+        <item type="gem" material="FIRE OPAL" />
+        <item type="smallgem" material="FIRE OPAL" />
+        <source type="rough" material="FIRE OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, RED BERYL" category="gems" type="90" materialType="inorganic" inorganic="RED BERYL">
+        <item type="gem" material="RED BERYL" />
+        <item type="smallgem" material="RED BERYL" />
+        <source type="rough" material="RED BERYL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PINK TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="PINK TOURMALINE">
+        <item type="gem" material="PINK TOURMALINE" />
+        <item type="smallgem" material="PINK TOURMALINE" />
+        <source type="rough" material="PINK TOURMALINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, RED GROSSULAR" category="gems" type="90" materialType="inorganic" inorganic="RED GROSSULAR">
+        <item type="gem" material="RED GROSSULAR" />
+        <item type="smallgem" material="RED GROSSULAR" />
+        <source type="rough" material="RED GROSSULAR" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, ALMANDINE" category="gems" type="90" materialType="inorganic" inorganic="ALMANDINE">
+        <item type="gem" material="ALMANDINE" />
+        <item type="smallgem" material="ALMANDINE" />
+        <source type="rough" material="ALMANDINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, RED PYROPE" category="gems" type="90" materialType="inorganic" inorganic="RED PYROPE">
+        <item type="gem" material="RED PYROPE" />
+        <item type="smallgem" material="RED PYROPE" />
+        <source type="rough" material="RED PYROPE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, RED TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="RED TOURMALINE">
+        <item type="gem" material="RED TOURMALINE" />
+        <item type="smallgem" material="RED TOURMALINE" />
+        <source type="rough" material="RED TOURMALINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, RED ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="RED ZIRCON">
+        <item type="gem" material="RED ZIRCON" />
+        <item type="smallgem" material="RED ZIRCON" />
+        <source type="rough" material="RED ZIRCON" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PERIDOT" category="gems" type="90" materialType="inorganic" inorganic="PERIDOT">
+        <item type="gem" material="PERIDOT" />
+        <item type="smallgem" material="PERIDOT" />
+        <source type="rough" material="PERIDOT" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, HELIODOR" category="gems" type="90" materialType="inorganic" inorganic="HELIODOR">
+        <item type="gem" material="HELIODOR" />
+        <item type="smallgem" material="HELIODOR" />
+        <source type="rough" material="HELIODOR" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, GREEN JADE" category="gems" type="90" materialType="inorganic" inorganic="GREEN JADE">
+        <item type="gem" material="GREEN JADE" />
+        <item type="smallgem" material="GREEN JADE" />
+        <source type="rough" material="GREEN JADE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, GREEN ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="GREEN ZIRCON">
+        <item type="gem" material="GREEN ZIRCON" />
+        <item type="smallgem" material="GREEN ZIRCON" />
+        <source type="rough" material="GREEN ZIRCON" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, DEMANTOID" category="gems" type="90" materialType="inorganic" inorganic="DEMANTOID">
+        <item type="gem" material="DEMANTOID" />
+        <item type="smallgem" material="DEMANTOID" />
+        <source type="rough" material="DEMANTOID" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, GREEN TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="GREEN TOURMALINE">
+        <item type="gem" material="GREEN TOURMALINE" />
+        <item type="smallgem" material="GREEN TOURMALINE" />
+        <source type="rough" material="GREEN TOURMALINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, TSAVORITE" category="gems" type="90" materialType="inorganic" inorganic="TSAVORITE">
+        <item type="gem" material="TSAVORITE" />
+        <item type="smallgem" material="TSAVORITE" />
+        <source type="rough" material="TSAVORITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, BLUE GARNET" category="gems" type="90" materialType="inorganic" inorganic="BLUE GARNET">
+        <item type="gem" material="BLUE GARNET" />
+        <item type="smallgem" material="BLUE GARNET" />
+        <source type="rough" material="BLUE GARNET" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, INDIGO TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="INDIGO TOURMALINE">
+        <item type="gem" material="INDIGO TOURMALINE" />
+        <item type="smallgem" material="INDIGO TOURMALINE" />
+        <source type="rough" material="INDIGO TOURMALINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, MELANITE" category="gems" type="90" materialType="inorganic" inorganic="MELANITE">
+        <item type="gem" material="MELANITE" />
+        <item type="smallgem" material="MELANITE" />
+        <source type="rough" material="MELANITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, BLACK PYROPE" category="gems" type="90" materialType="inorganic" inorganic="BLACK PYROPE">
+        <item type="gem" material="BLACK PYROPE" />
+        <item type="smallgem" material="BLACK PYROPE" />
+        <source type="rough" material="BLACK PYROPE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, BLACK ZIRCON" category="gems" type="90" materialType="inorganic" inorganic="BLACK ZIRCON">
+        <item type="gem" material="BLACK ZIRCON" />
+        <item type="smallgem" material="BLACK ZIRCON" />
+        <source type="rough" material="BLACK ZIRCON" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CRYSTAL_ROCK" category="gems" type="90" materialType="inorganic" inorganic="CRYSTAL_ROCK">
+        <item type="gem" material="CRYSTAL_ROCK" />
+        <item type="smallgem" material="CRYSTAL_ROCK" />
+        <source type="rough" material="CRYSTAL_ROCK" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, QUARTZ_ROSE" category="gems" type="90" materialType="inorganic" inorganic="QUARTZ_ROSE">
+        <item type="gem" material="QUARTZ_ROSE" />
+        <item type="smallgem" material="QUARTZ_ROSE" />
+        <source type="rough" material="QUARTZ_ROSE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, TURQUOISE" category="gems" type="90" materialType="inorganic" inorganic="TURQUOISE">
+        <item type="gem" material="TURQUOISE" />
+        <item type="smallgem" material="TURQUOISE" />
+        <source type="rough" material="TURQUOISE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, AVENTURINE" category="gems" type="90" materialType="inorganic" inorganic="AVENTURINE">
+        <item type="gem" material="AVENTURINE" />
+        <item type="smallgem" material="AVENTURINE" />
+        <source type="rough" material="AVENTURINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PIPE OPAL" category="gems" type="90" materialType="inorganic" inorganic="PIPE OPAL">
+        <item type="gem" material="PIPE OPAL" />
+        <item type="smallgem" material="PIPE OPAL" />
+        <source type="rough" material="PIPE OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, MILK OPAL" category="gems" type="90" materialType="inorganic" inorganic="MILK OPAL">
+        <item type="gem" material="MILK OPAL" />
+        <item type="smallgem" material="MILK OPAL" />
+        <source type="rough" material="MILK OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, ONYX OPAL" category="gems" type="90" materialType="inorganic" inorganic="ONYX OPAL">
+        <item type="gem" material="ONYX OPAL" />
+        <item type="smallgem" material="ONYX OPAL" />
+        <source type="rough" material="ONYX OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PINEAPPLE OPAL" category="gems" type="90" materialType="inorganic" inorganic="PINEAPPLE OPAL">
+        <item type="gem" material="PINEAPPLE OPAL" />
+        <item type="smallgem" material="PINEAPPLE OPAL" />
+        <source type="rough" material="PINEAPPLE OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, JASPER OPAL" category="gems" type="90" materialType="inorganic" inorganic="JASPER OPAL">
+        <item type="gem" material="JASPER OPAL" />
+        <item type="smallgem" material="JASPER OPAL" />
+        <source type="rough" material="JASPER OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, WHITE JADE" category="gems" type="90" materialType="inorganic" inorganic="WHITE JADE">
+        <item type="gem" material="WHITE JADE" />
+        <item type="smallgem" material="WHITE JADE" />
+        <source type="rough" material="WHITE JADE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, MOONSTONE" category="gems" type="90" materialType="inorganic" inorganic="MOONSTONE">
+        <item type="gem" material="MOONSTONE" />
+        <item type="smallgem" material="MOONSTONE" />
+        <source type="rough" material="MOONSTONE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, MILK QUARTZ" category="gems" type="90" materialType="inorganic" inorganic="MILK QUARTZ">
+        <item type="gem" material="MILK QUARTZ" />
+        <item type="smallgem" material="MILK QUARTZ" />
+        <source type="rough" material="MILK QUARTZ" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, FORTIFICATION AGATE" category="gems" type="90" materialType="inorganic" inorganic="FORTIFICATION AGATE">
+        <item type="gem" material="FORTIFICATION AGATE" />
+        <item type="smallgem" material="FORTIFICATION AGATE" />
+        <source type="rough" material="FORTIFICATION AGATE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, WHITE CHALCEDONY" category="gems" type="90" materialType="inorganic" inorganic="WHITE CHALCEDONY">
+        <item type="gem" material="WHITE CHALCEDONY" />
+        <item type="smallgem" material="WHITE CHALCEDONY" />
+        <source type="rough" material="WHITE CHALCEDONY" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, BONE OPAL" category="gems" type="90" materialType="inorganic" inorganic="BONE OPAL">
+        <item type="gem" material="BONE OPAL" />
+        <item type="smallgem" material="BONE OPAL" />
+        <source type="rough" material="BONE OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SHELL OPAL" category="gems" type="90" materialType="inorganic" inorganic="SHELL OPAL">
+        <item type="gem" material="SHELL OPAL" />
+        <item type="smallgem" material="SHELL OPAL" />
+        <source type="rough" material="SHELL OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, GRAY CHALCEDONY" category="gems" type="90" materialType="inorganic" inorganic="GRAY CHALCEDONY">
+        <item type="gem" material="GRAY CHALCEDONY" />
+        <item type="smallgem" material="GRAY CHALCEDONY" />
+        <source type="rough" material="GRAY CHALCEDONY" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CLEAR TOURMALINE" category="gems" type="90" materialType="inorganic" inorganic="CLEAR TOURMALINE">
+        <item type="gem" material="CLEAR TOURMALINE" />
+        <item type="smallgem" material="CLEAR TOURMALINE" />
+        <source type="rough" material="CLEAR TOURMALINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PYRITE" category="gems" type="90" materialType="inorganic" inorganic="PYRITE">
+        <item type="gem" material="PYRITE" />
+        <item type="smallgem" material="PYRITE" />
+        <source type="rough" material="PYRITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, RESIN OPAL" category="gems" type="90" materialType="inorganic" inorganic="RESIN OPAL">
+        <item type="gem" material="RESIN OPAL" />
+        <item type="smallgem" material="RESIN OPAL" />
+        <source type="rough" material="RESIN OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SUNSTONE" category="gems" type="90" materialType="inorganic" inorganic="SUNSTONE">
+        <item type="gem" material="SUNSTONE" />
+        <item type="smallgem" material="SUNSTONE" />
+        <source type="rough" material="SUNSTONE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, TIGER IRON" category="gems" type="90" materialType="inorganic" inorganic="TIGER IRON">
+        <item type="gem" material="TIGER IRON" />
+        <item type="smallgem" material="TIGER IRON" />
+        <source type="rough" material="TIGER IRON" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, TIGEREYE" category="gems" type="90" materialType="inorganic" inorganic="TIGEREYE">
+        <item type="gem" material="TIGEREYE" />
+        <item type="smallgem" material="TIGEREYE" />
+        <source type="rough" material="TIGEREYE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, YELLOW JASPER" category="gems" type="90" materialType="inorganic" inorganic="YELLOW JASPER">
+        <item type="gem" material="YELLOW JASPER" />
+        <item type="smallgem" material="YELLOW JASPER" />
+        <source type="rough" material="YELLOW JASPER" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CITRINE" category="gems" type="90" materialType="inorganic" inorganic="CITRINE">
+        <item type="gem" material="CITRINE" />
+        <item type="smallgem" material="CITRINE" />
+        <source type="rough" material="CITRINE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, GOLD OPAL" category="gems" type="90" materialType="inorganic" inorganic="GOLD OPAL">
+        <item type="gem" material="GOLD OPAL" />
+        <item type="smallgem" material="GOLD OPAL" />
+        <source type="rough" material="GOLD OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, AMBER OPAL" category="gems" type="90" materialType="inorganic" inorganic="AMBER OPAL">
+        <item type="gem" material="AMBER OPAL" />
+        <item type="smallgem" material="AMBER OPAL" />
+        <source type="rough" material="AMBER OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, WOOD OPAL" category="gems" type="90" materialType="inorganic" inorganic="WOOD OPAL">
+        <item type="gem" material="WOOD OPAL" />
+        <item type="smallgem" material="WOOD OPAL" />
+        <source type="rough" material="WOOD OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, WAX OPAL" category="gems" type="90" materialType="inorganic" inorganic="WAX OPAL">
+        <item type="gem" material="WAX OPAL" />
+        <item type="smallgem" material="WAX OPAL" />
+        <source type="rough" material="WAX OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SMOKY QUARTZ" category="gems" type="90" materialType="inorganic" inorganic="SMOKY QUARTZ">
+        <item type="gem" material="SMOKY QUARTZ" />
+        <item type="smallgem" material="SMOKY QUARTZ" />
+        <source type="rough" material="SMOKY QUARTZ" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PICTURE JASPER" category="gems" type="90" materialType="inorganic" inorganic="PICTURE JASPER">
+        <item type="gem" material="PICTURE JASPER" />
+        <item type="smallgem" material="PICTURE JASPER" />
+        <source type="rough" material="PICTURE JASPER" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, BROWN JASPER" category="gems" type="90" materialType="inorganic" inorganic="BROWN JASPER">
+        <item type="gem" material="BROWN JASPER" />
+        <item type="smallgem" material="BROWN JASPER" />
+        <source type="rough" material="BROWN JASPER" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PLUME AGATE" category="gems" type="90" materialType="inorganic" inorganic="PLUME AGATE">
+        <item type="gem" material="PLUME AGATE" />
+        <item type="smallgem" material="PLUME AGATE" />
+        <source type="rough" material="PLUME AGATE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, FIRE AGATE" category="gems" type="90" materialType="inorganic" inorganic="FIRE AGATE">
+        <item type="gem" material="FIRE AGATE" />
+        <item type="smallgem" material="FIRE AGATE" />
+        <source type="rough" material="FIRE AGATE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, TUBE AGATE" category="gems" type="90" materialType="inorganic" inorganic="TUBE AGATE">
+        <item type="gem" material="TUBE AGATE" />
+        <item type="smallgem" material="TUBE AGATE" />
+        <source type="rough" material="TUBE AGATE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PINK JADE" category="gems" type="90" materialType="inorganic" inorganic="PINK JADE">
+        <item type="gem" material="PINK JADE" />
+        <item type="smallgem" material="PINK JADE" />
+        <source type="rough" material="PINK JADE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, LAVENDER JADE" category="gems" type="90" materialType="inorganic" inorganic="LAVENDER JADE">
+        <item type="gem" material="LAVENDER JADE" />
+        <item type="smallgem" material="LAVENDER JADE" />
+        <source type="rough" material="LAVENDER JADE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CHERRY OPAL" category="gems" type="90" materialType="inorganic" inorganic="CHERRY OPAL">
+        <item type="gem" material="CHERRY OPAL" />
+        <item type="smallgem" material="CHERRY OPAL" />
+        <source type="rough" material="CHERRY OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SARDONYX" category="gems" type="90" materialType="inorganic" inorganic="SARDONYX">
+        <item type="gem" material="SARDONYX" />
+        <item type="smallgem" material="SARDONYX" />
+        <source type="rough" material="SARDONYX" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, BANDED AGATE" category="gems" type="90" materialType="inorganic" inorganic="BANDED AGATE">
+        <item type="gem" material="BANDED AGATE" />
+        <item type="smallgem" material="BANDED AGATE" />
+        <source type="rough" material="BANDED AGATE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CARNELIAN" category="gems" type="90" materialType="inorganic" inorganic="CARNELIAN">
+        <item type="gem" material="CARNELIAN" />
+        <item type="smallgem" material="CARNELIAN" />
+        <source type="rough" material="CARNELIAN" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SARD" category="gems" type="90" materialType="inorganic" inorganic="SARD">
+        <item type="gem" material="SARD" />
+        <item type="smallgem" material="SARD" />
+        <source type="rough" material="SARD" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CHRYSOCOLLA" category="gems" type="90" materialType="inorganic" inorganic="CHRYSOCOLLA">
+        <item type="gem" material="CHRYSOCOLLA" />
+        <item type="smallgem" material="CHRYSOCOLLA" />
+        <source type="rough" material="CHRYSOCOLLA" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, CHRYSOPRASE" category="gems" type="90" materialType="inorganic" inorganic="CHRYSOPRASE">
+        <item type="gem" material="CHRYSOPRASE" />
+        <item type="smallgem" material="CHRYSOPRASE" />
+        <source type="rough" material="CHRYSOPRASE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, VARISCITE" category="gems" type="90" materialType="inorganic" inorganic="VARISCITE">
+        <item type="gem" material="VARISCITE" />
+        <item type="smallgem" material="VARISCITE" />
+        <source type="rough" material="VARISCITE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, MOSS OPAL" category="gems" type="90" materialType="inorganic" inorganic="MOSS OPAL">
+        <item type="gem" material="MOSS OPAL" />
+        <item type="smallgem" material="MOSS OPAL" />
+        <source type="rough" material="MOSS OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, MOSS AGATE" category="gems" type="90" materialType="inorganic" inorganic="MOSS AGATE">
+        <item type="gem" material="MOSS AGATE" />
+        <item type="smallgem" material="MOSS AGATE" />
+        <source type="rough" material="MOSS AGATE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, BLOODSTONE" category="gems" type="90" materialType="inorganic" inorganic="BLOODSTONE">
+        <item type="gem" material="BLOODSTONE" />
+        <item type="smallgem" material="BLOODSTONE" />
+        <source type="rough" material="BLOODSTONE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PRASE OPAL" category="gems" type="90" materialType="inorganic" inorganic="PRASE OPAL">
+        <item type="gem" material="PRASE OPAL" />
+        <item type="smallgem" material="PRASE OPAL" />
+        <source type="rough" material="PRASE OPAL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, PRASE" category="gems" type="90" materialType="inorganic" inorganic="PRASE">
+        <item type="gem" material="PRASE" />
+        <item type="smallgem" material="PRASE" />
+        <source type="rough" material="PRASE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, LAPIS LAZULI" category="gems" type="90" materialType="inorganic" inorganic="LAPIS LAZULI">
+        <item type="gem" material="LAPIS LAZULI" />
+        <item type="smallgem" material="LAPIS LAZULI" />
+        <source type="rough" material="LAPIS LAZULI" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, BLUE JADE" category="gems" type="90" materialType="inorganic" inorganic="BLUE JADE">
+        <item type="gem" material="BLUE JADE" />
+        <item type="smallgem" material="BLUE JADE" />
+        <source type="rough" material="BLUE JADE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, LACE AGATE" category="gems" type="90" materialType="inorganic" inorganic="LACE AGATE">
+        <item type="gem" material="LACE AGATE" />
+        <item type="smallgem" material="LACE AGATE" />
+        <source type="rough" material="LACE AGATE" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, SCHORL" category="gems" type="90" materialType="inorganic" inorganic="SCHORL">
+        <item type="gem" material="SCHORL" />
+        <item type="smallgem" material="SCHORL" />
+        <source type="rough" material="SCHORL" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, MORION" category="gems" type="90" materialType="inorganic" inorganic="MORION">
+        <item type="gem" material="MORION" />
+        <item type="smallgem" material="MORION" />
+        <source type="rough" material="MORION" /> 
+    </dfjob>                  
+      <dfjob name="Cut Gem, ONYX" category="gems" type="90" materialType="inorganic" inorganic="ONYX">
+        <item type="gem" material="ONYX" />
+        <item type="smallgem" material="ONYX" />
+        <source type="rough" material="ONYX" /> 
+    </dfjob>                  
 </dfjobs>
