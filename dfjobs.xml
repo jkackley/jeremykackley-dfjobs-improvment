@@ -221,22 +221,12 @@
     <dfjob name="Make Totem" category="Other" type="130"  materialType="bone">
         <item type="totem" material="all" />       
     </dfjob>
-        
-		
-<!--		This one is an oddity, the other material types seem to work fine, but this one does
-	'make unknown material cage' in game.  here is the dump from jobs for a cage.:
-
-Job Address: 222454c8
-7800ffffffff6e20000000000000000000000000000000000000000000000000726f7720ffff7572ffffffff00000000ffffffff020000000100010000000000
-Type: 120 Subtype1: -1 Subtype2: -1 Subtype3: -1 matid: -1 gembitmask: 0 Memorial:: -1 matType: 2 Left: 1 Total: 1
-Material: wood
-	
-	<dfjob name="Cage, WOOD" category="WOOD" type="120"  materialType="WOOD">
+        		
+	<dfjob name="Cage, WOOD" category="WOOD" type="120"  materialType="wood">
         <item type="cage" material="all" />
         <source type="wood" material="all" />
     </dfjob>
     
--->>	
     <dfjob name="Adamantite Wafers" category="smelter" reaction="ADAMANTINE_WAFERS">
         <item type="bar" material="ADAMANTINE" />
     </dfjob>
@@ -357,7 +347,7 @@ Material: wood
         <item type="greaves" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
-   <dfjob name="Leggings, IRON" category="IRON" type="103" subtype="2" materialType="inorganic" inorganic="IRON">
+   <dfjob name="Leggings, IRON" category="IRON" type="103" subtype="leggings" materialType="inorganic" inorganic="IRON">
         <item type="leggings" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
@@ -365,11 +355,11 @@ Material: wood
         <item type="high boot" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
- <dfjob name="Low boots, IRON" category="IRON" type="118" subtype="2" materialType="inorganic" inorganic="IRON">
+ <dfjob name="Low boots, IRON" category="IRON" type="118" subtype="low boot" materialType="inorganic" inorganic="IRON">
         <item type="low boot" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
-	 <dfjob name="Warhammer, IRON" category="IRON" type="97" subtype="2" materialType="inorganic" inorganic="IRON">
+	 <dfjob name="Warhammer, IRON" category="IRON" type="97" subtype="war hammer" materialType="inorganic" inorganic="IRON">
         <item type="war hammer" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
@@ -393,11 +383,11 @@ Material: wood
         <item type="battle axe" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
-    <dfjob name="Breastplate, IRON" category="IRON" type="101" subtype="2" materialType="inorganic" inorganic="IRON">
+    <dfjob name="Breastplate, IRON" category="IRON" type="101" subtype="breastplate" materialType="inorganic" inorganic="IRON">
         <item type="breastplate" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
-    <dfjob name="Mail Shirt, IRON" category="IRON" type="101" subtype="1" materialType="inorganic" inorganic="IRON">
+    <dfjob name="Mail Shirt, IRON" category="IRON" type="101" subtype="mail shirt" materialType="inorganic" inorganic="IRON">
         <item type="mail shirt" material="IRON" />
         <source type="bar" material="IRON" />
     </dfjob>
@@ -429,7 +419,7 @@ Material: wood
         <item type="greaves" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-   <dfjob name="Leggings, COPPER" category="COPPER" type="103" subtype="2" materialType="inorganic" inorganic="COPPER">
+   <dfjob name="Leggings, COPPER" category="COPPER" type="103" subtype="leggings" materialType="inorganic" inorganic="COPPER">
         <item type="leggings" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
@@ -437,11 +427,11 @@ Material: wood
         <item type="high boot" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
- <dfjob name="Low boots, COPPER" category="COPPER" type="118" subtype="2" materialType="inorganic" inorganic="COPPER">
+ <dfjob name="Low boots, COPPER" category="COPPER" type="118" subtype="low boot" materialType="inorganic" inorganic="COPPER">
         <item type="low boot" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-	 <dfjob name="Warhammer, COPPER" category="COPPER" type="97" subtype="2" materialType="inorganic" inorganic="COPPER">
+	 <dfjob name="Warhammer, COPPER" category="COPPER" type="97" subtype="war hammer" materialType="inorganic" inorganic="COPPER">
         <item type="war hammer" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
@@ -465,11 +455,11 @@ Material: wood
         <item type="battle axe" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-    <dfjob name="Breastplate, COPPER" category="COPPER" type="101" subtype="2" materialType="inorganic" inorganic="COPPER">
+    <dfjob name="Breastplate, COPPER" category="COPPER" type="101" subtype="breastplate" materialType="inorganic" inorganic="COPPER">
         <item type="breastplate" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
-    <dfjob name="Mail Shirt, COPPER" category="COPPER" type="101" subtype="1" materialType="inorganic" inorganic="COPPER">
+    <dfjob name="Mail Shirt, COPPER" category="COPPER" type="101" subtype="mail shirt" materialType="inorganic" inorganic="COPPER">
         <item type="mail shirt" material="COPPER" />
         <source type="bar" material="COPPER" />
     </dfjob>
@@ -501,7 +491,7 @@ Material: wood
         <item type="greaves" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
-   <dfjob name="Leggings, BRONZE" category="BRONZE" type="103" subtype="2" materialType="inorganic" inorganic="BRONZE">
+   <dfjob name="Leggings, BRONZE" category="BRONZE" type="103" subtype="leggings" materialType="inorganic" inorganic="BRONZE">
         <item type="leggings" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
@@ -509,11 +499,11 @@ Material: wood
         <item type="high boot" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
- <dfjob name="Low boots, BRONZE" category="BRONZE" type="118" subtype="2" materialType="inorganic" inorganic="BRONZE">
+ <dfjob name="Low boots, BRONZE" category="BRONZE" type="118" subtype="low boot" materialType="inorganic" inorganic="BRONZE">
         <item type="low boot" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
-	 <dfjob name="Warhammer, BRONZE" category="BRONZE" type="97" subtype="2" materialType="inorganic" inorganic="BRONZE">
+	 <dfjob name="Warhammer, BRONZE" category="BRONZE" type="97" subtype="war hammer" materialType="inorganic" inorganic="BRONZE">
         <item type="war hammer" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
@@ -537,11 +527,11 @@ Material: wood
         <item type="battle axe" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
-    <dfjob name="Breastplate, BRONZE" category="BRONZE" type="101" subtype="2" materialType="inorganic" inorganic="BRONZE">
+    <dfjob name="Breastplate, BRONZE" category="BRONZE" type="101" subtype="breastplate" materialType="inorganic" inorganic="BRONZE">
         <item type="breastplate" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
-    <dfjob name="Mail Shirt, BRONZE" category="BRONZE" type="101" subtype="1" materialType="inorganic" inorganic="BRONZE">
+    <dfjob name="Mail Shirt, BRONZE" category="BRONZE" type="101" subtype="mail shirt" materialType="inorganic" inorganic="BRONZE">
         <item type="mail shirt" material="BRONZE" />
         <source type="bar" material="BRONZE" />
     </dfjob>
@@ -573,7 +563,7 @@ Material: wood
         <item type="greaves" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
-   <dfjob name="Leggings, STEEL" category="STEEL" type="103" subtype="2" materialType="inorganic" inorganic="STEEL">
+   <dfjob name="Leggings, STEEL" category="STEEL" type="103" subtype="leggings" materialType="inorganic" inorganic="STEEL">
         <item type="leggings" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
@@ -581,11 +571,11 @@ Material: wood
         <item type="high boot" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
- <dfjob name="Low boots, STEEL" category="STEEL" type="118" subtype="2" materialType="inorganic" inorganic="STEEL">
+ <dfjob name="Low boots, STEEL" category="STEEL" type="118" subtype="low boot" materialType="inorganic" inorganic="STEEL">
         <item type="low boot" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
-	 <dfjob name="Warhammer, STEEL" category="STEEL" type="97" subtype="2" materialType="inorganic" inorganic="STEEL">
+	 <dfjob name="Warhammer, STEEL" category="STEEL" type="97" subtype="war hammer" materialType="inorganic" inorganic="STEEL">
         <item type="war hammer" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
@@ -609,11 +599,11 @@ Material: wood
         <item type="battle axe" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
-    <dfjob name="Breastplate, STEEL" category="STEEL" type="101" subtype="2" materialType="inorganic" inorganic="STEEL">
+    <dfjob name="Breastplate, STEEL" category="STEEL" type="101" subtype="breastplate" materialType="inorganic" inorganic="STEEL">
         <item type="breastplate" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
-    <dfjob name="Mail Shirt, STEEL" category="STEEL" type="101" subtype="1" materialType="inorganic" inorganic="STEEL">
+    <dfjob name="Mail Shirt, STEEL" category="STEEL" type="101" subtype="mail shirt" materialType="inorganic" inorganic="STEEL">
         <item type="mail shirt" material="STEEL" />
         <source type="bar" material="STEEL" />
     </dfjob>
@@ -645,7 +635,7 @@ Material: wood
         <item type="greaves" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
-   <dfjob name="Leggings, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="103" subtype="2" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+   <dfjob name="Leggings, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="103" subtype="leggings" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="leggings" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
@@ -653,11 +643,11 @@ Material: wood
         <item type="high boot" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
- <dfjob name="Low boots, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="118" subtype="2" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+ <dfjob name="Low boots, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="118" subtype="low boot" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="low boot" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
-	 <dfjob name="Warhammer, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="97" subtype="2" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+	 <dfjob name="Warhammer, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="97" subtype="war hammer" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="war hammer" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
@@ -681,11 +671,11 @@ Material: wood
         <item type="battle axe" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
-    <dfjob name="Breastplate, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="101" subtype="2" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+    <dfjob name="Breastplate, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="101" subtype="breastplate" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="breastplate" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
-    <dfjob name="Mail Shirt, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="101" subtype="1" materialType="inorganic" inorganic="BISMUTH_BRONZE">
+    <dfjob name="Mail Shirt, BISMUTH_BRONZE" category="BISMUTH_BRONZE" type="101" subtype="mail shirt" materialType="inorganic" inorganic="BISMUTH_BRONZE">
         <item type="mail shirt" material="BISMUTH_BRONZE" />
         <source type="bar" material="BISMUTH_BRONZE" />
     </dfjob>
@@ -717,7 +707,7 @@ Material: wood
         <item type="greaves" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
-   <dfjob name="Leggings, ADAMANTINE" category="ADAMANTINE" type="103" subtype="2" materialType="inorganic" inorganic="ADAMANTINE">
+   <dfjob name="Leggings, ADAMANTINE" category="ADAMANTINE" type="103" subtype="leggings" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="leggings" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
@@ -725,11 +715,11 @@ Material: wood
         <item type="high boot" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
- <dfjob name="Low boots, ADAMANTINE" category="ADAMANTINE" type="118" subtype="2" materialType="inorganic" inorganic="ADAMANTINE">
+ <dfjob name="Low boots, ADAMANTINE" category="ADAMANTINE" type="118" subtype="low boot" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="low boot" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
-	 <dfjob name="Warhammer, ADAMANTINE" category="ADAMANTINE" type="97" subtype="2" materialType="inorganic" inorganic="ADAMANTINE">
+	 <dfjob name="Warhammer, ADAMANTINE" category="ADAMANTINE" type="97" subtype="war hammer" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="war hammer" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
@@ -753,11 +743,11 @@ Material: wood
         <item type="battle axe" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
-    <dfjob name="Breastplate, ADAMANTINE" category="ADAMANTINE" type="101" subtype="2" materialType="inorganic" inorganic="ADAMANTINE">
+    <dfjob name="Breastplate, ADAMANTINE" category="ADAMANTINE" type="101" subtype="breastplate" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="breastplate" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
-    <dfjob name="Mail Shirt, ADAMANTINE" category="ADAMANTINE" type="101" subtype="1" materialType="inorganic" inorganic="ADAMANTINE">
+    <dfjob name="Mail Shirt, ADAMANTINE" category="ADAMANTINE" type="101" subtype="mail shirt" materialType="inorganic" inorganic="ADAMANTINE">
         <item type="mail shirt" material="ADAMANTINE" />
         <source type="bar" material="ADAMANTINE" />
     </dfjob>
